@@ -74,7 +74,7 @@ public class DeptDAO {
 		DeptDTO dto = null;
 		
 		try {
-			String sql = "select * form dept_temp where deptno = ?";
+			String sql = "select * from dept_temp where deptno = ?";
 			con = Getconnection();
 			pstmt = con.prepareStatement(sql);
 			pstmt.setInt(1, deptno);
