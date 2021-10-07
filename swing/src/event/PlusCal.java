@@ -12,6 +12,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JTextField;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JButton;
 import javax.swing.SwingConstants;
 
@@ -90,15 +91,27 @@ public class PlusCal extends JFrame implements ActionListener {
 		if(cmd.equals("확인")) {
 		// 확인 버튼 클릭
 		// num1, num2에 들어 있는 값 가져오기
-			int op1 = Integer.parseInt(num1.getText());
-			int op2 = Integer.parseInt(num2.getText());
 			
-		// 가져온 숫자를 덧셈
-			int total = op1 + op2;
+			try {
+				// Interger.parseInt("") => NumberFormatException
+				int op1 = Integer.parseInt(num1.getText()); // "5" + "7" => "57"
+				int op2 = Integer.parseInt(num2.getText());
+				
+				// 가져온 숫자를 덧셈
+				int total = op1 + op2;
+				
+				// 결과를 result 보여주기 11 => "11"
+				// result.setText(total+"");
+				result.setText(String.valueOf(total));
+				
+			} catch (Exception e2) {
+				// 개발할때 예외 발생 단계를 출력
+				// e2.printStackTrace();
+				
+				// 사용자에게 메시지 출력
+				JOptionPane.showMessageDialog(getParent(), "입력값을 확인해 주세요");
+			}
 			
-		// 결과를 result 보여주기
-		// result.setText(total+"");
-		result.setText(String.valueOf(total));
 		
 		} else {
 		// 취소 버튼 클릭
