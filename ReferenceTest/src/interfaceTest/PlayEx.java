@@ -3,12 +3,13 @@ package interfaceTest;
 public class PlayEx {
 	public static void main(String[] args) {
 		// Cannot instantiate the type PlayingCard
-		// ê°ì²´ ìƒì„± ë¶ˆê°€
+		// °´Ã¼ »ı¼º ºÒ°¡
 		// PlayingCard card = new PlayingCard();
 		
-		// PlayingCard.DIAMOND;
+		// PlayingCard.DIAMOND; 
 		
 		PlayingCard card = new Playing();
 		card.getCardKind();
+
 	}
 }

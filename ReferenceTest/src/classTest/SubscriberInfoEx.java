@@ -2,15 +2,17 @@ package classTest;
 
 public class SubscriberInfoEx {
 	public static void main(String[] args) {
-		SubscriberInfo info1 = new SubscriberInfo("í™ê¸¸ë™", "hong123", "qwer1234");
-		SubscriberInfo info2 = new SubscriberInfo("ì„±ì¶˜í–¥", "chun111", "sung1123", "010-2274-1234", "ì„œìš¸ì‹œ ì¢…ë¡œêµ¬");
+		SubscriberInfo info1 = new SubscriberInfo("È«±æµ¿", "hong123", "hong1234");
+		SubscriberInfo info2 = new SubscriberInfo("¼ºÃáÇâ", "sung123", "sung1234","010-1234-1234","¼­¿ï½Ã Á¾·Î±¸");
 		
 		
-		//í™ê¸¸ë™ ì „í™”ë²ˆí˜¸ ì¶”ê°€
-		info1.setTel("010-5845-1155");
+		//È«±æµ¿ ÀüÈ­¹øÈ£ Ãß°¡
+		info1.setTel("010-4321-4321");
 		
-		//ì„±ì¶˜í–¥ ì£¼ì†Œ ë³€ê²½
-		info2.setAddress("ì„œìš¸ì‹œ ì„±ë™êµ¬");
 		
+		//¼ºÃáÇâ ÁÖ¼Ò º¯°æ
+		info2.setAddress("¼­¿ï½Ã ¼ºµ¿±¸");
+
 	}
+
 }

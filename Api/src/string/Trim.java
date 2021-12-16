@@ -2,8 +2,8 @@ package string;
 
 public class Trim {
 	public static void main(String[] args) {
-		// ë¬¸ìì—´ ì•, ë’¤ ê³µë°± ì—†ì• ì£¼ê¸°
-		String str1 = "    abc    ";
+		// ¹®ÀÚ¿­ ¾Õ,µÚ °ø¹é ¾ø¾ÖÁÖ±â
+		String str1 = "    abc   ";
 		String str2 = "abc";
 		
 		String newStr1 = str1.trim();
@@ -12,5 +12,6 @@ public class Trim {
 		System.out.println(str1);
 		System.out.println(newStr1);
 		System.out.println(newStr1.equals(str2));
+
 	}
 }

@@ -7,71 +7,101 @@ public class ForTest5 {
 		// **********
 		// **********
 		// **********
-
-		// ì´ì¤‘ for ì‹¤í–‰ ìˆœì„œ
-		// 1. int i=0;
-		// 2. i<3;
-		// 3. ì•ˆìª½ for ë¬¸ì˜ int j=0;
-		// 4. j<3;
-		// 5. System.out.print("*"); *
-		// 6. j++ => j=1
-		// 7. j<3;
-		// 8. System.out.print("*"); **
-		// 9. j++ => j=2
-		// 10. j<3;
-		// 11. System.out.print("*"); ***
-		// 12. j++ => j=3
-		// 13. j<3; => ì•ˆìª½ for ë¬¸ ì¢…ë£Œ
-		// 14. System.out.println();
-
-		// 15. i++ => i=1
-		// 16. i<3;
-		// 17. ì•ˆìª½ for ë¬¸ì˜ int j=0; ~14ê¹Œì§€ ì‹¤í–‰
+		
+		//ÀÌÁß for ½ÇÇà ¼ø¼­
+		//¨ç int i=0;
+		//¨è i<3;
+		//¨é ¾ÈÂÊ for ¹®ÀÇ int j=0;
+		//¨ê j<3;
+		//¨ë System.out.print("*"); *
+		//¨ì j++ => j=1
+		//¨í j<3;
+		//¨î System.out.print("*"); **
+		//¨ï j++ => j=2
+		//¨ğ j<3;
+		//¨ñ System.out.print("*"); ***
+		//¨ò j++ => j=3
+		//¨ó j<3;  => ¾ÈÂÊ for ¹® Á¾·á	
+		//¨ô System.out.println(); 
+		
+		
+		//¨ç i++; i=1
+		//¨è i<3;
+		//¨é ¾ÈÂÊ for ¹®ÀÇ int j=0; ~~~ ¨ô ½ÇÇà   
 		// ***
 		// ***
-
-		// 18. i++ => i=2
-		// 19. i<3;
-		// 20. ì•ˆìª½ for ë¬¸ì˜ int j=0; ~14ê¹Œì§€ ì‹¤í–‰
+		
+		
+		//¨ç i++; i=2
+		//¨è i<3;
+		//¨é ¾ÈÂÊ for ¹®ÀÇ int j=0; ~~~ ¨ô ½ÇÇà   
 		// ***
 		// ***
 		// ***
-
-		// 21. i++ => i=3
-		// 22. i<3; => ë°”ê¹¥ for ë¬¸ ì¢…ë£Œ
-
-		for (int i = 0; i < 5; i++) {
-			for (int j = 0; j < 10; j++) {
+		
+		
+		//¨ç i++; i=3
+		//¨è i<3; => ¹Ù±ù for ¹® Á¾·á
+		
+		for(int i=0;i<5;i++) {
+			for(int j=0;j<10;j++) {
 				System.out.print("*");
 			}
 			System.out.println();
 		}
-//		for (int j = 1; j <= 1; j++) {
+		
+		System.out.println();
+		
+//		for(int j=1;j<=1;j++) {
 //			System.out.print("*");
 //		}
 //		System.out.println();
-//		for (int j = 1; j <= 2; j++) {
+//
+//		for(int j=1;j<=2;j++) {
 //			System.out.print("*");
 //		}
 //		System.out.println();
-//		for (int j = 1; j <= 3; j++) {
+//		
+//		for(int j=1;j<=3;j++) {
 //			System.out.print("*");
 //		}
 //		System.out.println();
-//		for (int j = 1; j <= 4; j++) {
+//		
+//		for(int j=1;j<=4;j++) {
 //			System.out.print("*");
 //		}
 //		System.out.println();
-//		for (int j = 1; j <= 5; j++) {
+//		
+//		for(int j=1;j<=5;j++) {
 //			System.out.print("*");
 //		}
 //		System.out.println();
 		
-		for (int i = 1; i <= 5; i++) {
-			for (int j = 1; j <= i; j++) {
+		
+		for(int i=1;i<=5;i++) {
+			for(int j=1;j<=i;j++) {
 				System.out.print("*");
 			}
 			System.out.println();
 		}
+		
+		
+		
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -2,30 +2,40 @@ package test;
 
 public class TypeTest1 {
 	public static void main(String[] args) {
-		// íƒ€ì… - 1) ê¸°ë³¸íƒ€ì… 2) ì°¸ì¡°íƒ€ì…
-		// ë³€ìˆ˜ì˜ ë©”ëª¨ë¦¬ ì‚¬ìš©ë˜ëŠ” ë°©ì‹ì´ ë‹¬ë¼ì§
-
-		// ê¸°ë³¸íƒ€ì…
+		// Å¸ÀÔ - 1) ±âº»Å¸ÀÔ  2) ÂüÁ¶Å¸ÀÔ
+		// º¯¼öÀÇ ¸Ş¸ğ¸® »ç¿ëµÇ´Â ¹æ½ÄÀÌ ´Ş¶óÁü
+		
+		// ±âº»Å¸ÀÔ
 		int age = 25;
 		double price = 200.3;
 		//int time = null;
-
-		// ì°¸ì¡°íƒ€ì… => Heap ì— ìƒì„± / null ì´ˆê¸°í™” /
-		// ë¬¸ìì—´ String name = new String("java")
+		
+		// ÂüÁ¶Å¸ÀÔ => Heap ¿¡ »ı¼º / null ÃÊ±âÈ­ /
+		// ¹®ÀÚ¿­ »ı¼º : String name = new String("java")
 		String name = "java";
 		String name2 = new String("java");
-		String hobby = null; // ì•„ì§ í™ ì—­ì—­ì´ í• ë‹¹ë˜ì§€ ì•Šì€ ê²ƒ
-
-		// ê°’ ë¹„êµ ==, !=
-		// equals()
-		System.out.println(name == name2 ? "ë™ì¼í•¨" : "ë‹¤ë¦„");
-		System.out.println(name.equals(name2) ? "ë™ì¼í•¨" : "ë‹¤ë¦„");
-
+		String hobby = null; //¾ÆÁ÷ Èü ¿µ¿ªÀÌ ÇÒ´çµÇÁö ¾ÊÀº °Í
+		
+		// °ª ºñ±³  ==, !=
+		//          equals()
+		System.out.println(name == name2 ? "µ¿ÀÏÇÔ" : "´Ù¸§");
+		System.out.println(name.equals(name2) ? "µ¿ÀÏÇÔ" : "´Ù¸§");
+		
+		
 		System.out.println(hobby);
 		// java.lang.NullPointerException
 		System.out.println(hobby.length());
+		
 	}
 }
+
+
+
+
+
+
+
+
 
 
 

@@ -1,28 +1,47 @@
 package classTest;
 
-// ë©”ì†Œë“œ ì˜¤ë²„ë¡œë”©
-// ë©”ì†Œë“œ ì´ë¦„ì´ ê°™ì•„ì•¼ í•œë‹¤.
-// ë§¤ê°œ ë³€ìˆ˜ì˜ ê°œìˆ˜ ë˜ëŠ” íƒ€ì…ì´ ë‹¬ë¼ì•¼ í•œë‹¤.
+// ¸Ş¼Òµå ¿À¹ö·Îµù
+// ¸Ş¼­µå ÀÌ¸§ÀÌ °°¾Æ¾ß ÇÑ´Ù.
+// ¸Å°³ º¯¼öÀÇ °³¼ö ¶Ç´Â Å¸ÀÔÀÌ ´Ş¶ó¾ß ÇÑ´Ù.
 
 public class MyMath2 {
-	int add(int a, int b) {
+	int add(int a, int b) {		
 		return a+b;
 	}
 	
-	long add(long a, long b) {
+	long add(long a, long b){
 		return a+b;
 	}
-
-	long add(long a, int b) {
+	
+	long add(long a, int b){
 		return a+b;
 	}
 	
 	int add(int[] arr) {
 		int result = 0;
-		for (int i = 0; i < arr.length; i++) {
+		for(int i=0;i<arr.length;i++) {
 			result += arr[i];
 		}
 		return result;
 	}
-	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

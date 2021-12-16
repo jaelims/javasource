@@ -8,44 +8,64 @@ import java.io.IOException;
 
 public class FileInputStreamEx2 {
 	public static void main(String[] args) {
-//		FileInputStream fis = null;
-//		FileOutputStream fos = null;
+//		FileInputStream fis=null;
+//		FileOutputStream fos=null;
 //		try {
-//			fis = new FileInputStream(new File("c:\\temp\\file1.txt"));
-//			fos = new FileOutputStream("c:\\temp\\test1.txt");
-//			
-//			byte datas[] = new byte[100];
-//			while (fis.read(datas)!=-1) {
-//				fos.write(datas);
-//			}
-//			
+//			 fis = new FileInputStream(new File("c:\\temp\\file1.txt"));
+//			 fos = new FileOutputStream("c:\\temp\\test1.txt");
+//			 
+//			 byte datas[]=new byte[100];
+//			 while(fis.read(datas)!=-1) {
+//				 fos.write(datas);
+//			 }		 
 //		} catch (FileNotFoundException e) {
 //			e.printStackTrace();
-//		} catch (IOException e) {
+//		} catch (IOException e) {			
 //			e.printStackTrace();
 //		} finally {
 //			try {
 //				fis.close();
 //				fos.close();
-//			} catch (IOException e) {
+//			} catch (IOException e) {				
 //				e.printStackTrace();
 //			}
 //		}
 		
 		try(FileInputStream fis= new FileInputStream(new File("c:\\temp\\file1.txt"));
-				FileOutputStream fos= new FileOutputStream("c:\\temp\\test1.txt");) {
+				FileOutputStream fos=new FileOutputStream("c:\\temp\\test1.txt")) {
 			
-			byte datas[] = new byte[100];
-			while (fis.read(datas)!=-1) {
-				fos.write(datas);
-			}
-			
+				 byte datas[]=new byte[100];
+				 while(fis.read(datas)!=-1) {
+					 fos.write(datas);
+				 }				
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
-		} catch (IOException e) {
+		} catch (IOException e) {			
 			e.printStackTrace();
 		}
-		
-		
+
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

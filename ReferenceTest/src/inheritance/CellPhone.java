@@ -3,28 +3,35 @@ package inheritance;
 public class CellPhone {
 	String model;
 	String color;
-
+	
 	void powerOn() {
-		System.out.println("ì „ì› on");
+		System.out.println("Àü¿ø on");
 	}
-
+	
 	void powerOff() {
-		System.out.println("ì „ì› off");
+		System.out.println("Àü¿ø off");
 	}
-
+	
 	void bell() {
-		System.out.println("ë²¨ì´ ìš¸ë¦½ë‹ˆë‹¤.");
+		System.out.println("º§ÀÌ ¿ï¸³´Ï´Ù.");
 	}
-
+	
 	void sendVoice(String msg) {
-		System.out.println("ë³¸ì¸ : " + msg);
+		System.out.println("º»ÀÎ : "+msg);
 	}
-
 	void receiveVoice(String msg) {
-		System.out.println("ìƒëŒ€ë°© : " + msg);
+		System.out.println("»ó´ë¹æ : "+msg);
 	}
-
 	void hangUp() {
-		System.out.println("ì „í™”ë¥¼ ëŠìŠµë‹ˆë‹¤.");
+		System.out.println("ÀüÈ­¸¦ ²÷½À´Ï´Ù.");
 	}
 }
+
+
+
+
+
+
+
+
+

@@ -4,23 +4,28 @@ import java.util.Scanner;
 
 public class DoWhileTest3 {
 	public static void main(String[] args) {
-		// ì»´í“¨í„°ê°€ 1~100 ì‚¬ì´ì˜ ì •ìˆ˜ë¥¼ ìž„ì˜ë¡œ ì„ ì •
-		// ì‚¬ìš©ìžëŠ” ì»´í“¨í„°ê°€ ê°€ì§€ê³  ìžˆëŠ” ìˆ«ìžê°€ ë¬´ì—‡ì¸ì§€ ì•Œì•„ë§žì¶”ê¸°
-		Scanner sc = new Scanner(System.in);
+		// ÄÄÇ»ÅÍ°¡ 1~100 »çÀÌÀÇ Á¤¼ö¸¦ ÀÓÀÇ·Î ¼±Á¤
+		// »ç¿ëÀÚ´Â ÄÄÇ»ÅÍ°¡ °¡Áö°í ÀÖ´Â ¼ýÀÚ°¡ ¹«¾ùÀÎÁö ¾Ë¾Æ¸ÂÃß±â
+		Scanner sc = new Scanner(System.in);		
 		
-		int answer = (int)(Math.random()*100)+1;
+		// 0~99
+		int answer = (int)(Math.random()*100)+1;  //65
 		int input = 0;
 		do {
 			
-			System.out.print("ì˜ˆì¸¡í•œ ìˆ«ìžë¥¼ ìž…ë ¥í•´ ì£¼ì„¸ìš” >>");
-			input = sc.nextInt();
+			System.out.print("¿¹ÃøÇÑ ¼ýÀÚ¸¦ ÀÔ·ÂÇØ ÁÖ¼¼¿ä >> ");
+			input = sc.nextInt(); //50 //70
 			
-			if (input < answer) {
-				System.out.println("ì¢€ ë” í°ìˆ˜ë¥¼ ìž…ë ¥í•´ ì£¼ì„¸ìš”");
-			} else {
-				System.out.println("ì¢€ ë” ìž‘ì€ìˆ˜ë¥¼ ìž…ë ¥í•´ ì£¼ì„¸ìš”");
-			}
+			if(input < answer) {
+				System.out.println("Á» ´õ Å«¼ö¸¦ ÀÔ·ÂÇØ ÁÖ¼¼¿ä");
+			}else {
+				System.out.println("Á» ´õ ÀÛÀº¼ö¸¦ ÀÔ·ÂÇØ ÁÖ¼¼¿ä");
+			}			
 		}while(input!=answer);
-		System.out.printf("ë‹¹ì²¨!!! ì»´í“¨í„°ì˜ ìˆ«ìž : %d\n", answer);
 	}
 }
+
+
+
+
+

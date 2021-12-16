@@ -9,24 +9,24 @@ public class InputStreamEx4 {
 		InputStream in = System.in;
 		OutputStream out = System.out;
 		
-		byte[] datas = new byte[100];
+		byte[] datas=new byte[100];
 		
-		// ì‚¬ìš©ìë¡œë¶€í„° ì´ë¦„ê³¼ í•˜ê³  ì‹¶ì€ë§ì„ ì…ë ¥ë°›ì€ í›„ì—
-		// String ê°ì²´ë¡œ ë³€í™˜
+		//»ç¿ëÀÚ·ÎºÎÅÍ ÀÌ¸§°ú ÇÏ°í ½ÍÀº¸»À» ÀÔ·Â¹ŞÀº ÈÄ¿¡ 
+		//String °´Ã¼·Î º¯È¯
 		
-		System.out.print("ì´ë¦„ : ");
+		System.out.print("ÀÌ¸§ : ");
 		try {
-			int nameBytes = in.read(datas); // í™ê¸¸ë™ ì—”í„°
-			// Enter : carriage return => 13ë²ˆ, line feed : 10ë²ˆ
-			String name = new String(datas, 0, nameBytes-2);
+			int nameBytes = in.read(datas); //È«±æµ¿¿£ÅÍ
+			//Enter : carriage return => 13¹ø, line feed : 10 ¹ø
+			String name = new String(datas,0,nameBytes-2);
 			
-			System.out.print("í•˜ê³  ì‹¶ì€ë§ : ");
-			int commentsBytes = in.read(datas);
-			String comment = new String(datas, 0, commentsBytes-2);
+			System.out.print("ÇÏ°í ½ÍÀº¸» : ");
+			int commentsBytes = in.read(datas); 
+			String comment = new String(datas,0,commentsBytes-2);
 			
-			System.out.println("ì…ë ¥í•œ ì´ë¦„ : "+name);
-			System.out.println("ì…ë ¥í•œ í•˜ê³  ì‹¶ì€ë§ : "+comment);
-		} catch (IOException e) {
+			System.out.println("ÀÔ·ÂÇÑ ÀÌ¸§ : "+name);
+			System.out.println("ÀÔ·ÂÇÑ ÇÏ°í ½ÍÀº ¸» : "+comment);
+		} catch (IOException e) {		
 			e.printStackTrace();
 		} finally {
 			try {
@@ -36,5 +36,19 @@ public class InputStreamEx4 {
 				e2.printStackTrace();
 			}
 		}
+
 	}
+
 }
+
+
+
+
+
+
+
+
+
+
+
+

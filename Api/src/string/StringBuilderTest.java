@@ -4,31 +4,63 @@ public class StringBuilderTest {
 	public static void main(String[] args) {
 //		String data = "ABC";
 //		data += "DEF";
-//		data += "";
-		// ê¸°ì¡´ ë¬¸ìì—´ ì œê±°í•œ í›„ ìƒˆë¡­ê²Œ ë¬¸ìì—´ ìƒì„± => StringBuffer, StringBuilder ê°œì„ 
+//		data += "";		
+		// ±âÁ¸ ¹®ÀÚ¿­ Á¦°ÅÇÑ ÈÄ »õ·Ó°Ô ¹®ÀÚ¿­ »ı¼º => StringBuffer, StringBuilder °³¼±
 		
-		// ë©€í‹° ìŠ¤ë ˆë“œ ì§€ì›
+		
+		//¸ÖÆ¼ ½º·¹µå Áö¿ø
 		//StringBuffer buffer = new StringBuffer();
 		
-		// ë‹¨ì¼ ìŠ¤ë ˆë“œ ì§€ì›
+		//´ÜÀÏ ½º·¹µå Áö¿ø
 		StringBuilder builder = new StringBuilder();
 		
-		// ì¶”ê°€
+		//Ãß°¡
 		builder.append("ABC");
 		builder.append("DEF");
 		System.out.println(builder);
 		
-		// ì‚½ì…
+		//»ğÀÔ
 		builder.insert(3, "34");
 		System.out.println(builder);
 		
-		// ì‚­ì œ
+		//»èÁ¦
 		builder.delete(1, 3);
 		System.out.println(builder);
+		
 		
 		String str1 = "Java Programming";
 		StringBuilder builder1 = new StringBuilder(str1);
 		builder1.append(3.14);
 		
+		builder1.deleteCharAt(1);
+		System.out.println(builder1);
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

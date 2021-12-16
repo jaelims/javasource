@@ -1,14 +1,14 @@
 package abstractTest;
 
-/* ì¶”ìƒ í´ë˜ìŠ¤ : 
- * ì¶”ìƒ : êµ¬ì²´ì ì¸ ë‚´ìš©ì„
+/* Ãß»óÅ¬·¡½º : 
+ * Ãß»ó : ±¸Ã¼ÀûÀÎ ³»¿ëÀº ¹èÁ¦ÇÏ°í °øÅëµÈ ºÎºĞ¸¸À» ¸¸µé¾î ÁÖ´Â ÀÛ¾÷
+ * 
  */
-
 
 
 public abstract class Car {
 	
-	private String color;
+	private String color;	
 	
 	public Car(String color) {
 		super();
@@ -16,10 +16,21 @@ public abstract class Car {
 	}
 
 	public void start() {
-		System.out.println("ìë™ì°¨ ì¶œë°œ");
+		System.out.println("ÀÚµ¿Â÷ Ãâ¹ß");
 	}
 	
 	abstract void drive();
 	abstract void stop();
 	
 }
+
+
+
+
+
+
+
+
+
+
+

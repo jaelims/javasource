@@ -1,47 +1,40 @@
 package classTest;
 
 public class SubscriberInfo {
-	// ì†ì„± - ì´ë¦„, ì•„ì´ë””, íŒ¨ìŠ¤ì›Œë“œ, ì „í™”ë²ˆí˜¸, ì£¼ì†Œ
+	//¼Ó¼º - ÀÌ¸§,¾ÆÀÌµğ,ÆĞ½º¿öµå,ÀüÈ­¹øÈ£,ÁÖ¼Ò
 	private String name;
 	private String id;
-	private String pw;
+	private String password;
 	private String tel;
 	private String address;
 	
 	
-	// ìƒì„±ì - ì´ë¦„, ì•„ì´ë””, íŒ¨ìŠ¤ì›Œë“œë§Œ ì´ˆê¸°í™”ë¥¼ í•œ í›„ ê°ì²´ ìƒì„±
-	//	   - ì´ë¦„, ì•„ì´ë””, íŒ¨ìŠ¤ì›Œë“œ, ì „í™”ë²ˆí˜¸, ì£¼ì†Œë¥¼ ì´ˆê¸°í™” í•œ í›„ ê°ì²´ ìƒì„±
-	public SubscriberInfo(String name, String id, String pw) {
+	//»ı¼ºÀÚ - ÀÌ¸§,¾ÆÀÌµğ,ÆĞ½º¿öµå¸¸ ÃÊ±âÈ­¸¦ ÇÑÈÄ °´Ã¼ »ı¼º
+	public SubscriberInfo(String name, String id, String password) {
 		super();
 		this.name = name;
 		this.id = id;
-		this.pw = pw;
+		this.password = password;
 	}
-	public SubscriberInfo(String name, String id, String pw, String tel, String address) {
+	//       - ÀÌ¸§,¾ÆÀÌµğ,ÆĞ½º¿öµå,ÀüÈ­¹øÈ£,ÁÖ¼Ò¸¦ ÃÊ±âÈ­ ÇÑ ÈÄ °´Ã¼ »ı¼º
+	public SubscriberInfo(String name, String id, String password, String tel, String address) {
 		super();
 		this.name = name;
 		this.id = id;
-		this.pw = pw;
+		this.password = password;
 		this.tel = tel;
 		this.address = address;
 	}
 	
-	
-	// ê¸°ëŠ¥ - íŒ¨ìŠ¤ì›Œë“œ ë³€ê²½, ì „í™”ë²ˆí˜¸ ë³€ê²½, ì£¼ì†Œ ë³€ê²½
-	//setterë©”ì†Œë“œ
-	public void setPw(String pw) {
-		this.pw = pw;
+	//±â´É - ÆĞ½º¿öµå º¯°æ, ÀüÈ­¹øÈ£ º¯°æ, ÁÖ¼Ò º¯°æ
+	//setter¸Ş¼Òµå
+	public void setPassword(String password) {
+		this.password = password;
 	}
 	public void setTel(String tel) {
 		this.tel = tel;
 	}
 	public void setAddress(String address) {
 		this.address = address;
-	}
-	
-	
-	
-	
-	
-	
+	}		
 }

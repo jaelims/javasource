@@ -4,13 +4,28 @@ public class SystemEx2 {
 	public static void main(String[] args) {
 		long sum = 0;
 		
-		long start = System.currentTimeMillis(); // 1/1000 Ï¥à
+		long start = System.currentTimeMillis(); // 1/1000 √ 
 		
-		for (int i = 1; i < 10000000; i++) {
+		for(int i=1;i<10000000;i++) {
 			sum+=i;
 		}
 		long end = System.currentTimeMillis();
-		System.out.println("1 ~ 10,000,000 Í±∏Î¶∞ ÏãúÍ∞Ñ "+(end-start));
-		System.out.println("1 ~ 10,000,000 Ìï© "+(sum));
+		
+		System.out.println("1 ~ 10,000,000 ∞…∏∞ Ω√∞£ "+(end-start));
+		System.out.println("1 ~ 10,000,000 «’ "+(sum));
+
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

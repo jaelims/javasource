@@ -8,23 +8,25 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 public class MixLayout extends JFrame {
+	
 	public MixLayout() {
-		setTitle("ì—¬ëŸ¬ ë ˆì´ì•„ì›ƒ í˜¼í•©");
+		setTitle("¿©·¯ ·¹ÀÌ¾Æ¿ô È¥ÇÕ");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		
-		JPanel panel1 = new JPanel(); // FlowLayout ê¸°ë³¸
+		JPanel panel1 = new JPanel(); //FlowLayout ±âº»
 		panel1.setBackground(Color.ORANGE);
 		
-		JButton btn1 = new JButton("ë²„íŠ¼1");
-		btn1.setBackground(Color.BLUE);
+		
+		JButton btn1 = new JButton("¹öÆ°1");
+		btn1.setBackground(Color.DARK_GRAY);
 		panel1.add(btn1);
-		panel1.add(new JButton("ë²„íŠ¼2"));
-		panel1.add(new JButton("ë²„íŠ¼3"));
+		panel1.add(new JButton("¹öÆ°2"));
+		panel1.add(new JButton("¹öÆ°3"));		
 		
 		add(panel1,BorderLayout.NORTH);
 		
-		JPanel panel2 = new JPanel(); // FlowLayout ê¸°ë³¸
+		JPanel panel2 = new JPanel(); //FlowLayout ±âº»
 		panel2.setLayout(new BorderLayout());
 		
 		panel2.add(new JButton("Swing"));
@@ -33,11 +35,14 @@ public class MixLayout extends JFrame {
 		
 		
 		
-		setSize(300, 300);
+		setSize(300,300);
 		setVisible(true);
 	}
 	
+	
+
 	public static void main(String[] args) {
 		new MixLayout();
 	}
+
 }

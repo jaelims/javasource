@@ -2,8 +2,10 @@ package event;
 
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
+import java.awt.TextField;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.lang.reflect.Field;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -12,71 +14,90 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
 // KeyListener
-// KeyEventë¥¼ ê°ì§€í•˜ëŠ” ë¦¬ìŠ¤ë„ˆ
-// KeyEventëŠ” í¬ì»¤ìŠ¤ë¥¼ ê°€ì§„ ì»´í¬ë„ŒíŠ¸ì—ì„œë§Œ ë°œìƒ
-// KeyPressed() : í‚¤ë¥¼ ëˆ„ë¥´ëŠ” ìˆœê°„ ë°œìƒ
-// 			KeyTyped() : ëˆ„ë¥¸ í‚¤ê°€ ë–¼ì–´ì§€ëŠ” ìˆœê°„ í˜¸ì¶œ(ë‹¨, ìœ ë‹ˆì½”ë“œì¸ ê²½ìš°ë§Œ í˜¸ì¶œ)
-// KeyReleased() : ëˆ„ë¥¸ í‚¤ë¥¼ ë–¼ëŠ” ìˆœê°„ í˜¸ì¶œ
+// KeyEvent¸¦ °¨ÁöÇÏ´Â ¸®½º³Ê
+// KeyEvent ´Â Æ÷Ä¿½º¸¦ °¡Áø ÄÄÆ÷³ÍÆ®¿¡¼­¸¸ ¹ß»ı
+// keyPressed() : Å°¸¦ ´©¸£´Â ¼ø°£ ¹ß»ı
+//             keyTyped() : ´©¸¥ Å°°¡ ¶¼¾îÁö´Â ¼ø°£ È£Ãâ(´Ü, À¯´ÏÄÚµåÀÎ °æ¿ì¸¸ È£Ãâ)
+// keyReleased() : ´©¸¥ Å°¸¦ ¶¼´Â ¼ø°£ È£Ãâ
 
 public class KeyEventTest1 extends JFrame implements KeyListener {
-
+	
 	private JPanel panel;
 	private JTextField textField;
 	private JTextArea textArea;
 	
+	
 	public KeyEventTest1() {
 		panel = new JPanel();
-		panel.setLayout(new GridLayout(0,2));
+		panel.setLayout(new GridLayout(0, 2));
 		
-		panel.add(new JLabel("ë¬¸ìë¥¼ ì…ë ¥í•˜ì„¸ìš” "));
+		panel.add(new JLabel("¹®ÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä "));
 		
 		textField = new JTextField(10);
 		textField.addKeyListener(this);
 		panel.add(textField);
 		
-		textArea = new JTextArea(3,30);
+		textArea = new JTextArea(3, 30);
 		
 		getContentPane().add(panel,BorderLayout.NORTH);
 		getContentPane().add(textArea,BorderLayout.CENTER);
 		
-		setTitle("í‚¤ ì´ë²¤íŠ¸");
+		setTitle("Å° ÀÌº¥Æ®");
 		setSize(400,200);
 		setVisible(true);
 	}
 	
 	
+	
+
 	@Override
 	public void keyTyped(KeyEvent e) {
 		display(e, "KeyTyped : ");
-
 	}
 
 	@Override
 	public void keyPressed(KeyEvent e) {
-		display(e, "KeyTyped : ");
-
+		display(e, "keyPressed : ");
 	}
 
 	@Override
-	public void keyReleased(KeyEvent e) {
-		display(e, "KeyTyped : ");
-
-	}
+	public void keyReleased(KeyEvent e) {		
+		display(e, "keyReleased : ");
+	}	
 	
 	protected void display(KeyEvent e, String str) {
-		char keyChar = e.getKeyChar(); // í˜„ì¬ ëˆŒëŸ¬ì§„ í‚¤ ë¬¸ìê°’
-		int keyCode = e.getKeyCode(); // í˜„ì¬ ëˆŒëŸ¬ì§„ í‚¤ ì½”ë“œê°’
+		char keyChar = e.getKeyChar(); //ÇöÀç ´­·¯Áø Å° ¹®ÀÚ°ª
+		int keyCode = e.getKeyCode(); // ÇöÀç ´­·¯Áø Å° ÄÚµå°ª
 		
 		// textArea.setText(t);
 		
-		String modifiers = "Alt : " + e.isAltDown() + " Ctrl : " + e.isControlDown()
-							+ " Shift : " + e.isShiftDown();
-		textArea.append(str + " ë¬¸ì : " + keyChar + " (ì½”ë“œ : " + keyCode + ") " + modifiers + "\n");
+		String modifiers = "Alt : "+e.isAltDown()+" Ctrl : "+e.isControlDown()
+					+" Shift : "+e.isShiftDown();
+		textArea.append(str+" ¹®ÀÚ : "+keyChar+" (ÄÚµå : "+keyCode+") "+modifiers+"\n");
 	}
+	
+	
+	
+	
 
 	public static void main(String[] args) {
 		new KeyEventTest1();
-
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

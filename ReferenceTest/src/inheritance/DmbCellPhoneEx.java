@@ -1,22 +1,33 @@
 package inheritance;
 
 public class DmbCellPhoneEx {
+
 	public static void main(String[] args) {
-		DmbCellPhone phone = new DmbCellPhone();
-
+		DmbCellPhone phone = new DmbCellPhone();	
 		
-		phone.color = "black";
-		phone.model = "ìë°”í°";
-		phone.channel = 7;
-
+		
+		phone.color="black";
+		phone.model="ÀÚ¹ÙÆù";
+		phone.channel=7;
+		
 		phone.powerOn();
 		phone.turnOnDmb();
 		phone.changeChannelDmb(8);
 		phone.turnOffDmb();
 		phone.bell();
-		phone.sendVoice("ì•ˆë…•í•˜ì„¸ìš”");
-		phone.receiveVoice("ë°˜ê°€ì›Œìš”");
+		phone.sendVoice("¾È³çÇÏ¼¼¿ä");
+		phone.receiveVoice("¹İ°¡¿ö¿ä");
 		phone.hangUp();
+		
 
 	}
+
 }
+
+
+
+
+
+
+
+

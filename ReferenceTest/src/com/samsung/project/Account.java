@@ -1,29 +1,44 @@
 package com.samsung.project;
 
 public class Account {
-	// ì†ì„± : ê³„ì¢Œë²ˆí˜¸(122-01-12222), ìž”ì•¡, ì´ë¦„
-	private String accountNum;
-	private int money;
+	//¼Ó¼º : °èÁÂ¹øÈ£(122-01-12222),ÀÜ¾×,ÀÌ¸§
+	private String accountNo; 
+	private int balance;
 	private String name;
 	
-	// ê¸°ë³¸ìƒì„±ìž
-	public Account(String accountNum, int money, String name) {
+	//±âº»»ý¼ºÀÚ
+	public Account(String accountNo, int balance, String name) {
 		super();
-		this.accountNum = accountNum;
-		this.money = money;
+		this.accountNo = accountNo;
+		this.balance = balance;
 		this.name = name;
 	}
 	
 	
-	// ê¸°ëŠ¥ : ìž…ê¸ˆí•œë‹¤.(ìž…ë ¥ê°’ : ìž…ê¸ˆì•¡, ë°˜í™˜ê°’ : ì—†ìŒ) => í˜„ìž¬ìž”ì•¡ += ìž…ê¸ˆì•¡
-	// 		ì¶œê¸ˆí•œë‹¤.(ìž…ë ¥ê°’ : ì¶œê¸ˆì•¡, ë°˜í™˜ê°’ : í˜„ìž¬ìž”ì•¡) = > í˜„ìž¬ìž”ì•¡ -=ì¶œê¸ˆì•¡
-	public void add(int amount) {
-		money += amount;
+	
+	
+	
+	//±â´É : ÀÔ±ÝÇÑ´Ù.(ÀÔ·Â°ª : ÀÔ±Ý¾×, ¹ÝÈ¯°ª:¾øÀ½) => ÇöÀçÀÜ¾× += ÀÔ±Ý¾×
+	public void deposit(int amount) {
+		balance += amount;
 	}
-	public int subtrack(int amount) {
-		if (money > amount) {
-			money -= amount;
+	
+	
+
+
+	//       Ãâ±ÝÇÑ´Ù.(ÀÔ·Â°ª : Ãâ±Ý¾×, ¹ÝÈ¯°ª:ÇöÀçÀÜ¾×) => ÇöÀçÀÜ¾× -= Ãâ±Ý¾×
+	public int withdraw(int amount) {
+		if(balance > amount) {
+			balance -= amount;			
 		}
-		return money;
+		return balance;
 	}
 }
+
+
+
+
+
+
+
+

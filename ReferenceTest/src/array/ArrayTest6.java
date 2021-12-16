@@ -2,24 +2,26 @@ package array;
 
 public class ArrayTest6 {
 	public static void main(String[] args) {
-		// ì´ì°¨ì›ë°°ì—´
-		int scores[][] = new int[2][3]; // 2í–‰ 3ì—´
-
-		// ì´ˆê¸°í™”
+		// ÀÌÂ÷¿ø¹è¿­
+		int scores[][] = new int[2][3]; //2Çà 3¿­
+		
+		
+		// ÃÊ±âÈ­
 		scores[0][0] = 15;
 		scores[0][1] = 25;
 		scores[0][2] = 35;
-
+		
 		scores[1][0] = 45;
 		scores[1][1] = 55;
 		scores[1][2] = 65;
-
-		// í™•ì¸
-		System.out.println("ë°°ì—´ ê¸¸ì´(í–‰) : " + scores.length);
-		System.out.println("ë°°ì—´ ê¸¸ì´(ì—´) : " + scores[0].length);
-
-		for (int i = 0; i < scores.length; i++) {
-			for (int j = 0; j < scores[i].length; j++) {
+		
+		//È®ÀÎ
+		System.out.println("¹è¿­ ±æÀÌ(Çà) : "+scores.length);
+		System.out.println("¹è¿­ ±æÀÌ(¿­) : "+scores[0].length);
+		
+		
+		for(int i=0;i<scores.length;i++) {
+			for(int j=0;j<scores[i].length;j++) {
 				System.out.print(scores[i][j]+" ");
 			}
 			System.out.println();
@@ -34,10 +36,10 @@ public class ArrayTest6 {
 			System.out.println();
 		}
 		
-		
+
 		int arr[][] = {
-				{15, 25},
-				{65, 85, 95}
+				{15,25},
+				{65,85,95}
 		};
 		
 		for(int i[]:arr) {
@@ -47,10 +49,19 @@ public class ArrayTest6 {
 			System.out.println();
 		}
 		
-		//ë°°ì—´ëª… ì¶œë ¥
-		System.out.println(scores); // [[I@2a139a55 
+		//¹è¿­¸í Ãâ·Â
+		System.out.println(scores); // [[I@2a139a55
 		System.out.println(arr); // [[I@15db9742
 		
-		
 	}
+
 }
+
+
+
+
+
+
+
+
+

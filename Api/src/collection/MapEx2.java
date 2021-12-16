@@ -10,38 +10,62 @@ import java.util.Set;
 public class MapEx2 {
 	public static void main(String[] args) {
 		Map<String, String> map = new HashMap<String, String>();
-
-		map.put("id_0123", "í™ê¸¸ë™");
-		map.put("id_0124", "ì¥ê¸¸ë™");
-		map.put("id_0125", "ì†¡ê¸¸ë™");
-		map.put("id_0126", "ìµœê¸¸ë™");
-
-		// ê°€ì ¸ì˜¤ê¸°
-
-		Set<String> keys = map.keySet();
-
-		// List, Set, Map ì— ë‹´ê²¨ì§„ ë°ì´í„°ë“¤ì„ í‘œì¤€í™”ëœ ë°©ë²•ìœ¼ë¡œ ê°€ì ¸ì˜¬ ìˆ˜ ìˆë„ë¡ ì œê³µ
+		
+		//¿ä¼Ò Ãß°¡
+		map.put("id_0123", "È«±æµ¿");
+		map.put("id_0124", "Àå±æµ¿");
+		map.put("id_0125", "¼Û±æµ¿");
+		map.put("id_0126", "ÃÖ±æµ¿");
+		
+		//°¡Á®¿À±â
+		
+		Set<String> keys=map.keySet();
+		
+		//List,Set,Map ¿¡ ´ã°ÜÁø µ¥ÀÌÅÍµéÀ» Ç¥ÁØÈ­µÈ ¹æ¹ıÀ¸·Î °¡Á®¿Ã ¼ö ÀÖµµ·Ï Á¦°ø
 		Iterator<String> iter = keys.iterator();
-
-		while (iter.hasNext()) {
-			// System.out.println(iter.next());
+		
+		while(iter.hasNext()) {
+			//System.out.println(iter.next());
 			String userId = iter.next();
-			String value = map.get(userId);
-			System.out.println(userId + " : " + value);
+			String value=map.get(userId);
+			System.out.println(userId+" : "+value);
 		}
 		
 		System.out.println();
 		
-		// Map.Entry ê°ì²´ ì‚¬ìš©
-		Set<Entry<String, String>> entrySet = map.entrySet();
+		//Map.Entry °´Ã¼ »ç¿ë
+		Set<Entry<String, String>> entrySet=map.entrySet();
 		Iterator<Entry<String, String>> iter2=entrySet.iterator();
 		
-		while (iter2.hasNext()) {
-			Entry<String, String> entry = iter2.next();
+		while(iter2.hasNext()) {
+			Entry<String, String> entry=iter2.next();
 			System.out.println(entry.getKey()+" : "+entry.getValue());
 		}
-		
-		
-		
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

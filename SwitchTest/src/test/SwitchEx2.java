@@ -2,35 +2,53 @@ package test;
 
 public class SwitchEx2 {
 	public static void main(String[] args) {
-		char grade='b';
+		char grade='B';
 		
-		// A or a => ìš°ìˆ˜íšŒì›
-		// B or b => ì¼ë°˜íšŒì›
-		// ì•„ë¬´ê²ƒë„ ì—†ìŒ => ì†ë‹˜
+		// A or a => ¿ì¼öÈ¸¿ø
+		// B or b => ÀÏ¹İÈ¸¿ø
+		// ¾Æ¹«°Íµµ ¾øÀ½ => ¼Õ´Ô
 		
 		switch (grade) {
 		case 'A':
-		case 'a':	
-			System.out.println("ìš°ìˆ˜íšŒì›");
+		case 'a':
+			System.out.println("¿ì¼öÈ¸¿ø");
 			break;
 		case 'B':
-		case 'b':	
-			System.out.println("ì¼ë°˜íšŒì›");
+		case 'b':
+			System.out.println("ÀÏ¹İÈ¸¿ø");
 			break;
 		default:
-			System.out.println("ì†ë‹˜");
-			break; //ìƒëµ ê°€ëŠ¥
+			System.out.println("¼Õ´Ô");
+			break; //»ı·« °¡´É
 		}
 		
 		System.out.println();
 		
-		//if~elseif~else ë³€ê²½
-		if (grade == 'A' || grade == 'a') {
-			System.out.println("ìš°ìˆ˜íšŒì›");
-		} else if (grade == 'B' || grade == 'b') {
-			System.out.println("ì¼ë°˜íšŒì›");
-		} else {
-			System.out.println("ì†ë‹˜");
+		//if~else if~else º¯°æ
+		if(grade=='a' || grade=='A') {
+			System.out.println("¿ì¼öÈ¸¿ø");
+		}else if(grade=='b' || grade=='B') {
+			System.out.println("ÀÏ¹İÈ¸¿ø");
+		}else {
+			System.out.println("¼Õ´Ô");
 		}
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

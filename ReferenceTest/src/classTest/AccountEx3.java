@@ -2,66 +2,81 @@ package classTest;
 
 public class AccountEx3 {
 	public static void main(String[] args) {
-		// Account3 ê°ì²´ë¥¼ 5ê°œ ìƒì„±í•˜ê³  ì‹¶ë‹¤
-//		Account3 account1 = new Account3("122-12", 250000, "í™ê¸¸ë™");
-//		Account3 account2 = new Account3("122-13", 260000, "ìž¥ê¸¸ë™");
-//		Account3 account3 = new Account3("122-14", 270000, "ê¹€ê¸¸ë™");
-//		Account3 account4 = new Account3("122-15", 280000, "ìµœê¸¸ë™");
-//		Account3 account5 = new Account3("122-12", 290000, "ì´ê¸¸ë™");
+		// Account3 °´Ã¼¸¦ 5°³ »ý¼ºÇÏ°í ½Í´Ù
+//		Account3 account1 = new Account3("122-12", 250000, "È«±æµ¿");
+//		Account3 account2 = new Account3("122-13", 260000, "Àå±æµ¿");
+//		Account3 account3 = new Account3("122-14", 270000, "±è±æµ¿");
+//		Account3 account4 = new Account3("122-15", 280000, "ÃÖ±æµ¿");
+//		Account3 account5 = new Account3("122-16", 290000, "ÀÌ±æµ¿");
+//		
+		//µ¿ÀÏÇÑ Å¸ÀÔÀ¸·Î °´Ã¼ »ý¼º½Ã È¿À²¼ºÀ» Àû¿ëÇÑ´Ù¸é?
 		
-		// ë™ì¼í•œ íƒ€ìž…ìœ¼ë¡œ ê°ì²´ ìƒì„±ì‹œ íš¨ìœ¨ì„±ì„ ì ìš©í•œë‹¤ë©´?
-		
-		// í´ëž˜ìŠ¤ ë°°ì—´
+		//Å¬·¡½º ¹è¿­
 		Account3 accArr[] = new Account3[5];
-//		System.out.println(accArr[0]); // null
+		//System.out.println(accArr[0]); // null		
 		
-		accArr[0] = new Account3("122-12", 250000, "í™ê¸¸ë™");
-		accArr[1] = new Account3("122-13", 260000, "ìž¥ê¸¸ë™");
-		accArr[2] = new Account3("122-14", 270000, "ê¹€ê¸¸ë™");
-		accArr[3] = new Account3("122-15", 280000, "ìµœê¸¸ë™");
-		accArr[4] = new Account3("122-12", 290000, "ì´ê¸¸ë™");
+		accArr[0] = new Account3("122-12", 250000, "È«±æµ¿");
+		accArr[1] = new Account3("122-13", 260000, "Àå±æµ¿");
+		accArr[2] = new Account3("122-14", 270000, "±è±æµ¿");
+		accArr[3] = new Account3("122-15", 280000, "ÃÖ±æµ¿");
+		accArr[4] = new Account3("122-16", 290000, "ÀÌ±æµ¿");
+			
 		
-		// int a,b,c,d,e,....; => int arr[]=new int[10];
+		// int a,b,c,d,e,.....; => int arr[]=new int[10];
 		// double arr[]=new double[5]; arr[0] => 0.0
 		// arr[0] print => 0
 		
-//		for (int i = 0; i < accArr.length; i++) {
-//			
+//		for(int i=0;i<accArr.length;i++) {
 //			System.out.print(accArr[i].getName()+"\t");
-//			System.out.print(accArr[i].getAccountNum()+"\t");
-//			System.out.println(accArr[i].getMoney());
+//			System.out.print(accArr[i].getAccountNo()+"\t");			
+//			System.out.println(accArr[i].getBalance());
 //		}
+		
 		accountPrint(accArr);
 		
 		System.out.println();
 		
-		for (int i = 0; i < accArr.length; i++) {
+		for(int i=0;i<accArr.length;i++) {
+			
 			Account3 account = accArr[i];
 			
-			//ìž…ê¸ˆ
-			account.add(10000);
+			//ÀÔ±Ý
+			account.deposit(10000);
 			
 			accountPrint(account);
-//			
+			
 //			System.out.print(account.getName()+"\t");
-//			System.out.print(account.getAccountNum()+"\t");
-//			System.out.println(account.getMoney());
-		}
+//			System.out.print(account.getAccountNo()+"\t");			
+//			System.out.println(account.getBalance());
+		}		
 	}
 	
 	static void accountPrint(Account3 accArr[]) {
-		for (int i = 0; i < accArr.length; i++) {
+		for(int i=0;i<accArr.length;i++) {
 			System.out.print(accArr[i].getName()+"\t");
-			System.out.print(accArr[i].getAccountNum()+"\t");
-			System.out.println(accArr[i].getMoney());
+			System.out.print(accArr[i].getAccountNo()+"\t");			
+			System.out.println(accArr[i].getBalance());
 		}
 	}
 	
 	static void accountPrint(Account3 account) {
 		System.out.print(account.getName()+"\t");
-		System.out.print(account.getAccountNum()+"\t");
-		System.out.println(account.getMoney());
-		
+		System.out.print(account.getAccountNo()+"\t");			
+		System.out.println(account.getBalance());
 	}
 	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

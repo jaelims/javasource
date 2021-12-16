@@ -6,14 +6,10 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-import java.awt.FlowLayout;
 import javax.swing.JLabel;
+import javax.swing.SwingConstants;
 import javax.swing.JButton;
 import javax.swing.JTextField;
-import java.awt.Font;
-import javax.swing.SwingConstants;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
 
 public class OrderPizza extends JFrame {
 
@@ -41,37 +37,29 @@ public class OrderPizza extends JFrame {
 	 */
 	public OrderPizza() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 650, 300);
+		setBounds(100, 100, 518, 120);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		setContentPane(contentPane);
 		contentPane.setLayout(new BorderLayout(0, 0));
+		setContentPane(contentPane);
 		
-		JLabel lblNewLabel = new JLabel("자바 피자에 오신 것을 환영합니다. 피자의 종류를 선택하시오");
+		JLabel lblNewLabel = new JLabel("\uC790\uBC14 \uD53C\uC790\uC5D0 \uC624\uC2E0 \uAC83\uC744 \uD658\uC601\uD569\uB2C8\uB2E4. \uD53C\uC790\uC758 \uC885\uB958\uB97C \uC120\uD0DD\uD558\uC2DC\uC624");
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setFont(new Font("D2Coding", Font.PLAIN, 18));
 		contentPane.add(lblNewLabel, BorderLayout.NORTH);
 		
 		JPanel panel = new JPanel();
 		contentPane.add(panel, BorderLayout.CENTER);
 		
-		JButton btnNewButton_1 = new JButton("콤보피자");
-		panel.add(btnNewButton_1);
-		btnNewButton_1.setFont(new Font("D2Coding", Font.PLAIN, 18));
-		
-		JButton btnNewButton = new JButton("포테이토피자");
+		JButton btnNewButton = new JButton("\uCF64\uBCF4\uD53C\uC790");
 		panel.add(btnNewButton);
-		btnNewButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
-		btnNewButton.setFont(new Font("D2Coding", Font.PLAIN, 18));
 		
-		JButton btnNewButton_2 = new JButton("불고기피자");
+		JButton btnNewButton_1 = new JButton("\uD3EC\uD14C\uC774\uD1A0\uD53C\uC790");
+		panel.add(btnNewButton_1);
+		
+		JButton btnNewButton_2 = new JButton("\uBD88\uACE0\uAE30\uD53C\uC790");
 		panel.add(btnNewButton_2);
-		btnNewButton_2.setFont(new Font("D2Coding", Font.PLAIN, 18));
 		
-		JLabel lblNewLabel_1 = new JLabel("개수");
+		JLabel lblNewLabel_1 = new JLabel("\uAC1C\uC218");
 		panel.add(lblNewLabel_1);
 		
 		textField = new JTextField();

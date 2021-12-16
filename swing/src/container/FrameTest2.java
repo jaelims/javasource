@@ -4,7 +4,7 @@ import javax.swing.JFrame;
 
 public class FrameTest2 extends JFrame {
 	public FrameTest2() {
-		setTitle("ìƒì† í”„ë ˆì„");
+		setTitle("»ó¼Ó ÇÁ·¹ÀÓ");
 		setSize(300, 500);
 		setVisible(true);
 	}

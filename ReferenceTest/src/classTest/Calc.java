@@ -1,28 +1,44 @@
 package classTest;
 
-// ê°™ì€ í´ë˜ìŠ¤ ë‚´ì— ë‹¤ë¥¸ ë©”ì†Œë“œ í˜¸ì¶œ
+//°°Àº Å¬·¡½º ³»¿¡ ´Ù¸¥ ¸Ş¼Òµå È£Ãâ
 public class Calc {
-	// ë§ì…ˆ
+	//µ¡¼À
 	int plus(int x, int y) {
-		return x + y;
+		return x+y;
 	}
-
-	// í‰ê· 
+	
+	//Æò±Õ
 	double avg(int x, int y) {
-		// return (x+y)/2.0;
-		// return plus(x,y)/2;
-		int sum = plus(x, y);
-		return sum / 2;
+		//return (x+y)/2;
+		//return plus(x,y)/2;
+		int sum = plus(x,y);
+		return sum/2;
 	}
-
+	
 	void execute() {
-		// í‰ê·  ë©”ì†Œë“œ í˜¸ì¶œ
-		double result = avg(7, 10);
-		// í”„ë¦°íŠ¸ ë©”ì†Œë“œ í˜¸ì¶œ
-		println("ì‹¤í–‰ê²°ê³¼ "+ result);
+		//Æò±Õ ¸Ş¼Òµå È£Ãâ
+		double result=avg(7,10);
+		//ÇÁ¸°Æ® ¸Ş¼Òµå È£Ãâ
+		println("½ÇÇà°á°ú "+result);
 	}
 	
 	void println(String msg) {
 		System.out.println(msg);
 	}
+	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -2,33 +2,39 @@ package array;
 
 public class ArrayTest8 {
 	public static void main(String[] args) {
-		// ìˆ«ì ì¹´ë“œ 45ì¥(1~45ë²ˆ)
+		// ¼ıÀÚ Ä«µå 45Àå(1~45¹ø) 
 		int card[] = new int[45];
 		
-		for (int i = 0; i < card.length; i++) {
+		for(int i=0;i<card.length;i++) {
 			card[i] = i+1;
 		}
 		
-//		for(int i:card) {
-//			card[i] = i+1;
-//		}
 		
 		for(int no:card) {
 			System.out.print(no+" ");
 		}
 		
-		System.out.println();
 		
-		// ì¹´ë“œ ì„ê¸°
-		for (int i = 0; i < card.length; i++) {
-			// ë°”ê¿€ ìœ„ì¹˜ ì„ ì •
+		// Ä«µå ¼¯±â
+		for(int i=0;i<card.length;i++) {
+			//¹Ù²Ü À§Ä¡ ¼±Á¤
 			int pos = (int)(Math.random()*45);
 			int temp = card[i];
 			card[i] = card[pos];
 			card[pos] = temp;
 		}
+		
+		System.out.println();
+		
 		for(int no:card) {
 			System.out.print(no+" ");
 		}
 	}
 }
+
+
+
+
+
+
+

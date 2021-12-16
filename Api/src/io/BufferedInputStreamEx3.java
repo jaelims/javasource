@@ -8,27 +8,34 @@ import java.io.FileOutputStream;
 public class BufferedInputStreamEx3 {
 	public static void main(String[] args) {
 		
-		// FileInputStreamë§Œ ì‚¬ìš©í•˜ëŠ” ê²½ìš° + í•œë°”ì´íŠ¸ì”©
+		//FileInputStream¸¸ »ç¿ëÇÏ´Â °æ¿ì + ÇÑ¹ÙÀÌÆ®¾¿
 		try(FileInputStream fis = new FileInputStream("c:\\temp\\picture.jpg")) {
 			long start = System.currentTimeMillis();
-			while (fis.read()!=-1) {}
-				long end = System.currentTimeMillis();
-				System.out.println("FileInputStreamë§Œ ì‚¬ìš©ì‹œ " + (end-start));
+			while(fis.read()!=-1) {	}
+			long end = System.currentTimeMillis();
+			System.out.println("FileInputSteam¸¸ »ç¿ë½Ã "+(end-start));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		
 		
-		// FileInputStream + BufferedInputStream ì‚¬ìš©í•˜ëŠ” ê²½ìš°
+		//FileInputStream + BufferedInputStream »ç¿ëÇÏ´Â °æ¿ì		
 		try(FileInputStream fis = new FileInputStream("c:\\temp\\picture.jpg");
-			BufferedInputStream bis = new BufferedInputStream(fis);) {
+			BufferedInputStream bis = new BufferedInputStream(fis)) {			
 			long start = System.currentTimeMillis();
-			while (bis.read()!=-1) {}
-				long end = System.currentTimeMillis();
-				System.out.println("FileInputStream + BufferedInputStream ì‚¬ìš©ì‹œ " + (end-start));
+			while(bis.read()!=-1) {	}
+			long end = System.currentTimeMillis();
+			System.out.println("FileInputSteam+BufferedInputStream »ç¿ë½Ã "+(end-start));
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 	}
 }
+
+
+
+
+
+

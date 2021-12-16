@@ -2,19 +2,15 @@ package shop;
 
 public class ShopEx {
 	public static void main(String[] args) {
-		MyShop ms = new MyShop();
-
-		// ìƒì  ì´ë¦„ ì§€ì •
-		ms.setTitle("ìë°”ë§ˆíŠ¸");
-
-		// ê³ ê° ìƒì„±
-		ms.genUser();
-
-		// ì œí’ˆ ìƒì„±
-		ms.genProduct();
-
-		// ìƒì  ì‹œì‘
-		ms.start();
-
+		MyShop shop = new MyShop();
+		
+		//»óÁ¡ ÀÌ¸§ ÁöÁ¤
+		shop.setTitle("Java Shop");
+		//°í°´ »ı¼º
+		shop.genUser();
+		//Á¦Ç° »ı¼º
+		shop.genProduct();
+		//»óÁ¡ ½ÃÀÛ
+		shop.start();
 	}
 }

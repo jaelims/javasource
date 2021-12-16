@@ -3,21 +3,29 @@ package classTest;
 public class CarEx2 {
 	public static void main(String[] args) {
 		
-		
-		//ì²«ë²ˆì§¸ ì°¨
-		//ê°ì²´ ìƒì„± ì‹œ ìƒì„±ì ìë™ í˜¸ì¶œë¨
+		//Ã¹¹øÂ° Â÷
+		//°´Ã¼ »ı¼º ½Ã »ı¼ºÀÚ ÀÚµ¿ È£ÃâµÊ
 		Car2 car = new Car2();
-		// ê¸°ë³¸ ì†ì„±ê°’ì€ String=>null, int=>0, boolean=>false, double=>0.0
+		// ±âº» ¼Ó¼º°ªÀº String=>null,int=>0,
+		// boolean=> false, double=>0.0
+			
 		
-		//ë‘ë²ˆì§¸ ì°¨
+		
+		//µÎ¹øÂ° Â÷
+		//°´Ã¼ »ı¼º ½Ã »ı¼ºÀÚ ÀÚµ¿ È£ÃâµÊ
 		Car2 car2 = new Car2("kona");
 
-		//ì„¸ë²ˆì§¸ ì°¨
-		Car2 car3 = new Car2("kona", "black");
+		//¼¼¹øÂ°Â÷
+		Car2 car3 = new Car2("kona","black");
 		
-		//ë„¤ë²ˆì§¸ ì°¨
-		Car2 car4 = new Car2("í˜„ëŒ€", "kona", "black", 250);
-		
-
+		//³×¹øÂ° Â÷
+		Car2 car4 = new Car2("Çö´ë","kona","black",250);		
+	
 	}
 }
+
+
+
+
+
+

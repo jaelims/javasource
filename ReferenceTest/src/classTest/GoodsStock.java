@@ -1,23 +1,19 @@
 package classTest;
 
 public class GoodsStock {
-	// ì†ì„± : ìƒí’ˆì½”ë“œ(p12345), ìž¬ê³ ìˆ˜ëŸ‰(100)
-	
+	//¼Ó¼º : »óÇ°ÄÚµå(p12345), Àç°í¼ö·®(100)
 	String code;
-	int stockNum;
+	int stockNum; // 10
 	
-	// ê¸°ëŠ¥ : ìž¬ê³ ìˆ˜ëŸ‰ ì¦ê°€(ìž…ë ¥ê°’ ìˆ˜ëŸ‰, ì¶œë ¥ê°’ì€ ì—†ìŒ), 
-	// 		ìž¬ê³ ìˆ˜ëŸ‰ ê°ì†Œ(ìž…ë ¥ê°’ ìˆ˜ëŸ‰, ì¶œë ¥ê°’ì€ í˜„ìž¬ ìž¬ê³ ìˆ˜ëŸ‰)
-	
+	//±â´É : Àç°í¼ö·® Áõ°¡(ÀÔ·Â°ª ¼ö·®, Ãâ·Â°ªÀº ¾øÀ½),
 	void addStock(int amount) {
 		stockNum += amount;
 	}
-	
+	//       Àç°í¼ö·® °¨¼Ò(ÀÔ·Â°ª ¼ö·®,Ãâ·Â°ªÀº ÇöÀç Àç°í¼ö·®)
 	int subtrackStock(int amount) {
-		if (stockNum > amount) {
+		if(stockNum > amount) {
 			stockNum -= amount;
 		}
 		return stockNum;
-	}
-	
+	}	
 }

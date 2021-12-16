@@ -2,32 +2,51 @@ package test;
 
 public class SwitchEx4 {
 	public static void main(String[] args) {
-		// 8 : ì¶œê·¼ì„ í•©ë‹ˆë‹¤.
-		// 9 : íšŒì˜ë¥¼ í•©ë‹ˆë‹¤.
-		// 10 : ì—…ë¬´ë¥¼ ë´…ë‹ˆë‹¤.
-		// ë‚˜ë¨¸ì§€ : ì™¸ê·¼ì„ ë‚˜ê°‘ë‹ˆë‹¤.
+		// 8 : Ãâ±ÙÀ» ÇÕ´Ï´Ù.
+		// 9 : È¸ÀÇ¸¦ ÇÕ´Ï´Ù.
+		// 10 : ¾÷¹«¸¦ º¾´Ï´Ù.
+		// ³ª¸ÓÁö : ¿Ü±ÙÀ» ³ª°©´Ï´Ù.
 		
-		// 8~11 ì‚¬ì´ì˜ ìˆ«ìê°€ ë‚˜ì˜¤ë„ë¡ ì‘ì„±
-		
-		// (int)(Math.random()*6) => 0~5
-		
+		// 8~11 »çÀÌÀÇ ¼ıÀÚ°¡ ³ª¿Àµµ·Ï ÀÛ¼º
+				
 		// (int)(Math.random()*4) => 0~3
 		int time = (int)(Math.random()*4)+8;
 		
 		switch (time) {
 		case 8:
-			System.out.println("ì¶œê·¼ì„ í•©ë‹ˆë‹¤.");
+			System.out.println("Ãâ±ÙÀ» ÇÕ´Ï´Ù.");
 			break;
 		case 9:
-			System.out.println("íšŒì˜ë¥¼ í•©ë‹ˆë‹¤.");
+			System.out.println("È¸ÀÇ¸¦ ÇÕ´Ï´Ù.");
 			break;
 		case 10:
-			System.out.println("ì—…ë¬´ë¥¼ ë´…ë‹ˆë‹¤.");
+			System.out.println("¾÷¹«¸¦ º¾´Ï´Ù.");
 			break;
 		default:
-			System.out.println("ì™¸ê·¼ì„ ë‚˜ê°‘ë‹ˆë‹¤.");
+			System.out.println("¿Ü±ÙÀ» ³ª°©´Ï´Ù.");
 			break;
 		}
+		
+		
 	}
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -5,6 +5,7 @@ public class Cat implements Soundable{
 	@Override
 	public String sound() {
 		// TODO Auto-generated method stub
-		return "ì•¼ì˜¹";
+		return "¾ß¿Ë";
 	}
+
 }

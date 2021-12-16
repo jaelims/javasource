@@ -6,11 +6,11 @@ public class CaptionTVEx {
 		
 		ctv.channel = 10;
 		ctv.channelUp();
-		System.out.println("í˜„ì¬ ì±„ë„" + ctv.channel);
+		System.out.println("ÇöÀç Ã¤³Î "+ctv.channel);
 		
-		ctv.displayCaption("Hell world");
+		ctv.displayCaption("Hell World");
 		ctv.caption = true;
 		ctv.displayCaption("Hell java");
-		
+
 	}
 }

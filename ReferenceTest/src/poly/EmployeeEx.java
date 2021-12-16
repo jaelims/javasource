@@ -4,27 +4,29 @@ public class EmployeeEx {
 	public static void main(String[] args) {
 		Worker worker = new Worker();
 		
+		Employee e1=new Employee();
+		e1.setName("È«±æµ¿");
+		e1.setPosition("»ç¿ø");
+		worker.work(e1);		
 		
-		Employee e1 = new Employee();
-		e1.setName("í™ê¸¸ë™");
-		e1.setPosition("ì‚¬ì›");
-		worker.work(e1);
-				
+		
 		Ceo ceo = new Ceo();
-		ceo.setName("ë°•ë³´ê²€");
-		ceo.setPosition("ì‚¬ì¥");
+		ceo.setName("¹Úº¸°Ë");
+		ceo.setPosition("»çÀå");
 		worker.work(ceo);
 		
 		Manager manager = new Manager();
-		manager.setName("ê¹€ìˆ˜ì •");
-		manager.setPosition("ê´€ë¦¬ì");
+		manager.setName("±è¼öÁ¤");
+		manager.setPosition("°ü¸®ÀÚ");
 		worker.work(manager);
 		
 		PartTime partTime = new PartTime();
-		partTime.setName("ì´ì§€í›ˆ");
-		partTime.setPosition("ì•„ë¥´ë°”ì´íŠ¸");
+		partTime.setName("ÀÌÁöÈÆ");
+		partTime.setPosition("¾Æ¸£¹ÙÀÌÆ®");
 		worker.work(partTime);
-		
-	}
 
+	}
 }
+
+
+

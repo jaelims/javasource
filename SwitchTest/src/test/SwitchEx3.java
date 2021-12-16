@@ -4,26 +4,26 @@ import java.util.Scanner;
 
 public class SwitchEx3 {
 	public static void main(String[] args) {
-		//String position = "ê³¼ì¥";
+		//String position="°úÀå";
 		
-		//position ì…ë ¥ ë°›ì€í›„ ê¸ˆì•¡ ì¶œë ¥
-		Scanner a = new Scanner(System.in);
-		System.out.print("ì§ê¸‰ : ");
-		String position = a.next();
+		//position ÀÔ·Â ¹ŞÀºÈÄ ±İ¾× Ãâ·Â
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Á÷±Ş ÀÔ·Â : ");
+		String position = sc.next();
 		
-		// position ë¶€ì¥ 700ë§Œì›, ê³¼ì¥ 500ë§Œì›, ë‚˜ë¨¸ì§€ 300ë§Œì›
-
+		//position ºÎÀå 700¸¸¿ø, °úÀå 500¸¸¿ø, ³ª¸ÓÁö 300¸¸¿ø
 		switch (position) {
-		case "ë¶€ì¥":
-			System.out.println("700ë§Œì›");
+		case "ºÎÀå":
+			System.out.println("700¸¸¿ø");
 			break;
-		case "ê³¼ì¥":
-			System.out.println("500ë§Œì›");
+		case "°úÀå":
+			System.out.println("500¸¸¿ø");
 			break;
 		default:
-			System.out.println("300ë§Œì›");
+			System.out.println("300¸¸¿ø");
 			break;
 		}
-	}
+		
 
+	}
 }

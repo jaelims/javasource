@@ -5,12 +5,14 @@ public class CarEx {
 		
 		Car car = new Car();
 		
-		car.company = "í˜„ëŒ€";
-		car.model = "KONA";
-		car.color = "red";
-		car.maxSpeed = 200;
+		car.company = "Çö´ë";
+		car.model="KONA";
+		car.color="red";
+		car.maxSpeed=200;
 		
 		car.forward();
 		
+		
+				
 	}
 }

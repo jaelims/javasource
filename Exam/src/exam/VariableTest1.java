@@ -1,32 +1,47 @@
 package exam;
 
-/* ë³€ìˆ˜ì˜ ìœ íš¨ë²”ìœ„
- * 1.ì„ ì–¸ëœ ë¸”ë¡ ë‚´ì—ì„œë§Œ ì‚¬ìš©ê°€ëŠ¥
- * 2.ë¡œì»¬(ì§€ì—­)ë³€ìˆ˜ëŠ” ë°˜ë“œì‹œ ì´ˆê¸°í™” í•´ì•¼ í•¨
+/* º¯¼öÀÇ À¯È¿¹üÀ§
+ * ¨ç ¼±¾ğµÈ ºí·Ï ³»¿¡¼­¸¸ »ç¿ë°¡´É
+ * ¨è ·ÎÄÃ(Áö¿ª)º¯¼ö´Â ¹İµå½Ã ÃÊ±âÈ­ ÇØ¾ß ÇÔ
  */
 
+
 public class VariableTest1 {
-
-	// ë³€ìˆ˜
+	
+	//º¯¼ö
 	private int num1;
-
-	// ë©”ì†Œë“œ
+	
+	//¸Ş¼Òµå
 	public static void main(String[] args) {
 		int num2 = 0;
-
-		if (num2 < 10) {
+		
+		if(num2 < 10) {
 			System.out.println(num2);
-
-			int num3 = 3;
+			
+			int num3=3;
 		}
 		
-		for (int i = 0; i < 10; i++) {
+		for(int i=0;i<10;i++) {
 			System.out.print(i+"  ");
 		}
 		
+		//System.out.println(i);
+		
 	}
-
+	
 	public void print() {
-		System.out.println(num1);
+		System.out.println(num1);		
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+

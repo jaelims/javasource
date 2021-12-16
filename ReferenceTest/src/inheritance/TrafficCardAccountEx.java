@@ -2,10 +2,10 @@ package inheritance;
 
 public class TrafficCardAccountEx {
 	public static void main(String[] args) {
-		TrafficCardAccount traffic = new TrafficCardAccount("122-12", 10000, "í™ê¸¸ë™", 
-				"122-12-133", true);
-
-		System.out.println("í˜„ì¬ì”ì•¡ : " + traffic.payTraffic("122-12-133", 1000));
+		TrafficCardAccount traffic = new TrafficCardAccount("122-14", 10000, "È«±æµ¿", 
+				"3333-44", true);
+		
+		System.out.println("ÇöÀçÀÜ¾× : "+traffic.payTrafficCard("3333-44", 1800));
 
 	}
 }

@@ -1,35 +1,42 @@
 package classTest;
 
-public class TV2 {
-	// ì†ì„±(í•„ë“œ,ë©¤ë²„ë³€ìˆ˜,í”„ë¡œí¼í‹°) => ìƒ‰ìƒ,ì „ì›ìƒíƒœ,ì±„ë„....
+public class TV2 {	
+	// ¼Ó¼º(ÇÊµå,¸â¹öº¯¼ö,ÇÁ·ÎÆÛÆ¼) => »ö»ó,Àü¿ø»óÅÂ,Ã¤³Î....
 	String color; // red,blue,black....
-	boolean power;	// on, off
+	boolean power;    // on, off
 	int channel;
 	
-	
-	// ìƒì„±ìž
+	//»ý¼ºÀÚ
 	TV2(){
-		// default(ê¸°ë³¸) ìƒì„±ìž
-		// ëª…ì‹œì ìœ¼ë¡œ ìƒì„±ìžê°€ í•˜ë‚˜ë„ ì„ ì–¸ë˜ì§€ ì•Šì•˜ë‹¤ë©´ ì»´íŒŒì¼ëŸ¬ê°€ ìžë™ìœ¼ë¡œ ë§Œë“¤ì–´ëƒ„
+		//default(±âº») »ý¼ºÀÚ
+		//¸í½ÃÀûÀ¸·Î »ý¼ºÀÚ°¡ ÇÏ³ªµµ ¼±¾ðµÇÁö ¾Ê¾Ò´Ù¸é ÄÄÆÄÀÏ·¯°¡ ÀÚµ¿À¸·Î ¸¸µé¾î³¿
 	}
-	TV2(String color, int channel) {
+	TV2(String color,int channel){
 		this.color = color;
 		this.channel = channel;
 	}
 	
 	
 	
-	// ë™ìž‘(ë©”ì†Œë“œ) => ì±„ë„ ë³€ê²½(ì¦ê°€,ê°ì†Œ)í•˜ë‹¤/ì „ì›ì„ ì¼œë‹¤/ë„ë‹¤
+	
+	
+	// µ¿ÀÛ(¸Þ¼Òµå) => Ã¤³Î º¯°æ(Áõ°¡,°¨¼Ò)ÇÏ´Ù/Àü¿øÀ» ÄÑ´Ù/²ô´Ù
 	void channelUp() {
-		// channelUp ê°€ í•´ì•¼ í•˜ëŠ” ìž‘ì—… ìž‘ì„±
-		channel++;
+		//channelUp °¡ ÇØ¾ß ÇÏ´Â ÀÛ¾÷ ÀÛ¼º ÇöÀç Ã¤³Î 7 => 8,9,10....
+		channel++;		
 	}
 	void channelDown() {
-		// channelDown ê°€ í•´ì•¼ í•˜ëŠ” ìž‘ì—… ìž‘ì„±
+		//channelDown ÀÌ ÇØ¾ß ÇÏ´Â ÀÛ¾÷ ÀÛ¼º ÇöÀç Ã¤³Î 7 => 6,5,4....
 		channel--;
 	}
+	
 	void power() {
-		// power ê°€ í•´ì•¼ í•˜ëŠ” ìž‘ì—… on => off, off => on
+		//power°¡ ÇØ¾ß ÇÏ´Â ÀÛ¾÷ on => off,  off => on
 		power = !power;
 	}
+	
 }
+
+
+
+

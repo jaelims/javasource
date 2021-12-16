@@ -5,110 +5,112 @@ import java.util.Scanner;
 
 public class EmpMain {
 	public static void main(String[] args) {
-
-		boolean run = true;
+		
+		boolean run=true;
 		Scanner sc = new Scanner(System.in);
 		EmpDAO dao = new EmpDAO();
-
-		while (run) {
-			System.out.println("======================");
-			System.out.println("1. ê°œë³„ ì¡°íšŒ");
-			System.out.println("2. ì „ì²´ ì¡°íšŒ");
-			System.out.println("3. ê¸‰ì—¬ ì˜¤ë¦„ì°¨ìˆœ ì¡°íšŒ");
-			System.out.println("4. ê¸‰ì—¬ ìˆ˜ì •");
-			System.out.println("5. ì¶”ê°€ìˆ˜ë‹¹ ìˆ˜ì •");
-			System.out.println("6. ì‹ ì…ì‚¬ì› ì…ë ¥");
-			System.out.println("7. ì‚¬ì› ì‚­ì œ");
-			System.out.println("8. ì¢…ë£Œ");
-			System.out.println("======================");
-
-			System.out.print("ì…ë ¥ >> ");
+		
+		while(run) {
+			System.out.println("=========================================");
+			System.out.println("1. °³º° Á¶È¸");
+			System.out.println("2. ÀüÃ¼ Á¶È¸");
+			System.out.println("3. ±Ş¿© ¿À¸§Â÷¼ø Á¶È¸");
+			System.out.println("4. ±Ş¿© ¼öÁ¤");
+			System.out.println("5. Ãß°¡¼ö´ç ¼öÁ¤");
+			System.out.println("6. ½ÅÀÔ»ç¿ø ÀÔ·Â");
+			System.out.println("7. »ç¿ø »èÁ¦");
+			System.out.println("8. Á¾·á");
+			System.out.println("=========================================");
+			
+			System.out.print("ÀÔ·Â >> ");
 			int no = sc.nextInt();
-
+			
 			switch (no) {
 			case 1:
-				System.out.print("ì¡°íšŒí•  ì‚¬ì›ë²ˆí˜¸ ì…ë ¥ : ");
+				System.out.print("Á¶È¸ÇÒ »ç¿ø¹øÈ£ ÀÔ·Â : ");
 				int empno = sc.nextInt();
-				EmpDTO dto = dao.getRow(empno);
-
-				if (dto == null) {
-					System.out.println("\në°ì´í„° ì—†ìŒ");
-				} else {
-					System.out.println("\nì‚¬ë²ˆ\tì´ë¦„\tì§ë¬´\të§¤ë‹ˆì €\tì…ì‚¬ì¼\t\tê¸‰ì—¬\të³´ë„ˆìŠ¤\të¶€ì„œë²ˆí˜¸");
-					System.out.print(dto.getEmpno() + "\t");
-					System.out.print(dto.getEname() + "\t");
-					System.out.print(dto.getJob() + "\t");
-					System.out.print(dto.getMgr() + "\t");
-					System.out.print(dto.getHiredate() + "\t");
-					System.out.print(dto.getSal() + "\t");
-					System.out.print(dto.getComm() + "\t");
-					System.out.println(dto.getDeptno() + "\n");
+				EmpDTO dto=dao.getRow(empno);
+				
+				if(dto==null) {
+					System.out.println("\nµ¥ÀÌÅÍ ¾øÀ½");
+				}else {
+					System.out.println("\n»ç¹ø\tÀÌ¸§\tÁ÷¹«\t¸Å´ÏÀú\tÀÔ»çÀÏ\t\t±Ş¿©\tº¸³Ê½º\tºÎ¼­¹øÈ£");
+					System.out.print(dto.getEmpno()+"\t");
+					System.out.print(dto.getEname()+"\t");
+					System.out.print(dto.getJob()+"\t");
+					System.out.print(dto.getMgr()+"\t");
+					System.out.print(dto.getHiredate()+"\t");					
+					System.out.print(dto.getSal()+"\t");
+					System.out.print(dto.getComm()+"\t");
+					System.out.println(dto.getDeptno()+"\n");
 				}
 				break;
 			case 2:
-				List<EmpDTO> list = dao.select();
-
-				System.out.println("\nì‚¬ë²ˆ\tì´ë¦„\tì§ë¬´\të§¤ë‹ˆì €\tì…ì‚¬ì¼\t\tê¸‰ì—¬\të³´ë„ˆìŠ¤\të¶€ì„œë²ˆí˜¸");
-				// ë¦¬ìŠ¤íŠ¸ì— ë“¤ì–´ ìˆëŠ” ë‚´ìš© ì¶œë ¥
-				for (EmpDTO dto1 : list) {
-					System.out.print(dto1.getEmpno() + "\t");
-					System.out.print(dto1.getEname() + "\t");
-					System.out.print(dto1.getJob() + "\t");
-					System.out.print(dto1.getMgr() + "\t");
-					System.out.print(dto1.getHiredate() + "\t");
-					System.out.print(dto1.getSal() + "\t");
-					System.out.print(dto1.getComm() + "\t");
-					System.out.print(dto1.getDeptno() + "\n");
+				List<EmpDTO> list=dao.select();
+				
+				
+				System.out.println("\n»ç¹ø\tÀÌ¸§\tÁ÷¹«\t¸Å´ÏÀú\tÀÔ»çÀÏ\t\t±Ş¿©\tº¸³Ê½º\tºÎ¼­¹øÈ£");
+				//¸®½ºÆ®¿¡ µé¾î ÀÖ´Â ³»¿ë Ãâ·Â
+				for(EmpDTO dto1 : list) {
+					System.out.print(dto1.getEmpno()+"\t");
+					System.out.print(dto1.getEname()+"\t");
+					System.out.print(dto1.getJob()+"\t");
+					System.out.print(dto1.getMgr()+"\t");
+					System.out.print(dto1.getHiredate()+"\t");					
+					System.out.print(dto1.getSal()+"\t");
+					System.out.print(dto1.getComm()+"\t");
+					System.out.print(dto1.getDeptno()+"\n");
 				}
-
+				
+				
 				break;
-
 			case 3:
-				System.out.println("ì‚¬ì›ë³„ ê¸‰ì—¬ ì˜¤ë¦„ì°¨ìˆœ ì¡°íšŒ");
-				System.out.println("ì‚¬ì›ëª…\tê¸‰ì—¬");
-				list = dao.orderBySal();
-				for (EmpDTO dto2 : list) {
-					System.out.print(dto2.getEname() + "\t");
-					System.out.print(dto2.getSal() + "\n");
+				
+				System.out.println("»ç¿øº° ±Ş¿© ¿À¸§Â÷¼ø Á¶È¸");
+				System.out.println("»ç¿ø¸í\t±Ş¿©");
+				list=dao.orderBySal();
+				for(EmpDTO dto2:list) {
+					System.out.print(dto2.getEname()+"\t");
+					System.out.print(dto2.getSal()+"\n");
 				}
-				System.out.println();
-
+				System.out.println();				
 				break;
 			case 4:
-				System.out.print("\nìˆ˜ì • ì‚¬ì› ë²ˆí˜¸ : ");
+				System.out.print("\n¼öÁ¤ »ç¿ø ¹øÈ£ : ");				
 				empno = sc.nextInt();
-				System.out.print("ìˆ˜ì • ê¸‰ì—¬ : ");
-				int sal = sc.nextInt();
-				boolean updateFlag = dao.updateSal(empno, sal);
-				System.out.println(updateFlag ? "ì—…ë°ì´íŠ¸ ì„±ê³µ" : "ì—…ë°ì´íŠ¸ ì‹¤íŒ¨");
+				System.out.print("¼öÁ¤ ±Ş¿© : ");
+				int sal = sc.nextInt();			
+				boolean updateFlag=dao.updateSal(empno, sal);
+				System.out.println(updateFlag?"¾÷µ¥ÀÌÆ® ¼º°ø":"¾÷µ¥ÀÌÆ® ½ÇÆĞ");
 				System.out.println();
 				break;
 			case 5:
-				System.out.print("\nì¡°ê±´ ê¸‰ì—¬ : ");
+				System.out.print("\nÁ¶°Ç ±Ş¿© : ");
 				sal = sc.nextInt();
-				System.out.print("ì¶”ê°€ìˆ˜ë‹¹ : ");
+				System.out.print("Ãß°¡¼ö´ç : ");
 				int comm = sc.nextInt();
-				updateFlag = dao.updateComm(comm, sal);
-				System.out.println(updateFlag ? "ì—…ë°ì´íŠ¸ ì„±ê³µ" : "ì—…ë°ì´íŠ¸ ì‹¤íŒ¨");
-				System.out.println();
+				
+				updateFlag=dao.updateComm(comm, sal);
+				System.out.println(updateFlag?"¾÷µ¥ÀÌÆ® ¼º°ø":"¾÷µ¥ÀÌÆ® ½ÇÆĞ");
 				break;
 			case 6:
-				System.out.println("\n*** ì‹ ì…ì‚¬ì› ì…ë ¥ ***");
-//				System.out.print("ì‚¬ì›ë²ˆí˜¸ : ");
+				System.out.println("\n*** ½ÅÀÔ»ç¿ø ÀÔ·Â ***");
+				
+//				System.out.print("»ç¿ø¹øÈ£ : ");
 //				empno = sc.nextInt();
-//				System.out.print("ì‚¬ì›ëª… : ");
+//				System.out.print("»ç¿ø¸í : ");
 //				String ename = sc.next();
-//				System.out.print("ì§ë¬´ : ");
+//				System.out.print("Á÷¹« : ");
 //				String job = sc.next();
-//				System.out.print("ë§¤ë‹ˆì € ë²ˆí˜¸ : ");
+//				System.out.print("¸Å´ÏÀú ¹øÈ£ : ");
 //				int mgr = sc.nextInt();
-//				System.out.print("ê¸‰ì—¬ : ");
+//				System.out.print("±Ş¿© : ");
 //				sal = sc.nextInt();
-//				System.out.print("ì¶”ê°€ìˆ˜ë‹¹ : ");
+//				System.out.print("Ãß°¡¼ö´ç : ");
 //				comm = sc.nextInt();
-//				System.out.print("ë¶€ì„œë²ˆí˜¸ : ");
+//				System.out.print("ºÎ¼­¹øÈ£ : ");
 //				int deptno = sc.nextInt();
-//
+//				
 //				EmpDTO newDto = new EmpDTO();
 //				newDto.setEmpno(empno);
 //				newDto.setEname(ename);
@@ -117,44 +119,57 @@ public class EmpMain {
 //				newDto.setSal(sal);
 //				newDto.setComm(comm);
 //				newDto.setDeptno(deptno);
-
+				
 				EmpDTO newDto = new EmpDTO();
-
-				System.out.print("ì‚¬ì›ë²ˆí˜¸ : ");
+				
+				System.out.print("»ç¿ø¹øÈ£ : ");
 				newDto.setEmpno(sc.nextInt());
-				System.out.print("ì‚¬ì›ëª… : ");
+				System.out.print("»ç¿ø¸í : ");
 				newDto.setEname(sc.next());
-				System.out.print("ì§ë¬´ : ");
+				System.out.print("Á÷¹« : ");
 				newDto.setJob(sc.next());
-				System.out.print("ë§¤ë‹ˆì € ë²ˆí˜¸ : ");
+				System.out.print("¸Å´ÏÀú ¹øÈ£ : ");
 				newDto.setMgr(sc.nextInt());
-				System.out.print("ê¸‰ì—¬ : ");
+				System.out.print("±Ş¿© : ");
 				newDto.setSal(sc.nextInt());
-				System.out.print("ì¶”ê°€ìˆ˜ë‹¹ : ");
+				System.out.print("Ãß°¡¼ö´ç : ");
 				newDto.setComm(sc.nextInt());
-				System.out.print("ë¶€ì„œë²ˆí˜¸ : ");
+				System.out.print("ºÎ¼­¹øÈ£ : ");
 				newDto.setDeptno(sc.nextInt());
-
-				System.out.println(dao.insertEmp(newDto) ? "ì‚¬ì› ì¶”ê°€ ì„±ê³µ" : "ì‚¬ì› ì¶”ê°€ ì‹¤íŒ¨");
-
+										
+				System.out.println(dao.insertEmp(newDto)?"»ç¿ø Ãß°¡ ¼º°ø":"»ç¿ø Ãß°¡ ½ÇÆĞ");
+				
+				
 				break;
 			case 7:
-				System.out.println("\n*** ì‚¬ì› ì‚­ì œ ***");
-				System.out.print("ì‚­ì œí•  ì‚¬ì› ë²ˆí˜¸ : ");
+				
+				System.out.println("\n*** »ç¿ø »èÁ¦ ****");
+				System.out.print("»èÁ¦ ÇÒ »ç¿ø ¹øÈ£ : ");
 				empno = sc.nextInt();
-				System.out.println(dao.deleteEmp(empno) ? "ì‚¬ì› ì‚­ì œ ì„±ê³µ" : "ì‚¬ì› ì‚­ì œ ì‹¤íŒ¨");
+				System.out.println(dao.deleteEmp(empno)?"»ç¿ø »èÁ¦ ¼º°ø":"»ç¿ø »èÁ¦ ½ÇÆĞ");
 				System.out.println();
-
+				
 				break;
 			case 8:
 				run = false;
 				break;
 			default:
-				System.out.println("ë²ˆí˜¸ë¥¼ í™•ì¸í•´ ì£¼ì„¸ìš”");
+				System.out.println("¹øÈ£¸¦ È®ÀÎÇØ ÁÖ¼¼¿ä");
 				break;
 			}
+			
 		}
+		
+		
 
 	}
-
 }
+
+
+
+
+
+
+
+
+

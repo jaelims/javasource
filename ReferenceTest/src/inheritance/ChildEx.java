@@ -2,13 +2,14 @@ package inheritance;
 
 public class ChildEx {
 	public static void main(String[] args) {
-		// Child ê°ì²´ ìƒì„± => 2ê°€ì§€
+		// Child °´Ã¼ »ý¼º => 2°¡Áö
 		
-		// ê°ì²´ ìƒì„±
-		// 1) super();	  => Object ìƒì„±ìž í˜¸ì¶œ
-		// 2) this.age 	  = age
-		// 3) super(age); => Parent ìƒì„±ìž í˜¸ì¶œ
-		// 4) Child ê°ì²´ ìƒì„±
+		// °´Ã¼ »ý¼º
+		// 
+		// 1) super(); => Object »ý¼ºÀÚ È£Ãâ
+		// 2) this.age = age
+		// 3) super(age);	=> Parent »ý¼ºÀÚ È£Ãâ
+		// 4) Child °´Ã¼ »ý¼º
 		
 		Child child = new Child(25);
 		System.out.println("child age "+child.getAge());
@@ -17,8 +18,15 @@ public class ChildEx {
 		
 		Parent parent = new Child(26);
 		System.out.println("child age "+parent.getAge());
-		// parent.play(); ëª»ë¶€ë¦„
+		// parent.play(); ¸øºÎ¸§
 		parent.print();
-		
 	}
 }
+
+
+
+
+
+
+
+

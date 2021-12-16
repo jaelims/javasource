@@ -2,13 +2,14 @@ package inheritance;
 
 public class CheckingAccountEx {
 	public static void main(String[] args) {
-		CheckingAccount checkingAccount = new CheckingAccount("122-12", 200000, "í™ê¸¸ë™", "122-12-133");
-
-		// ì¹´ë“œ ë²ˆí˜¸ ì•ˆë§ëŠ” ê²½ìš°
-		// System.out.println(checkingAccount.payCard("122-12", 50000));
-
-		// ì¹´ë“œ ë²ˆí˜¸ ë§ëŠ” ê²½ìš°
-		System.out.println("í˜„ì¬ ì”ì•¡ " + checkingAccount.payCard("122-12-133", 50000));
+		// CheckingAccount(String accountNo, int balance, String name,String cardNo)
+		CheckingAccount checkingAccount = new CheckingAccount("122-12",200000,"È«±æµ¿","122-12-133");
+		
+		//Ä«µå ¹øÈ£ ¾È¸Â´Â °æ¿ì
+		//System.out.println(checkingAccount.pay("322-12", 20000));
+		
+		//Ä«µå ¹øÈ£ ¸Â´Â °æ¿ì
+		System.out.println("ÇöÀç ÀÜ¾× "+checkingAccount.pay("122-12-133", 20000));
 
 	}
 }

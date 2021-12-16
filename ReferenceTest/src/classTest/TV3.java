@@ -1,32 +1,27 @@
 package classTest;
 
-public class TV3 {
-	// ì†ì„±(í•„ë“œ,ë©¤ë²„ë³€ìˆ˜,í”„ë¡œí¼í‹°) => ìƒ‰ìƒ,ì „ì›ìƒíƒœ,ì±„ë„....
-	private String color;
-	private boolean power;
+public class TV3 {	
+	
+	private String color; 
+	private boolean power;    
 	private int channel;
 	
-	
-	// ìƒì„±ìž
+	//»ý¼ºÀÚ
 	TV3(){
-		// default(ê¸°ë³¸) ìƒì„±ìž
-		// ëª…ì‹œì ìœ¼ë¡œ ìƒì„±ìžê°€ í•˜ë‚˜ë„ ì„ ì–¸ë˜ì§€ ì•Šì•˜ë‹¤ë©´ ì»´íŒŒì¼ëŸ¬ê°€ ìžë™ìœ¼ë¡œ ë§Œë“¤ì–´ëƒ„
+		//default(±âº») »ý¼ºÀÚ
+		//¸í½ÃÀûÀ¸·Î »ý¼ºÀÚ°¡ ÇÏ³ªµµ ¼±¾ðµÇÁö ¾Ê¾Ò´Ù¸é ÄÄÆÄÀÏ·¯°¡ ÀÚµ¿À¸·Î ¸¸µé¾î³¿
 	}
-	TV3(String color, int channel) {
+	TV3(String color,int channel){
 		this.color = color;
 		this.channel = channel;
-	}
-	
+	}	
 	public TV3(String color, boolean power, int channel) {
 		super();
 		this.color = color;
 		this.power = power;
 		this.channel = channel;
 	}
-	
-	// getter : í˜„ìž¬ ë©¤ë²„ë³€ìˆ˜ì˜ ìƒíƒœë¥¼ ì•Œê³  ì‹¶ë‹¤
-	// setter : í˜„ìž¬ ë©¤ë²„ë³€ìˆ˜ì˜ ìƒíƒœë¥¼ ë³€ê²½í•˜ê³  ì‹¶ë‹¤
-	
+		
 	public String getColor() {
 		return color;
 	}
@@ -45,19 +40,23 @@ public class TV3 {
 	public void setChannel(int channel) {
 		this.channel = channel;
 	}
-	
-	
-	// ë™ìž‘(ë©”ì†Œë“œ) => ì±„ë„ ë³€ê²½(ì¦ê°€,ê°ì†Œ)í•˜ë‹¤/ì „ì›ì„ ì¼œë‹¤/ë„ë‹¤
+	// µ¿ÀÛ(¸Þ¼Òµå) => Ã¤³Î º¯°æ(Áõ°¡,°¨¼Ò)ÇÏ´Ù/Àü¿øÀ» ÄÑ´Ù/²ô´Ù
 	void channelUp() {
-		// channelUp ê°€ í•´ì•¼ í•˜ëŠ” ìž‘ì—… ìž‘ì„±
-		channel++;
+		//channelUp °¡ ÇØ¾ß ÇÏ´Â ÀÛ¾÷ ÀÛ¼º ÇöÀç Ã¤³Î 7 => 8,9,10....
+		channel++;		
 	}
 	void channelDown() {
-		// channelDown ê°€ í•´ì•¼ í•˜ëŠ” ìž‘ì—… ìž‘ì„±
+		//channelDown ÀÌ ÇØ¾ß ÇÏ´Â ÀÛ¾÷ ÀÛ¼º ÇöÀç Ã¤³Î 7 => 6,5,4....
 		channel--;
 	}
+	
 	void power() {
-		// power ê°€ í•´ì•¼ í•˜ëŠ” ìž‘ì—… on => off, off => on
+		//power°¡ ÇØ¾ß ÇÏ´Â ÀÛ¾÷ on => off,  off => on
 		power = !power;
 	}
+	
 }
+
+
+
+

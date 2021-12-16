@@ -11,29 +11,33 @@ public class FrameTest3 extends JFrame{
 		setTitle("MyFrame");
 		setSize(300, 300);
 		
-		// ì»´í¬ë„ŒíŠ¸ : JButton, JCheckBox, JRadio, .....
+		//ÄÄÆ÷³ÍÆ®:JButton,JCheckBox,JRadio,.....
 		
-		JButton btn1 = new JButton("ë²„íŠ¼1");
+		JButton btn1 = new JButton("¹öÆ°1");
 		add(btn1,BorderLayout.EAST);
 		
-		JButton btn2 = new JButton("ë²„íŠ¼2");
-		add(btn2,BorderLayout.SOUTH);
+		JButton btn2 = new JButton("¹öÆ°2");
+		add(btn2,BorderLayout.SOUTH);		
 		
-		JButton btn3 = new JButton("ë²„íŠ¼3");
+		JButton btn3 = new JButton("¹öÆ°3");
 		add(btn3,BorderLayout.WEST);
 		
-		JButton btn4 = new JButton("ë²„íŠ¼4");
+		JButton btn4 = new JButton("¹öÆ°4");
 		add(btn4,BorderLayout.NORTH);
 		
-		JButton btn5 = new JButton("ë²„íŠ¼5");
+		JButton btn5 = new JButton("¹öÆ°5");
 		add(btn5,BorderLayout.CENTER);
 		
 		setVisible(true);
 	}
-	
+
 	public static void main(String[] args) {
 		FrameTest3 f = new FrameTest3();
-		
+
 	}
 
 }
+
+
+
+

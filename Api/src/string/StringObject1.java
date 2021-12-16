@@ -3,11 +3,11 @@ package string;
 public class StringObject1 {
 	public static void main(String[] args) {
 		
-		//ì¶•ì•½ë°©ë²•
-		String str1 = "ì•ˆë…•í•˜ì„¸ìš”";
+		//Ãà¾à¹æ¹ı
+		String str1 = "¾È³çÇÏ¼¼¿ä";
 		
-		//ì •ì‹ë°©ë²•
-		String str2 = new String("ì•ˆë…•í•˜ì„¸ìš”");
+		//Á¤½Ä¹æ¹ı
+		String str2 = new String("¾È³çÇÏ¼¼¿ä");
 		
 		char[] value= {'a','b','c','d','e'};
 		String str3 = new String(value);

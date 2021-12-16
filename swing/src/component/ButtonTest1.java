@@ -16,9 +16,8 @@ import javax.swing.ImageIcon;
 public class ButtonTest1 extends JFrame implements ActionListener{
 
 	private JPanel contentPane;
-	private JButton left;
-	private JButton middle;
-	private JButton right;
+	private JButton left,middle,right;
+
 	/**
 	 * Launch the application.
 	 */
@@ -53,16 +52,16 @@ public class ButtonTest1 extends JFrame implements ActionListener{
 		left.setMnemonic('D');
 		contentPane.add(left);
 		
-		middle = new JButton("Middle button");
+		middle = new JButton("Middle Button");
 		middle.setActionCommand("middle");
 		middle.addActionListener(this);
 		middle.setIcon(new ImageIcon(ButtonTest1.class.getResource("/component/middle.gif")));
 		middle.setMnemonic('M');
 		contentPane.add(middle);
 		
-		right = new JButton("Enable middle button");
+		right = new JButton("Enable middle Button");
 		right.setActionCommand("enable");
-		right.addActionListener(this);
+		right.addActionListener(this);		
 		right.setIcon(new ImageIcon(ButtonTest1.class.getResource("/component/right.gif")));
 		right.setMnemonic('E');
 		contentPane.add(right);
@@ -73,24 +72,39 @@ public class ButtonTest1 extends JFrame implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		String cmd = e.getActionCommand();
-		System.out.println(cmd);
-		if (cmd.equals("disable")) { // middle ë²„íŠ¼ ë¹„í™œì„±í™”
-			// disable ë²„íŠ¼ í´ë¦­ì´ ë˜ë©´
+		//System.out.println(cmd);
+		
+		
+		// disable ¹öÆ° Å¬¸¯ÀÌ µÇ¸é
+		if(cmd.equals("disable")) {
+			// middle ¹öÆ° ºñÈ°¼ºÈ­
 			middle.setEnabled(false);
-			// disable ë²„íŠ¼ ë¹„í™œì„±í™”
+			// disable ¹öÆ° ºñÈ°¼ºÈ­
 			left.setEnabled(false);
-			// enable ë²„íŠ¼ í™œì„±í™”
+			// enable ¹öÆ° È°¼ºÈ­
 			right.setEnabled(true);
-		} else if (cmd.equals("enable")) { // enable ë²„íŠ¼ í´ë¦­
-			// middle ë²„íŠ¼ í™œì„±í™”
+		}else { // enable ¹öÆ° Å¬¸¯		
+		
+			// middle ¹öÆ° È°¼ºÈ­
 			middle.setEnabled(true);
-			// disable ë²„íŠ¼ í™œì„±í™”
+			// disable ¹öÆ° È°¼ºÈ­
 			left.setEnabled(true);
-			// enable ë²„íŠ¼ ë¹„í™œì„±í™”
+			// enable ¹öÆ° ºñÈ°¼ºÈ­
 			right.setEnabled(false);
 		}
-		
-		
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

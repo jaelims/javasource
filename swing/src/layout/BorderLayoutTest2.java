@@ -6,43 +6,49 @@ import java.awt.Container;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
-//ìƒ,í•˜,ì¢Œ,ìš°,ê°€ìš´ë°
-//BorderLayout.EAST
-//BorderLayout.WEST
-//BorderLayout.CENTER
-//BorderLayout.NORTH
-//BorderLayout.SOUTH
+/*»ó,ÇÏ,ÁÂ,¿ì,°¡¿îµ¥
+	BorderLayout.EAST
+	BorderLayout.WEST
+	BorderLayout.CENTER
+	BorderLayout.NORTH
+	BorderLayout.SOUTH 
+ */
 
 public class BorderLayoutTest2 extends JFrame{
 	
 	public BorderLayoutTest2() {
-		setTitle("BorderLayout í…ŒìŠ¤íŠ¸");
+		setTitle("BorderLayout Å×½ºÆ®");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
-		// ê¸°ë³¸ ë ˆì´ì•„ì›ƒ BorderLayout
+		//±âº» ·¹ÀÌ¾Æ¿ô BorderLayout
 		Container container = getContentPane();
 		container.setLayout(new BorderLayout(30, 20));
 		
-		JButton btn1 = new JButton("ë²„íŠ¼1");
+		
+		
+		JButton btn1 = new JButton("¹öÆ°1");
 		add(btn1,BorderLayout.EAST);
 		
-		JButton btn2 = new JButton("ë²„íŠ¼2");
-		add(btn2,BorderLayout.WEST);
+		JButton btn2 = new JButton("¹öÆ°2");
+		add(btn2,BorderLayout.WEST);		
 		
-		JButton btn3 = new JButton("ë²„íŠ¼3");
+		JButton btn3 = new JButton("¹öÆ°3");
 		add(btn3,BorderLayout.CENTER);
 		
-		JButton btn4 = new JButton("ë²„íŠ¼4");
-		add(btn4,BorderLayout.NORTH);
+		JButton btn4 = new JButton("¹öÆ°4");
+		add(btn4,BorderLayout.SOUTH);
 		
-		JButton btn5 = new JButton("ë²„íŠ¼5");
-		add(btn5,BorderLayout.SOUTH);
+		JButton btn5 = new JButton("¹öÆ°5");
+		add(btn5,BorderLayout.NORTH);		
 		
 		setSize(300, 300);
 		setVisible(true);
 	}
 	
+
 	public static void main(String[] args) {
 		BorderLayoutTest2 f = new BorderLayoutTest2();
+
 	}
+
 }

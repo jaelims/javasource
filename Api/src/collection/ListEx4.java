@@ -3,24 +3,32 @@ package collection;
 import java.util.LinkedList;
 import java.util.List;
 
-/* ArrayList vs LinkedList
- * - ìˆœì°¨ì ìœ¼ë¡œ ì¶”ê°€/ì‚­ì œ ì‹œ ArrayListê°€ ì¢€ ë” ë¹ ë¦„
- * - ì¤‘ê°„ ë°ì´í„°ë¥¼ ì¶”ê°€/ì‚­ì œ ì‹œ LinkedListê°€ ì¢€ ë” ë¹ ë¦„
+/* ArrayList vs LinkendList
+ * - ¼øÂ÷ÀûÀ¸·Î Ãß°¡/»èÁ¦ ½Ã ArrayList Á» ´õ ºü¸§
+ * - Áß°£ µ¥ÀÌÅÍ¸¦ Ãß°¡/»èÁ¦ ½Ã LinkedList°¡ Á» ´õ ºü¸§
  */
-
 public class ListEx4 {
 	public static void main(String[] args) {
-		List<String> list = new LinkedList<>();
+		List<String> list = new LinkedList<String>();
 		
-		//ì¶”ê°€
-		list.add("ì‚¬ê³¼");
-		list.add("ë°°");
-		list.add("ë³µìˆ­ì•„");
-		list.add("ë”¸ê¸°");
-		list.add("ìˆ˜ë°•");
-		list.add("ë°”ë‚˜ë‚˜");
+		//Ãß°¡
+		list.add("»ç°ú");
+		list.add("¹è");
+		list.add("º¹¼ş¾Æ");
+		list.add("µş±â");
+		list.add("¼ö¹Ú");
+		list.add("¹Ù³ª³ª");
 		
 		System.out.println(list);
-		
 	}
 }
+
+
+
+
+
+
+
+
+
+

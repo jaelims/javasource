@@ -1,22 +1,22 @@
 package classTest;
 
-// final : ìˆ˜ì •ë¶ˆê°€ / ì´ˆê¸°í™” ë¬´ì¡°ê±´ í•„ìš”
-// ì‚¬ìš©ë˜ëŠ” ê³³ : í´ë˜ìŠ¤, ë©”ì†Œë“œ, ë©¤ë²„ë³€ìˆ˜, ì§€ì—­ë³€ìˆ˜
-// í´ë˜ìŠ¤ : ìƒì† ë¶ˆê°€
-// ë©”ì†Œë“œ : ì˜¤ë²„ë¼ì´ë”© ë¶ˆê°€
-// ë©¤ë²„ë³€ìˆ˜, ì§€ì—­ë³€ìˆ˜ : ìˆ˜ì • ë¶ˆê°€
+// final : ¼öÁ¤ºÒ°¡ / ÃÊ±âÈ­ ¹«Á¶°Ç ÇÊ¿ä
+// »ç¿ëµÇ´Â °÷ : Å¬·¡½º,¸Ş¼­µå,¸â¹öº¯¼ö,Áö¿ªº¯¼ö
+// Å¬·¡½º : »ó¼Ó ºÒ°¡
+// ¸Ş¼Òµå : ¿À¹ö¶óÀÌµù ºÒ°¡
+// ¸â¹öº¯¼ö, Áö¿ªº¯¼ö : ¼öÁ¤ ºÒ°¡
 
 
 public class Person {
 	final String nation = "Korea";
-	final String ssn; // The blank final field ssn may not have been initialized
+	final String ssn; //The blank final field ssn may not have been initialized
 	String name;
 	
 	public Person(String ssn, String name) {
 		super();
 		this.ssn = ssn;
 		this.name = name;
-	}
+	}	
 	
 	
 }

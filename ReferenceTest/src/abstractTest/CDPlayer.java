@@ -3,13 +3,13 @@ package abstractTest;
 public class CDPlayer extends Player {
 
 	@Override
-	void play(int pos) {
-		System.out.println(pos + " ë¶€ë¶„ì—ì„œ ì¬ìƒ");
+	void play(int pos) {		
+		System.out.println(pos+" ºÎºĞ¿¡¼­ Àç»ı");
 	}
 
 	@Override
-	void stop() {
-		System.out.println("ì¬ìƒ ë©ˆì¶¤");
+	void stop() {		
+		System.out.println("Àç»ı ¸ØÃã");
 	}
 
 }

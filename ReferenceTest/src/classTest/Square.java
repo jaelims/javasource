@@ -1,14 +1,13 @@
 package classTest;
 
 public class Square {
-	// ì •ì‚¬ê°í˜• ë©´ì 
+	//Á¤»ç°¢Çü ¸éÀû
 	
-	// ì†ì„±
-	// ê¸°ëŠ¥ : ë©´ì êµ¬í•˜ê¸°
+	//¼Ó¼º : ÇÑº¯
+	int sideLength;
 	
-	double line;
-	
+	//±â´É : ¸éÀû±¸ÇÏ±â
 	double getArea() {
-		return line * line;
+		return sideLength * sideLength;
 	}
 }

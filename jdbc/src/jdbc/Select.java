@@ -8,50 +8,64 @@ import java.sql.SQLException;
 
 public class Select {
 	public static void main(String[] args) {
+		
 		Connection con = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
-
+		
 		try {
 			Class.forName("oracle.jdbc.OracleDriver");
-
+			
 			String url = "jdbc:oracle:thin:@localhost:1521:xe";
 			String user = "c##scott";
 			String password = "tiger";
-
-			con = DriverManager.getConnection(url, user, password);
-
-			if (con != null) {
-				System.out.println("ì—°ê²°ë˜ì—ˆìŠµë‹ˆë‹¤.");
-
-				// sql êµ¬ë¬¸ì„ ìž‘ì„± => emp í…Œì´ë¸”ì˜ ëª¨ë“  ë°ì´í„° ì¡°íšŒ
-				String sql = "SELECT * FROM emp";
-
-				// sql êµ¬ë¬¸ì„ ë°ì´í„°ë² ì´ìŠ¤ ì„œë²„ë¡œ ì „ì†¡
-				pstmt = con.prepareStatement(sql);
-
-				// sql êµ¬ë¬¸ì´ ì‹¤í–‰ëœ ê²°ê³¼ë¥¼ ë°›ì•„ì˜¤ê¸°
-				rs = pstmt.executeQuery();
-
-				// ë°›ì•„ì˜¨ ê²°ê³¼ë¥¼ í™”ë©´ì— ì¶œë ¥
-				System.out.println("empno	ename	job	mgr	hiredate	sal	comm	deptno");
-				while(rs.next()) { // ResultSet ê°ì²´ ì•ˆì— ì½ì–´ì˜¬ ë‚´ìš©ì´ ìžˆìœ¼ë©´ true
-					System.out.print(rs.getInt("empno")+"\t"); // number
-					System.out.print(rs.getString("ename")+"\t"); // varchar2
-					System.out.print(rs.getString("job")+"\t"); 
-					System.out.print(rs.getInt("mgr")+"\t"); // number
+			
+			con=DriverManager.getConnection(url, user, password);
+			
+			if(con!=null) {
+				System.out.println("¿¬°áµÇ¾ú½À´Ï´Ù.");
+				
+				//sql ±¸¹®À» ÀÛ¼º =>  emp Å×ÀÌºíÀÇ ¸ðµç µ¥ÀÌÅÍ Á¶È¸
+				String sql = "SELECT * FROM emp";				
+				
+				//sql ±¸¹®À» µ¥ÀÌÅÍº£ÀÌ½º ¼­¹ö·Î Àü¼Û
+				pstmt = con.prepareStatement(sql);				
+				
+				//sql ±¸¹®ÀÌ ½ÇÇàµÈ °á°ú¸¦ ¹Þ¾Æ¿À±â
+				rs = pstmt.executeQuery();			
+				
+				//¹Þ¾Æ¿Â °á°ú¸¦ È­¸é¿¡ Ãâ·Â
+				System.out.println("empno   ename   job   mgr   hiredate   sal   comm  deptno");
+				
+				while(rs.next()) { //ResultSet °´Ã¼ ¾È¿¡ ÀÐ¾î¿Ã ³»¿ëÀÌ ÀÖÀ¸¸é true
+					System.out.print(rs.getInt("empno")+"\t"); //number
+					System.out.print(rs.getString("ename")+"\t"); //varchar2
+					System.out.print(rs.getString("job")+"\t");
+					System.out.print(rs.getInt("mgr")+"\t"); //number
 					System.out.print(rs.getDate("hiredate")+"\t"); // Date
 					System.out.print(rs.getInt("sal")+"\t");
 					System.out.print(rs.getInt("comm")+"\t");
 					System.out.println(rs.getInt("deptno"));
-				}
-				
-
+				}				
 			}
-		} catch (ClassNotFoundException e) {
+		} catch (ClassNotFoundException e) {			
 			e.printStackTrace();
-		} catch (SQLException e) {
+		} catch (SQLException e) {			
 			e.printStackTrace();
 		}
+
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

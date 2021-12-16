@@ -3,7 +3,9 @@ package classTest;
 public class SquareEx {
 	public static void main(String[] args) {
 		Square square1 = new Square();
-		square1.line = 3;
-		System.out.println("ë©´ì  : " + square1.getArea());
+		square1.sideLength = 5;
+		System.out.println("Á¤»ç°¢Çü ¸éÀû : "+square1.getArea());
+
 	}
+
 }

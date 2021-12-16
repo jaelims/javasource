@@ -1,12 +1,12 @@
 package poly;
 
-public class Circle extends Shape {
-	Point center; // ì›ì˜ ì›ì ì¢Œí‘œ
-	int r; // ë°˜ì§€ë¦„
+public class Circle extends Shape{	
+	Point center; //¿øÀÇ ¿øÁ¡ÁÂÇ¥
+	int r; //¹İÁö¸§
 	
 	public Circle() {
-		this(new Point(0,0), 100);
-	}
+		this(new Point(0,0),100);
+	}	
 	
 	public Circle(Point center, int r) {
 		super();
@@ -16,6 +16,7 @@ public class Circle extends Shape {
 
 	@Override
 	void draw() {
-		System.out.printf("[center=(%d, %d), r=%d, color=%s]\n", center.x,center.y,r,color);
+		System.out.printf("[center=(%d, %d), r=%d, color=%s]\n",center.x,center.y,r,color);
 	}
+	
 }

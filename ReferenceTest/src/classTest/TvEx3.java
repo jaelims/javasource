@@ -2,29 +2,41 @@ package classTest;
 
 public class TvEx3 {
 	public static void main(String[] args) {
-		// TV3 ê°ì²´ë¥¼ 3ê°œ ìƒì„±í•˜ê³  ì‹¶ë‹¤
+		// TV3 °´Ã¼¸¦ 3°³ »ı¼ºÇÏ°í ½Í´Ù
 //		TV3 tv1 = new TV3();
 //		TV3 tv2 = new TV3();
 //		TV3 tv3 = new TV3();
-
-		// => ë°°ì—´
-		TV3 tvArr[] = new TV3[3]; // int arr[] = new int[3];
 		
-		tvArr[0] = new TV3("ë¹¨ê°•", true, 5);
-		tvArr[1] = new TV3("ê²€ì •", false, 6);
-		tvArr[2] = new TV3("í°ìƒ‰", true, 2);
+		//=> ¹è¿­
+		TV3 tvArr[]=new TV3[3];  // int arr[]=new int[3];
+		
+		tvArr[0] = new TV3("»¡°­",true,5);
+		tvArr[1] = new TV3("°ËÁ¤",false,6);
+		tvArr[2] = new TV3("Èò»ö",true,2);
 		
 		printArr(tvArr);
 	}
 	
 	static void printArr(TV3 tvArr[]) {
-		//tvArrì— ë“¤ì–´ìˆëŠ” ê°ì²´ì˜ ë‚´ìš©ì„ ì¶œë ¥
-		for (int i = 0; i < tvArr.length; i++) {
-			System.out.println("TV ìƒ‰ìƒ " + tvArr[i].getColor());
-			System.out.println("TV ì „ì› " + tvArr[i].isPower());
-			System.out.println("TV ì±„ë„ " + tvArr[i].getChannel());
+		//tvArr¿¡ µé¾îÀÖ´Â °´Ã¼ÀÇ ³»¿ëÀ» Ãâ·Â
+		for(int i=0;i<tvArr.length;i++) {
+			System.out.println("TV »ö»ó "+tvArr[i].getColor());
+			System.out.println("TV Àü¿ø "+tvArr[i].isPower());
+			System.out.println("TV Ã¤³Î "+tvArr[i].getChannel());
 			System.out.println();
 		}
 	}
-	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

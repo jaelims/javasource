@@ -1,53 +1,76 @@
 package classTest;
 
 /*
- * ë¦¬í„´íƒ€ì… ë©”ì†Œë“œëª…(.....){
+ * ¸®ÅÏÅ¸ÀÔ ¸Ş¼Òµå¸í(.....){
  * 
- * 		ë¦¬í„´íƒ€ì…ì´ void ì¸ ê²ƒì„ ì œì™¸í•œë‹¤ë©´
- * 		ë¬´ì¡°ê±´ return í‚¤ì›Œë“œê°€ ë“¤ì–´ì™€ì•¼ í•¨
+ * 		¸®ÅÏÅ¸ÀÔÀÌ void ÀÎ °ÍÀ» Á¦¿ÜÇÑ´Ù¸é
+ * 	    ¹«Á¶°Ç return Å°¿öµå°¡ µé¾î¿Í¾ß ÇÔ
+ * 
  * }
+ * 
+ * 
  */
-
 public class MethodTest1 {
-	// ë¦¬í„´ê°’ì´ true/false ë©”ì†Œë“œ ìƒì„± => boolean
+	// ¸®ÅÏ°ªÀÌ true/false ¸Ş¼Òµå »ı¼º => boolean
 	boolean isRedirect() {
-		return false;
-	}
-
-	// ë¦¬í„´ê°’ì´ int íƒ€ì…ì¸ ë©”ì†Œë“œ
+		return false;		
+	}	
+	
+	// ¸®ÅÏ°ªÀÌ int Å¸ÀÔÀÎ ¸Ş¼Òµå
 	int sum() {
 		return 3;
-	}
-
-	// ë¦¬í„´ê°’ì´ int, ë‘ ê°œì˜ ì „ë‹¬ì¸ì(int)ë¥¼ ë°›ê¸°
-	int multiply(int num1, int num2) {
-		return num1 * num2;
-	}
-
-	// ë¦¬í„´ê°’: long, ë‘ ê°œì˜ ì „ë‹¬ì¸ì(int)ë¥¼ ë°›ê¸°
-	long add(long num1, long num2) {
-		return num1 + num2;
-	}
-
-	// ë¦¬í„´ê°’: char ë©”ì†Œë“œ
+	}	
+	
+	// ¸®ÅÏ°ªÀÌ int, µÎ °³ÀÇ Àü´ŞÀÎÀÚ(int)¸¦ ¹Ş±â
+	int multiply(int num1,int num2) {
+		return num1*num2;
+	}	
+	
+	// ¸®ÅÏ°ª: long, µÎ °³ÀÇ Àü´ŞÀÎÀÚ(int)¸¦ ¹Ş±â
+	long add(long num1,long num2) {
+		return num1+num2;
+	}	
+	
+	// ¸®ÅÏ°ª: char ¸Ş¼Òµå
 	char method() {
 		return 'c';
 	}
-
-	void method1() { // ë„˜ê¸°ëŠ” ê°’ ì—†ìŒ
-
+	
+	void method1() { //³Ñ±â´Â °ª ¾øÀ½
+		
 	}
-
-	// ë¦¬í„´íƒ€ì… : intí˜• 1ì°¨ì› ë°°ì—´
-	// ì „ë‹¬ì¸ì : intí˜• 1ì°¨ì› ë°°ì—´
+	
+	//¸®ÅÏÅ¸ÀÔ : intÇü 1Â÷¿ø ¹è¿­
+	//Àü´ŞÀÎÀÚ : intÇü 1Â÷¿ø ¹è¿­
 	int[] print(int arr[]) {
 		return arr;
 	}
-
-	// ë¦¬í„´íƒ€ì… : double, ë§¤ê°œë³€ìˆ˜ : ë‘ê°œì˜ double
-	// í•´ì•¼í•  ì¼ : ë°›ì€ ë‘ê°œì˜ ë§¤ê°œë³€ìˆ˜ë¥¼ ë‚˜ëˆ„ê¸°í•œ ê²°ê³¼ ë¦¬í„´
-	double divide(double a, double b) {
-		return a / b;
+	
+	
+	//¸®ÅÏÅ¸ÀÔ : double, ¸Å°³º¯¼ö : µÎ°³ÀÇ double
+	//ÇØ¾ßÇÒ ÀÏ : ¹ŞÀº µÎ°³ÀÇ ¸Å°³º¯¼ö¸¦ ³ª´©±âÇÑ °á°ú ¸®ÅÏ
+	double divide(double a,double b) {
+		return a/b;
 	}
-
+	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

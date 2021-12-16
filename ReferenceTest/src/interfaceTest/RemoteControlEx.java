@@ -3,7 +3,7 @@ package interfaceTest;
 public class RemoteControlEx {
 	public static void main(String[] args) {
 		RemoteControl rc;
-//		rc = new Television();
+	//	rc = new Television();
 		rc = new Audio();
 		
 		rc.turnOn();
@@ -16,39 +16,54 @@ public class RemoteControlEx {
 //		rc.setVolume(7);
 //		rc.turnOff();
 		
-		//ìµëª… êµ¬í˜„ ê°ì²´
+		//ÀÍ¸í ±¸Çö °´Ã¼
 		RemoteControl rc1 = new RemoteControl() {
 			private int volume;
 			
 			@Override
 			public void turnOn() {
-				System.out.println("Radioë¥¼ ì¼­ë‹ˆë‹¤.");
+				System.out.println("Radio¸¦ ÄÕ´Ï´Ù.");				
 			}
 			
 			@Override
 			public void turnOff() {
-				System.out.println("Radioë¥¼ ë•ë‹ˆë‹¤.");
-				
+				System.out.println("Radio¸¦ ²ü´Ï´Ù.");				
 			}
 			
 			@Override
 			public void setVolume(int volume) {
-				
-				if (volume > RemoteControl.MAX_VOLUME) {
+				if(volume > RemoteControl.MAX_VOLUME) {
 					this.volume = RemoteControl.MAX_VOLUME;
-				}else if (volume < RemoteControl.MIN_VOLUME) {
+				}else if(volume < RemoteControl.MIN_VOLUME) {
 					this.volume = RemoteControl.MIN_VOLUME;
 				}else {
 					this.volume = volume;
-				}
-				System.out.println("Radio í˜„ìž¬ ë³¼ë¥¨ : "+this.volume);
-			}	
-		};
+				}				
+				System.out.println("Radio ÇöÀç º¼·ý : "+this.volume);				
+			}
+		}; 
 		
 		rc1.turnOn();
 		rc1.setVolume(5);
 		rc1.turnOff();
 		
-		
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

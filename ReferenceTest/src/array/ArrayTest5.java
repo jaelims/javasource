@@ -2,16 +2,17 @@ package array;
 
 public class ArrayTest5 {
 	public static void main(String[] args) {
-		// ë¬¸ì => char / 'a'
-		// ë¬¸ìì—´ => String / "a", "abc"
+		// ¹®ÀÚ => char / 'a' 
+		// ¹®ÀÚ¿­ => String / "a" , "abc"
 		
-		// char ë°°ì—´ ì„ ì–¸, ìƒì„±, ì´ˆê¸°í™”
-		char chArr[] = {'a', 'n', 's', 'w', 'e', 'r'};
-		char[] chArr2 = {'a', 'n', 's', 'w', 'e', 'r'};
+		// char ¹è¿­ ¼±¾ğ,»ı¼º,ÃÊ±âÈ­
+		char chArr[] = {'a','n','s','w','e','r'};
+		char[] chArr2 = {'a','n','s','w','e','r'};
 		
 		for(char ch:chArr) {
 			System.out.print(ch);
 		}
 		
+
 	}
 }

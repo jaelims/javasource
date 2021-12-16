@@ -3,82 +3,104 @@ package collection;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
-
-/* ArrayList vs LinkedList
- * - ìˆœì°¨ì ìœ¼ë¡œ ì¶”ê°€/ì‚­ì œ ì‹œ ArrayListê°€ ì¢€ ë” ë¹ ë¦„	 => size í¬ê²Œ ì¡ëŠ”ê²Œ ì¤‘ìš”
- * - ì¤‘ê°„ ë°ì´í„°ë¥¼ ì¶”ê°€/ì‚­ì œ ì‹œ LinkedListê°€ ì¢€ ë” ë¹ ë¦„
+/* ArrayList vs LinkendList
+ * - ¼øÂ÷ÀûÀ¸·Î Ãß°¡/»èÁ¦ ½Ã ArrayList Á» ´õ ºü¸§ => size Å©°Ô Àâ´Â°Ô Áß¿ä
+ * - Áß°£ µ¥ÀÌÅÍ¸¦ Ãß°¡/»èÁ¦ ½Ã LinkedList°¡ Á» ´õ ºü¸§
  */
-
 public class ListEx5 {
 	public static void main(String[] args) {
 		List<String> arrayList = new ArrayList<String>(2000000);
-		List<String> linkedList = new LinkedList<String>();
-
-		System.out.println("****** ìˆœì°¨ì  ì¶”ê°€ ******");
-		System.out.println("ArrayList ê±¸ë¦° ì‹œê°„ : " + add1(arrayList) + "ms");
-		System.out.println("LinkedList ê±¸ë¦° ì‹œê°„ : " + add1(linkedList) + "ms");
-
-		System.out.println();
-
-		System.out.println("****** ì¤‘ê°„ì—ì„œ ì¶”ê°€ ******");
-		System.out.println("ArrayList ê±¸ë¦° ì‹œê°„ : " + add2(arrayList) + "ms");
-		System.out.println("LinkedList ê±¸ë¦° ì‹œê°„ : " + add2(linkedList) + "ms");
+		List<String> linkedList = new LinkedList<>();
+		
+		System.out.println("****** ¼øÂ÷Àû Ãß°¡ ******");			
+		System.out.println("ArrayList °É¸° ½Ã°£ : "+add1(arrayList)+"ms");
+		System.out.println("LinkedList °É¸° ½Ã°£ : "+add1(linkedList)+"ms");
 		
 		System.out.println();
-
-		System.out.println("****** ì¤‘ê°„ì—ì„œ ì‚­ì œ ******");
-		System.out.println("ArrayList ê±¸ë¦° ì‹œê°„ : " + remove1(arrayList) + "ms");
-		System.out.println("LinkedList ê±¸ë¦° ì‹œê°„ : " + remove1(linkedList) + "ms");
+		
+		System.out.println("****** Áß°£¿¡¼­ Ãß°¡ ******");			
+		System.out.println("ArrayList °É¸° ½Ã°£ : "+add2(arrayList)+"ms");
+		System.out.println("LinkedList °É¸° ½Ã°£ : "+add2(linkedList)+"ms");
 		
 		System.out.println();
-
-		System.out.println("****** ìˆœì°¨ì ìœ¼ë¡œ ì‚­ì œ ******");
-		System.out.println("ArrayList ê±¸ë¦° ì‹œê°„ : " + remove2(arrayList) + "ms");
-		System.out.println("LinkedList ê±¸ë¦° ì‹œê°„ : " + remove2(linkedList) + "ms");
+		
+		System.out.println("****** Áß°£¿¡¼­ »èÁ¦ ******");			
+		System.out.println("ArrayList °É¸° ½Ã°£ : "+remove1(arrayList)+"ms");
+		System.out.println("LinkedList °É¸° ½Ã°£ : "+remove1(linkedList)+"ms");
+		
+		System.out.println();
+		
+		System.out.println("****** ¼øÂ÷ÀûÀ¸·Î »èÁ¦ ******");			
+		System.out.println("ArrayList °É¸° ½Ã°£ : "+remove2(arrayList)+"ms");
+		System.out.println("LinkedList °É¸° ½Ã°£ : "+remove2(linkedList)+"ms");
+		
 	}
-
-	// ìˆœì°¨ì ì¸ ì¶”ê°€
+	//¼øÂ÷ÀûÀÎ Ãß°¡
 	public static long add1(List<String> list) {
 		long start = System.currentTimeMillis();
-		for (int i = 0; i < 1000000; i++) {
-			list.add(i + "");
-
+		for(int i=0;i<1000000;i++) {
+			list.add(i+"");
 		}
 		long end = System.currentTimeMillis();
-		return end - start;
-	}
-
-	// ì¤‘ê°„ì—ì„œ ì¶”ê°€
-	public static long add2(List<String> list) {
-		long start = System.currentTimeMillis();
-		for (int i = 0; i < 10000; i++) {
-			list.add(500, "X");
-
-		}
-		long end = System.currentTimeMillis();
-		return end - start;
-	}
-
-	// ì¤‘ê°„ì—ì„œ ì‚­ì œ
-	public static long remove1(List<String> list) {
-		long start = System.currentTimeMillis();
-		for (int i = 0; i < 10000; i++) {
-			list.remove(i);
-
-		}
-		long end = System.currentTimeMillis();
-		return end - start;
+		return end-start;
 	}
 	
-	// ìˆœì°¨ì ì¸ ì‚­ì œ
-	public static long remove2(List<String> list) {
+	//Áß°£¿¡¼­ Ãß°¡
+	public static long add2(List<String> list) {
 		long start = System.currentTimeMillis();
-		for (int i = list.size()-1; i >=0; i--) {
-			list.remove(i);
-			
+		for(int i=0;i<10000;i++) {
+			list.add(500,"X");
 		}
 		long end = System.currentTimeMillis();
-		return end - start;
+		return end-start;
 	}
-
+	
+	//Áß°£¿¡¼­ »èÁ¦
+	public static long remove1(List<String> list) {
+		long start = System.currentTimeMillis();
+		for(int i=0;i<10000;i++) {
+			list.remove(i);
+		}
+		long end = System.currentTimeMillis();
+		return end-start;
+	}
+	
+	//¼øÂ÷ÀûÀÎ »èÁ¦
+	public static long remove2(List<String> list) {
+		long start = System.currentTimeMillis();
+		for(int i=list.size()-1;i>=0;i--) {
+			list.remove(i);
+		}
+		long end = System.currentTimeMillis();
+		return end-start;
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

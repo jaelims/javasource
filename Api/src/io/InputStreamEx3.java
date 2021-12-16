@@ -11,24 +11,36 @@ public class InputStreamEx3 {
 		InputStream in = System.in;
 		OutputStream out = System.out;
 		
-		byte b[] = new byte[100];
+		byte b[]=new byte[100];
 		
 		try {
-			// ì…ë ¥ ìŠ¤íŠ¸ë¦¼ì—ì„œ ì§€ì •ëœ byte ìˆ˜ ë§Œí¼ ì½ì–´ì˜¤ê¸°
-			while(in.read(b) != -1) {
-				out.write(b);
+			//ÀÔ·Â ½ºÆ®¸²¿¡¼­ ÁöÁ¤µÈ byte ¼ö ¸¸Å­ ÀĞ¾î¿À±â
+			while(in.read(b)!=-1) {
+				out.write(b);				
 			}
 			
-		} catch (IOException e) {
+		} catch (IOException e) {		
 			e.printStackTrace();
-		} finally { // ë¬´ì¡°ê±´ ì‹¤í–‰(exception ì´ ë°œìƒí•˜ë˜ ë°œìƒí•˜ì§€ ì•Šë˜)
+		} finally { //¹«Á¶°Ç ½ÇÇà(exception ÀÌ ¹ß»ıÇÏ´ø ¹ß»ıÇÏÁö ¾Ê´ø)
 			try {
 				in.close();
 				out.close();
-			} catch (IOException e) {
+			} catch (IOException e) {				
 				e.printStackTrace();
 			}
-		
 		}
+		
+
 	}
 }
+
+
+
+
+
+
+
+
+
+
+

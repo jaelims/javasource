@@ -5,17 +5,15 @@ public class PolyArgumentEx {
 		
 		Buyer buyer = new Buyer();
 		
-		// Tv tv = new Tv(100);
+		//Tv tv = new Tv(100);		
 		
 		buyer.buy(new Tv(100));
 		buyer.buy(new Computer(150));
 		buyer.buy(new Audio(50));
 		
-		System.out.println("í˜„ì¬ ë‚¨ì€ ëˆì€ "+buyer.money);
-		System.out.println("í˜„ì¬ ë³´ë„ˆìŠ¤ í¬ì¸íŠ¸ëŠ” "+buyer.bonusPoint);
+		System.out.println("ÇöÀç ³²Àº µ·Àº "+buyer.money);
+		System.out.println("ÇöÀç º¸³Ê½º Æ÷ÀÎÆ®´Â "+buyer.bonusPoint);
 		
-		
-		
-	}
 
+	}
 }

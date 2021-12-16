@@ -5,39 +5,58 @@ import java.util.Scanner;
 public class Exam3 {
 	public static void main(String[] args) {
 		boolean run = true;
-
-		// ìž”ì•¡
-		int balance = 0;
-
-		Scanner sc = new Scanner(System.in);
-
-		while (run) {
-			System.out.println("*************************");
-			System.out.println("1. ì˜ˆê¸ˆ | 2. ì¶œê¸ˆ | 3. ìž”ê³  | 4. ì¢…ë£Œ");
-			System.out.println("*************************");
-			System.out.print("ì„ íƒ >>> ");
-
-			// 1 ì„ íƒ : ì‚¬ìš©ìží•œí…Œ ì˜ˆê¸ˆì•¡ ìž…ë ¥ë°›ê¸° => balance ì¶”ê°€
-			// 2 ì„ íƒ : ì‚¬ìš©ìží•œí…Œ ì¶œê¸ˆì•¡ ìž…ë ¥ë°›ê¸° => balance ì°¨ê°
-			// 3 ì„ íƒ : balance ì¶œë ¥
-			// 4 ì„ íƒ : run = false ë³€ê²½ í›„ í”„ë¡œê·¸ëž¨ ì¢…ë£Œ
-
+		
+		//ÀÜ¾×
+		int balance = 0;		
+		
+		Scanner sc = new Scanner(System.in);		
+		
+		while(run) {
+			System.out.println("**************************************");
+			System.out.println("1. ¿¹±Ý | 2. Ãâ±Ý | 3. ÀÜ°í | 4. Á¾·á");
+			System.out.println("**************************************");
+			System.out.print("¼±ÅÃ >>> ");
+			
 			int menu = sc.nextInt();
-
-			if (menu == 1) {
-				System.out.print("ì˜ˆê¸ˆì•¡ ìž…ë ¥ : ");
-				balance += sc.nextInt();
-			} else if (menu == 2) {
-				System.out.print("ì¶œê¸ˆì•¡ ìž…ë ¥ : ");
-				balance -= sc.nextInt();
-			} else if (menu == 3) {
-				System.out.printf("ìž”ì•¡ : %dì›\n", balance);
-			} else if (menu == 4) {
-				run = false;
-			} else {
-				System.out.println("ë‹¤ì‹œ ìž…ë ¥");
+			
+			// 1 ¼±ÅÃ : »ç¿ëÀÚÇÑÅ× ¿¹±Ý¾× ÀÔ·Â¹Þ±â => balance Ãß°¡
+			// 2 ¼±ÅÃ : »ç¿ëÀÚÇÑÅ× Ãâ±Ý¾× ÀÔ·Â¹Þ±â => balance Â÷°¨
+			// 3 ¼±ÅÃ : balance Ãâ·Â
+			// 4 ¼±ÅÃ : run = false º¯°æ ÈÄ ÇÁ·Î±×·¥ Á¾·á
+			switch (menu) {
+				case 1:
+					System.out.print("¿¹±Ý¾× >> ");
+					balance+=sc.nextInt();
+					
+//					int money = sc.nextInt();
+//					balance = balance += money; // balance+=money;
+					break;
+				case 2:
+					System.out.print("Ãâ±Ý¾× >> ");
+					balance -= sc.nextInt();
+					break;
+				case 3:
+					System.out.println("ÀÜ¾× >> "+balance);
+					break;
+				case 4:
+					run = false;
+					break;
+				default:
+					System.out.println("¸Þ´º È®ÀÎ");
+					break;
 			}
+			
+			
 		}
-		System.out.println("í”„ë¡œê·¸ëž¨ ì¢…ë£Œ");
+
 	}
 }
+
+
+
+
+
+
+
+
+

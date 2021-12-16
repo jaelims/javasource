@@ -2,16 +2,16 @@ package array;
 
 public class Test2 {
 	public static void main(String[] args) {
-		int oldArr[] = {10, 20, 30};
+		int oldArr[] = {10,20,30};
 		
-		int newArr[] = new int[4];
+		int newArr[]=new int[4];
 		
-		// ê¸°ì¡´ ê°’ ìƒˆë¡œìš´ ê³³ìœ¼ë¡œ ë³µì‚¬
-//		for (int i = 0; i < oldArr.length; i++) {
-//			newArr[i] = oldArr[i];
+		//±âÁ¸ °ª »õ·Î¿î °÷À¸·Î º¹»ç
+//		for(int i=0;i<oldArr.length;i++) {
+//			newArr[i]=oldArr[i];
 //		}
-
-		System.arraycopy(oldArr, 0, newArr, 0, oldArr.length);
+		
+		System.arraycopy(oldArr, 0, newArr, 0, oldArr.length);		
 		
 		
 		newArr[3] = 40;
@@ -19,5 +19,7 @@ public class Test2 {
 		for(int i:newArr) {
 			System.out.print(i+" ");
 		}
+		
+
 	}
 }

@@ -1,25 +1,40 @@
 package inheritance;
 
 public class BonusPointAccount extends Account2{
-
-	// ê³„ì¢Œë²ˆí˜¸, ê³„ì¢Œì£¼, ì”ì•¡, ë³´ë„ˆìŠ¤í¬ì¸íŠ¸ / ì…ê¸ˆí•˜ë‹¤, ì¶œê¸ˆí•˜ë‹¤, ë³´ë„ˆìŠ¤ í¬ì¸íŠ¸ ì¶”ê°€
+	// °èÁÂ¹øÈ£,°èÁÂÁÖ,ÀÜ¾×,º¸³Ê½ºÆ÷ÀÎÆ® / ÀÔ±İÇÏ´Ù(º¸³Ê½º Æ÷ÀÎÆ® Ãß°¡), Ãâ±İÇÏ´Ù,
 	private int bonusPoint;
 	
-	public BonusPointAccount(String accountNum, int money, String name, int bonusPoint) {
-		super(accountNum, money, name);
+	
+	public BonusPointAccount(String accountNo, int balance, String name,int bonusPoint) {
+		super(accountNo, balance, name);
 		this.bonusPoint = bonusPoint;
 	}
 	
 	@Override
 	void deposit(int amount) {
-		// ì˜ˆê¸ˆí•˜ë‹¤
-		//setMoney(getMoney()+amount);
-		super.deposit(amount);
-		// ë³´ë„ˆìŠ¤í¬ì¸íŠ¸ += ì˜ˆê¸ˆì•¡ì˜ 0.1% ë³´ë„ˆìŠ¤ í¬ì¸íŠ¸
+		// ¿¹±İÇÏ´Ù,  
+		//setBalance(getBalance()+amount);		
+		super.deposit(amount);		
+		// º¸³Ê½ºÆ÷ÀÎÆ® += ¿¹±İ¾×ÀÇ 0.1% º¸³Ê½º Æ÷ÀÎÆ®
 		bonusPoint += amount*0.001;
-		
-		}
+	}
+	
 	public int getBonusPoint() {
 		return bonusPoint;
 	}
+	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -2,12 +2,10 @@ package string;
 
 public class Contains {
 	public static void main(String[] args) {
-		String str1 = "ìë°” í”„ë¡œê·¸ë˜ë°";
+		String str1 = "ÀÚ¹Ù ÇÁ·Î±×·¡¹Ö";	
 		
 		
-		
-		System.out.println(str1.contains("ê·¸") ? "í¬í•¨í•˜ê³  ìˆìŒ" : "í¬í•¨í•˜ê³  ìˆì§€ ì•ŠìŒ");
-		
-	}
+		System.out.println(str1.contains("±×") ? "Æ÷ÇÔÇÏ°í ÀÖÀ½":"Æ÷ÇÔÇÏ°í ÀÖÁö ¾ÊÀ½");
 
+	}
 }

@@ -3,12 +3,11 @@ package io;
 import java.io.FileReader;
 import java.io.Reader;
 
-/* ì²˜ë¦¬í•  íŒŒì¼ì´ ë¬¸ìë¼ë©´ Reader, Writerê°€ í¸í•¨
+/* Ã³¸®ÇÒ ÆÄÀÏÀÌ ¹®ÀÚ¶ó¸é Reader, Writer°¡ ÆíÇÔ
  * 
- * char í˜•íƒœë¡œ ì²˜ë¦¬
+ * char ÇüÅÂ·Î Ã³¸®
+ * 
  */
-
-
 
 public class FileReaderEx1 {
 	public static void main(String[] args) {
@@ -18,7 +17,7 @@ public class FileReaderEx1 {
 			
 			int readcharNo;
 			
-			while((readcharNo=reader.read(cbuf))!= -1) {
+			while((readcharNo=reader.read(cbuf)) != -1) {
 				System.out.println(cbuf);
 			}
 			
@@ -26,5 +25,24 @@ public class FileReaderEx1 {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

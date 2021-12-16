@@ -8,31 +8,43 @@ public class Connect {
 	public static void main(String[] args) {
 		Connection con = null;
 		try {
-			// ë“œë¼ì´ë²„ ë¡œë“œ
+			//µå¶óÀÌ¹ö ·Îµå
 			Class.forName("oracle.jdbc.OracleDriver");
 			
-			// ì—°ê²° ì‹œë„
-			// localhost : ë³¸ì¸ ì»´í“¨í„°
+			//¿¬°á ½Ãµµ
+			//localhost : º»ÀÎ ÄÄÇ»ÅÍ
 			String url = "jdbc:oracle:thin:@localhost:1521:xe";
 			String user = "c##scott";
 			String password = "tiger";
-			
 			con = DriverManager.getConnection(url, user, password);
 			
 			if(con!=null) {
-				System.out.println("ì—°ê²°ë˜ì—ˆìŠµë‹ˆë‹¤.");
+				System.out.println("¿¬°áµÇ¾ú½À´Ï´Ù.");
 			}
 			
-		} catch (ClassNotFoundException e) {
+		} catch (ClassNotFoundException e) {			
 			e.printStackTrace();
-		} catch (SQLException e) {
+		} catch (SQLException e) {			
 			e.printStackTrace();
 		} finally {
 			try {
 				con.close();
-			} catch (SQLException e) {
+			} catch (SQLException e) {				
 				e.printStackTrace();
 			}
 		}
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

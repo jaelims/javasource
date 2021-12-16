@@ -1,8 +1,8 @@
 package interfaceTest;
 
 
-// í´ë˜ìŠ¤ëŠ” extends ë‹¨ í•˜ë‚˜ë§Œ ìƒì† => ë‹¨ì¼ìƒì†
-// interface ëŠ” ë‹¤ì¤‘ìƒì†
+// Å¬·¡½º´Â extends ´Ü ÇÏ³ª¸¸ »ó¼Ó => ´ÜÀÏ»ó¼Ó
+// interface ´Â ´ÙÁß»ó¼Ó
 public interface Fightable extends Movable, Attackable {
 	
 }

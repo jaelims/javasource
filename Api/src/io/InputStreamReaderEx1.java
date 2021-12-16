@@ -5,9 +5,9 @@ import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.InputStreamReader;
 
-// ë¬¸ìž ë³€í™˜ ë³´ì¡° ìŠ¤íŠ¸ë¦¼
-// ë°”ì´íŠ¸ê¸°ë°˜ ìŠ¤íŠ¸ë¦¼ => Reader or Writer ë¡œ ë³€í™˜í•´ì„œ ì‚¬ìš©
-// ì¸ì½”ë”© ë°©ì‹ ì§€ì •(utf-8, euc-kr, ms949, ascii....)
+// ¹®ÀÚ º¯È¯ º¸Á¶ ½ºÆ®¸²
+// ¹ÙÀÌÆ®±â¹Ý ½ºÆ®¸² => Reader or Writer ·Î º¯È¯ÇØ¼­ »ç¿ë
+// ÀÎÄÚµù ¹æ½Ä ÁöÁ¤(utf-8,euc-kr,ms949,ascii.....)
 
 
 public class InputStreamReaderEx1 {
@@ -15,20 +15,36 @@ public class InputStreamReaderEx1 {
 		
 		
 		try(InputStreamReader reader = new InputStreamReader
-				(new FileInputStream("c:\\temp\\file1.txt"), "ms949");
-				FileWriter writer = new FileWriter("c:\\temp\\test3.txt")) {
+				(new FileInputStream("c:\\temp\\file1.txt"),"ms949");
+			FileWriter writer = new FileWriter("c:\\temp\\test3.txt")) {
 			
-				char cbuf[] = new char[100];
-				
-				while (reader.read(cbuf)!=-1) {
-					writer.write(cbuf);
-				}
+			char cbuf[]=new char[100];
+			
+			while(reader.read(cbuf)!=-1) {
+				writer.write(cbuf);
+			}
+			
 			
 		} catch (Exception e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
 		
-		
+
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

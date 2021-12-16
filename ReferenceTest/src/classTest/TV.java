@@ -1,22 +1,28 @@
 package classTest;
 
 public class TV {
-	// ì†ì„±(í•„ë“œ,ë©¤ë²„ë³€ìˆ˜,í”„ë¡œí¼í‹°) => ìƒ‰ìƒ,ì „ì›ìƒíƒœ,ì±„ë„....
+	// ¼Ó¼º(ÇÊµå,¸â¹öº¯¼ö,ÇÁ·ÎÆÛÆ¼) => »ö»ó,Àü¿ø»óÅÂ,Ã¤³Î....
 	String color; // red,blue,black....
-	boolean power;	// on, off
+	boolean power;    // on, off
 	int channel;
 	
-	// ë™ìž‘(ë©”ì†Œë“œ) => ì±„ë„ ë³€ê²½(ì¦ê°€,ê°ì†Œ)í•˜ë‹¤/ì „ì›ì„ ì¼œë‹¤/ë„ë‹¤
+	// µ¿ÀÛ(¸Þ¼Òµå) => Ã¤³Î º¯°æ(Áõ°¡,°¨¼Ò)ÇÏ´Ù/Àü¿øÀ» ÄÑ´Ù/²ô´Ù
 	void channelUp() {
-		// channelUp ê°€ í•´ì•¼ í•˜ëŠ” ìž‘ì—… ìž‘ì„±
-		channel++;
+		//channelUp °¡ ÇØ¾ß ÇÏ´Â ÀÛ¾÷ ÀÛ¼º ÇöÀç Ã¤³Î 7 => 8,9,10....
+		channel++;		
 	}
 	void channelDown() {
-		// channelDown ê°€ í•´ì•¼ í•˜ëŠ” ìž‘ì—… ìž‘ì„±
+		//channelDown ÀÌ ÇØ¾ß ÇÏ´Â ÀÛ¾÷ ÀÛ¼º ÇöÀç Ã¤³Î 7 => 6,5,4....
 		channel--;
 	}
+	
 	void power() {
-		// power ê°€ í•´ì•¼ í•˜ëŠ” ìž‘ì—… on => off, off => on
+		//power°¡ ÇØ¾ß ÇÏ´Â ÀÛ¾÷ on => off,  off => on
 		power = !power;
 	}
+	
 }
+
+
+
+

@@ -2,13 +2,13 @@ package inheritance;
 
 public class CaptionTVEx2 {
 	public static void main(String[] args) {
-		CaptionTV2 ctv = new CaptionTV2("black", true, 8);
-
-		// ctv.channel = 10;
+		CaptionTV2 ctv = new CaptionTV2("black",true,8);
+		
+		//ctv.channel = 10;
 		ctv.channelUp();
-		System.out.println("ÌòÑÏû¨ Ï±ÑÎÑê" + ctv.getChannel());
-
-		ctv.displayCaption("Hell world");
+		System.out.println("«ˆ¿Á √§≥Œ "+ctv.getChannel());
+		
+		ctv.displayCaption("Hell World");
 		ctv.caption = true;
 		ctv.displayCaption("Hell java");
 

@@ -2,22 +2,28 @@ package array;
 
 public class ArrayTest2 {
 	public static void main(String[] args) {
-		// int íƒ€ì„ì˜ ë³€ìˆ˜ 10 ê°œ ì„ ì–¸
-		// ë‹´ìœ¼ë ¤ê³ í•˜ëŠ”íƒ€ì… ë°°ì—´ëª…[] = new ë‹´ìœ¼ë ¤ê³ í•˜ëŠ”íƒ€ì…[ê°¯ìˆ˜];
+		// int Å¸ÀÔÀÇ º¯¼ö 10 °³ ¼±¾ğ
+		// ´ãÀ»·Á°íÇÏ´ÂÅ¸ÀÔ ¹è¿­¸í[] = new ´ãÀ»·Á°íÇÏ´ÂÅ¸ÀÔ[°¹¼ö]
 		
-		// ë°°ì—´ì˜ ì„ ì–¸ê³¼ ìƒì„±(í™)
+		// ¹è¿­ÀÇ ¼±¾ğ°ú »ı¼º(Èü)
 		int scores[] = new int[10];
 		
-		int arr[]; //ì„ ì–¸
-		arr = new int[10]; //ìƒì„±
+		int arr[]; //¼±¾ğ		
+		arr = new int[10]; //»ı¼º
 		
 		
-		// ë°°ì—´ì˜ ì„ ì–¸ê³¼ ìƒì„± ë° ì´ˆê¸°í™”
+		// ¹è¿­ÀÇ ¼±¾ğ°ú »ı¼º ¹× ÃÊ±âÈ­
 		int arr2[]= {35,95,65,75,25,33};
-		System.out.println("ë°°ì—´ ê¸¸ì´ "+arr2.length);
+		System.out.println("¹è¿­ ±æÀÌ "+arr2.length);
 		
 		for(int i=0;i<arr2.length;i++) {
 			System.out.print(arr2[i]+" ");
 		}
+		
+		
 	}
 }
+
+
+
+

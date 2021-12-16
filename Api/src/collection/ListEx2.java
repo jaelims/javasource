@@ -5,7 +5,7 @@ import java.util.Comparator;
 
 public class ListEx2 {
 	public static void main(String[] args) {
-		ArrayList<String> list = new ArrayList<>();
+		ArrayList<String> list = new ArrayList<String>();
 		
 		list.add("java");
 		list.add("JDBC");
@@ -19,15 +19,26 @@ public class ListEx2 {
 		
 		System.out.println(list);
 		
-		// ì‚­ì œ
-		list.remove(1); // JDBC ì œê±°
+		//»èÁ¦
+		list.remove(1); //JDBC Á¦°Å
 		System.out.println(list);
 		
-		// ì •ë ¬
-		list.sort(Comparator.reverseOrder()); // ë‚´ë¦¼ì°¨ìˆœ, naturalOrder() : ì˜¤ë¦„ì°¨ìˆœ
+		//Á¤·Ä
+		list.sort(Comparator.reverseOrder()); //³»¸²Â÷¼ø, naturalOrder() : ¿À¸§Â÷¼ø
 		System.out.println(list);
-		
-		
-		
+
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

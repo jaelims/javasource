@@ -2,26 +2,29 @@ package classTest;
 
 public class MyMathEx {
 	public static void main(String[] args) {
-		// static ë©”ì†Œë“œ(í´ëž˜ìŠ¤ ë©”ì†Œë“œ) í˜¸ì¶œ => ê°ì²´ ìƒì„± ì—†ì´ í˜¸ì¶œ
-		System.out.println(MyMath.add(200l, 100l));
-		System.out.println(MyMath.subtract(200l, 100l));
-		System.out.println(MyMath.multiply(200l, 100l));
+		//static ¸Þ¼Òµå(Å¬·¡½º ¸Þ¼Òµå) È£Ãâ => °´Ã¼ »ý¼º ¾øÀÌ È£Ãâ
+		System.out.println(MyMath.add(200L, 100L));
+		System.out.println(MyMath.subtract(200L, 100L));
+		System.out.println(MyMath.multiply(200L, 100L));
 		System.out.println(MyMath.divide(200.0, 100.0));
 		
-		System.out.println();
-		
-		// ë©¤ë²„ ë©”ì†Œë“œ í˜¸ì¶œ
+		//¸â¹ö¸Þ¼Òµå È£Ãâ
 		MyMath math = new MyMath();
-		
-		math.x = 200l;
-		math.y = 100l;
+		math.a = 200L;
+		math.b = 100L;
 		
 		System.out.println(math.add());
 		System.out.println(math.subtract());
 		System.out.println(math.multiply());
 		System.out.println(math.divide());
-			
-		
-		
 	}
 }
+
+
+
+
+
+
+
+
+

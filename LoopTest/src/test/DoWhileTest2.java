@@ -4,19 +4,28 @@ import java.util.Scanner;
 
 public class DoWhileTest2 {
 	public static void main(String[] args) {
-		System.out.println("ë©”ì‹œì§€ë¥¼ ìž…ë ¥í•˜ì„¸ìš”");
-		System.out.println("í”„ë¡œê·¸ëž¨ì„ ì¢…ë£Œí•˜ë ¤ë©´ që¥¼ ìž…ë ¥í•˜ì„¸ìš”");
+		System.out.println("¸Þ½ÃÁö¸¦ ÀÔ·ÂÇÏ¼¼¿ä");
+		System.out.println("ÇÁ·Î±×·¥À» Á¾·áÇÏ·Á¸é q¸¦ ÀÔ·ÂÇÏ¼¼¿ä");
 		
 		Scanner sc = new Scanner(System.in);
 		String inputString;
 		
 		do {
 			System.out.print("> ");
-			inputString=sc.nextLine();
+			inputString = sc.nextLine();
 			System.out.println(inputString);
-		} while(!inputString.equals("q"));
-			
-		System.out.println("í”„ë¡œê·¸ëž¨ ì¢…ë£Œ");
-				
+		}while(!inputString.equals("q"));
+		
+		System.out.println("ÇÁ·Î±×·¥ Á¾·á");
+
 	}
 }
+
+
+
+
+
+
+
+
+

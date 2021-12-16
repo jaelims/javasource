@@ -6,16 +6,38 @@ public class IntegerEx {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.print("ìˆ«ìžë¥¼ ìž…ë ¥í•´ ì£¼ì„¸ìš”");
+		System.out.print("¼ýÀÚ¸¦ ÀÔ·ÂÇØ ÁÖ¼¼¿ä");
 		
 		// 5 => "5"
 		String input = sc.next();
-		System.out.println(input+5); // + : ì—°ê²°
+		System.out.println(input+5); // + : ¿¬°á
 		
-		// "5" => 5
+		// "5" => 5,   "¤·" => NumberFormatException
 		int num = Integer.parseInt(input);
 		System.out.println(num+5);
-		
-	}
 
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -3,19 +3,36 @@ package string;
 public class StringBuilderTest2 {
 	public static void main(String[] args) {
 		String str1 = "hello java!!!";
-
-		// String í˜•íƒœë¡œ ë‘ê³  ê±°ê¾¸ë¡œ ì¶œë ¥
-		char[] chArr = str1.toCharArray();
 		
-		for (int i = chArr.length-1; i >= 0; i--) {
-			System.out.print(chArr[i] + " ");
+		//String ÇüÅÂ·Î µÎ°í °Å²Ù·Î Ãâ·Â
+		char[] chArr=str1.toCharArray();
+		
+		// chArr.length => 13
+		
+		for(int i=chArr.length-1;i>=0;i--) {
+			System.out.print(chArr[i]+" ");
 		}
 		System.out.println();
 		
-		// StringBuilder ê±°ê¾¸ë¡œ ì¶œë ¥
+		
+		//StringBuilder °Å²Ù·Î Ãâ·Â
 		StringBuilder builder = new StringBuilder(str1);
 		System.out.println(builder.reverse());
-		
-		
+
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

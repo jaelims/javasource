@@ -6,28 +6,30 @@ import java.util.Arrays;
 
 public class BufferedReaderEx2 {
 	public static void main(String[] args) {
-		// BufferedInputStreamEx5 íŒŒì¼ì„ ì½ì–´ì„œ í™”ë©´ì— ì¤„ë²ˆí˜¸ì™€ í•¨ê»˜ ì¶œë ¥
+		// BufferedInputStreamEx5 ÆÄÀÏÀ» ÀĞ¾î¼­ È­¸é¿¡ ÁÙ¹øÈ£¿Í ÇÔ²² Ãâ·Â
 		// FileReader("src/io/BufferedInputStreamEx5.java")
+		
 		try(FileReader fr = new FileReader("src/io/BufferedInputStreamEx5.java");
-			BufferedReader br = new BufferedReader(fr)) {
+			BufferedReader br = new BufferedReader(fr);) {
 			
-//			char cbuf[] = new char[100];
-//			int i=1;
-//			while (fr.read(cbuf)!=-1) {
-//				System.out.println(i+" "+Arrays.toString(cbuf));
-//				i++;
-//			}
+			//char cbuf[] = new char[100];
 			
 			String line = "";
 			int i=1;
-			while ((line = br.readLine())!=null) {
+			while((line=br.readLine())!=null) {
 				System.out.println(i+" "+line);
 				i++;
 			}
 			
-			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+
 	}
 }
+
+
+
+
+
+

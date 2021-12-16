@@ -13,18 +13,17 @@ public class BufferedInputStreamEx1 {
 		FileOutputStream fos = null;
 		BufferedOutputStream bos = null;
 		
-		try {
-			
+		try {			
 			fis = new FileInputStream("c:\\temp\\file1.txt");
 			bis = new BufferedInputStream(fis);
 			fos = new FileOutputStream("c:\\temp\\test4.txt");
 			bos = new BufferedOutputStream(fos);
 			
 			int data;
-			while ((data=bis.read())!=-1) {
+			while((data=bis.read())!=-1) {
 				bos.write(data);
 			}
-			bos.flush(); // Î≤ÑÌçº ÎπÑÏö∞Í∏∞
+			bos.flush(); //πˆ∆€ ∫ÒøÏ±‚
 			
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -38,5 +37,12 @@ public class BufferedInputStreamEx1 {
 				e2.printStackTrace();
 			}
 		}
+
 	}
 }
+
+
+
+
+
+

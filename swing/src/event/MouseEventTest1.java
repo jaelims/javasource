@@ -11,27 +11,30 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
 // MouseListener
-// mouseClicked() : ë§ˆìš°ìŠ¤ê°€ ì»´í¬ë„ŒíŠ¸ë¥¼ í´ë¦­í–ˆì„ ë•Œ
-// mousePressed() : ë§ˆìš°ìŠ¤ ë²„íŠ¼ì´ ëˆŒëŸ¬ì¡Œì„ ë•Œ
-// mouseReleased() : ëˆŒëŸ¬ì§„ ë²„íŠ¼ì´ ë–¼ì–´ì§ˆë•Œ
-// mouseEntered() : ë§ˆìš°ìŠ¤ê°€ ì»´í¬ë„ŒíŠ¸ ìœ„ì— ì˜¬ë¼ê°ˆ ë•Œ
-// mouseExited() : ë§ˆìš°ìŠ¤ê°€ ì»´í¬ë„ŒíŠ¸ì—ì„œ ë‚´ë ¤ì˜¬ ë•Œ
+// mouseClicked() : ¸¶¿ì½º°¡ ÄÄÆ÷³ÍÆ®¸¦ Å¬¸¯ÇßÀ» ¶§
+// mousePressed() : ¸¶¿ì½º ¹öÆ°ÀÌ ´­·¯Á³À» ¶§
+// mouseReleased() : ´­·¯Áø ¹öÆ°ÀÌ ¶¼¾îÁú¶§
+// mouseEntered() : ¸¶¿ì½º°¡ ÄÄÆ÷³ÍÆ® À§¿¡ ¿Ã¶ó°¥ ¶§
+// mouseExited() : ¸¶¿ì½º°¡ ÄÄÆ÷³ÍÆ®¿¡¼­ ³»·Á¿Ã ¶§
 
-// mousePressed() -> mouseReleased() -> mouseClicked()
+// mousePressed() -> mouseReleased() -> mouseClicked() 
+
+
 
 // MouseMotionListener
-// mouseDragged() : ë§ˆìš°ìŠ¤ê°€ ë“œë˜ê·¸ ë˜ëŠ” ë™ì•ˆ
-// mouseMoved() : ë§ˆìš°ìŠ¤ê°€ ì›€ì§ì´ëŠ” ë™ì•ˆ
+// mouseDragged() : ¸¶¿ì½º°¡ µå·¡±× µÇ´Â µ¿¾È
+// mouseMoved() : ¸¶¿ì½º°¡ ¿òÁ÷ÀÌ´Â µ¿¾È
 
-public class MouseEventTest1 extends JFrame implements MouseListener, MouseMotionListener {
-	
+
+public class MouseEventTest1 extends JFrame implements MouseListener, MouseMotionListener{
 	private JTextField textField;
 	
 	public MouseEventTest1() {
-		setTitle("ë§ˆìš°ìŠ¤ ì´ë²¤íŠ¸");
+		setTitle("¸¶¿ì½º ÀÌº¥Æ®");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
-		JButton btn = new JButton("í´ë¦­");
+		
+		JButton btn = new JButton("Å¬¸¯");
 		btn.addMouseListener(this);
 		add(btn,BorderLayout.NORTH);
 		
@@ -43,12 +46,14 @@ public class MouseEventTest1 extends JFrame implements MouseListener, MouseMotio
 		textField = new JTextField();
 		add(textField,BorderLayout.SOUTH);
 		
-		setSize(100, 100);
+		
+		setSize(100,100);
 		setVisible(true);
 	}
 	
 	public static void main(String[] args) {
 		new MouseEventTest1();
+
 	}
 
 	@Override
@@ -84,8 +89,7 @@ public class MouseEventTest1 extends JFrame implements MouseListener, MouseMotio
 
 	@Override
 	public void mouseMoved(MouseEvent e) {
-		System.out.println("mouseMoved");
-		
+		System.out.println("mouseMoved");		
 	}
 
 }

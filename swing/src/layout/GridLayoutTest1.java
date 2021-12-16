@@ -6,35 +6,36 @@ import java.awt.GridLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
-// GridLayout : ê²©ìëª¨ì–‘
+// GridLayout : °İÀÚ¸ğ¾ç
 
 
 public class GridLayoutTest1 extends JFrame {
-
+	
 	public GridLayoutTest1() {
-		setTitle("GridLayout í…ŒìŠ¤íŠ¸");
+		setTitle("GridLayout Å×½ºÆ®");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
-		// ë ˆì´ì•„ì›ƒ ë³€ê²½
+		//·¹ÀÌ¾Æ¿ô º¯°æ
 		Container container = getContentPane();
-		container.setLayout(new GridLayout(3, 4, 5, 5));
+		container.setLayout(new GridLayout(3, 4,5,5));	
 		
 		
-		//ë²„íŠ¼ 10ê°œ ìƒì„±
-		for (int i = 0; i < 12; i++) {
+		//¹öÆ° 10°³ »ı¼º
+		for(int i=0;i<12;i++) {
 			JButton btn = new JButton(i+"");
 			add(btn);
 		}
 		
 		setSize(500, 200);
 		setVisible(true);
-		
-	}
+	}	
 	
-	
+
 	public static void main(String[] args) {
 		new GridLayoutTest1();
 
 	}
 
 }
+
+

@@ -1,14 +1,8 @@
 package interfaceTest;
 
-/* 1) ìƒìˆ˜ í•„ë“œë§Œ ê°€ì§
- * 2) ì¶”ìƒ ë©”ì†Œë“œë§Œ ê°€ì§
- * 
- * 
- * 
+/* 1) »ó¼ö ÇÊµå¸¸ °¡Áü
+ * 2) Ãß»ó ¸Ş¼Òµå¸¸ °¡Áü 
  */
-
-
-
 public interface AdderInterface {
 	// interface field AdderInterface.x; only public, static & final are permitted
 	public static final int X = 100;
@@ -16,16 +10,24 @@ public interface AdderInterface {
 	// Abstract methods do not specify a body
 	void method1();
 	
-	// 1.8 ë¶€í„°
-	// staticë©”ì†Œë“œì™€ default ë©”ì†Œë“œ ë“¤ì–´ì˜¬ ìˆ˜ ìˆìŒ
+	// 1.8 ºÎÅÍ
+	// static¸Ş¼Òµå¿Í default ¸Ş¼Òµå µé¾î¿Ã ¼ö ÀÖÀ½
 	static void method2() {
 		
 	}
 	default void method3() {
 		
 	}
-	
-	
-	
-	
 }
+
+
+
+
+
+
+
+
+
+
+
+

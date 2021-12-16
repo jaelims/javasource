@@ -2,22 +2,23 @@ package component;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
+import java.awt.Font;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JTextField;
-import javax.swing.JButton;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.Font;
+
+import javax.swing.JButton;
 
 public class KeyPad extends JFrame implements ActionListener{
 
 	private JPanel contentPane;
 	private JTextField textField;
-	private JButton[] buttons = new JButton[9];
+	private JButton[] buttons=new JButton[9];
 
 	/**
 	 * Launch the application.
@@ -54,69 +55,37 @@ public class KeyPad extends JFrame implements ActionListener{
 		contentPane.add(panel, BorderLayout.CENTER);
 		panel.setLayout(new GridLayout(0, 3, 0, 0));
 		
-		// Ìå®ÎÑêÏóê Î≤ÑÌäº 9Í∞ú Î∂ÄÌÉÅ
-		for (int i = 0; i < buttons.length; i++) {
+		//∆–≥Œø° πˆ∆∞ 9∞≥ ∫Œ¬¯
+		for(int i=0;i<buttons.length;i++) {
 			buttons[i] = new JButton((i+1)+"");
-			// Î≤ÑÌäº font Î≥ÄÍ≤Ω
-			buttons[i].setFont(new Font("Íµ¥Î¶º", Font.PLAIN, 30));
-			// Ïï°ÏÖòÎ¶¨Ïä§ÎÑà
+			//πˆ∆∞ font ∫Ø∞Ê
+			buttons[i].setFont(new Font("±º∏≤", Font.PLAIN, 24));
+			//æ◊º«∏ÆΩ∫≥ 
 			buttons[i].addActionListener(this);
 			panel.add(buttons[i]);
-		}
-//		JButton key1 = new JButton("1");
-//		key1.addActionListener(this);
-//		key1.setFont(new Font("Íµ¥Î¶º", Font.PLAIN, 30));
-//		panel.add(key1);
-//		
-//		JButton key2 = new JButton("2");
-//		key2.addActionListener(this);
-//		key2.setFont(new Font("Íµ¥Î¶º", Font.PLAIN, 30));
-//		panel.add(key2);
-//		
-//		JButton key3 = new JButton("3");
-//		key3.addActionListener(this);
-//		key3.setFont(new Font("Íµ¥Î¶º", Font.PLAIN, 30));
-//		panel.add(key3);
-//		
-//		JButton key4 = new JButton("4");
-//		key4.addActionListener(this);
-//		key4.setFont(new Font("Íµ¥Î¶º", Font.PLAIN, 30));
-//		panel.add(key4);
-//		
-//		JButton key5 = new JButton("5");
-//		key5.addActionListener(this);
-//		key5.setFont(new Font("Íµ¥Î¶º", Font.PLAIN, 30));
-//		panel.add(key5);
-//		
-//		JButton key6 = new JButton("6");
-//		key6.addActionListener(this);
-//		key6.setFont(new Font("Íµ¥Î¶º", Font.PLAIN, 30));
-//		panel.add(key6);
-//		
-//		JButton key7 = new JButton("7");
-//		key7.addActionListener(this);
-//		key7.setFont(new Font("Íµ¥Î¶º", Font.PLAIN, 30));
-//		panel.add(key7);
-//		
-//		JButton key8 = new JButton("8");
-//		key8.addActionListener(this);
-//		key8.setFont(new Font("Íµ¥Î¶º", Font.PLAIN, 30));
-//		panel.add(key8);
-//		
-//		JButton key9 = new JButton("9");
-//		key9.addActionListener(this);
-//		key9.setFont(new Font("Íµ¥Î¶º", Font.PLAIN, 30));
-//		panel.add(key9);
+		}		
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		// Î≤ÑÌäºÏù¥ ÌÅ¥Î¶≠ÎêòÎ©¥
-		// ÎàåÎü¨ÏßÑ Î≤ÑÌäºÏùò Ïà´Ïûê Í∞ÄÏ†∏Ïò§Í∏∞
+		//πˆ∆∞¿Ã ≈¨∏Øµ«∏È
+		//¥≠∑Ø¡¯ πˆ∆∞¿« º˝¿⁄ ∞°¡Æø¿±‚
 		String cmd = e.getActionCommand();
-		// Í∞ÄÏ†∏Ïò® Ïà´ÏûêÎ•º textField Î≥¥Ïó¨Ï£ºÍ∏∞
-		textField.setText(textField.getText()+cmd);
 		
+		// ∞°¡Æø¬ º˝¿⁄∏¶ textField ∫∏ø©¡÷±‚
+		textField.setText(textField.getText()+cmd);
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+

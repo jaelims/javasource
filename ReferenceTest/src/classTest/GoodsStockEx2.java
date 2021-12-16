@@ -3,26 +3,32 @@ package classTest;
 public class GoodsStockEx2 {
 	public static void main(String[] args) {
 
-		// ì²«ë²ˆì§¸ ìƒí’ˆ ì¬ê³ ê´€ë¦¬
-		GoodsStock2 product1 = new GoodsStock2("p12345", 30);
-
-		// í´ë˜ìŠ¤ ì™¸ë¶€ì—ì„œ ì†ì„±ì„ ì§ì ‘ ë³€ê²½í•˜ëŠ” ê²ƒì€ ì•ˆë¨
-		// private
-		// product1.code = "p12345";
-		// product1.stockNum = 30;
-
-		// ìƒí’ˆíŒë§¤ => ì¬ê³  ê°ì†Œ
-		// í˜¸ì¶œ => ë¦¬í„´ê°’ì´ ìˆë‹¤ë©´ ë¦¬í„´ê°’ì„ ë°›ê¸°(syso, ë³€ìˆ˜)
-		// System.out.println("í˜„ì¬ ì¬ê³ ìˆ˜ëŸ‰ : " + product1.subtrackStock(15));
-
-		// ë³€ìˆ˜ ì„ ì–¸
+		
+		//Ã¹¹øÂ° »óÇ° Àç°í°ü¸®
+		GoodsStock2 product1 = new GoodsStock2("p12345",30);
+		
+		//Å¬·¡½º ¿ÜºÎ¿¡¼­ ¼Ó¼ºÀ» Á÷Á¢ º¯°æÇÏ´Â °ÍÀº ¾ÈµÊ
+		//private => GoodsStock2.code is not visible
+		//product1.code = "p12345";
+		//product1.stockNum = 30;
+		
+		//»óÇ°ÆÇ¸Å => Àç°í °¨¼Ò
+		//¸Ş¼Òµå È£Ãâ => ¸®ÅÏ°ªÀÌ ÀÖ´Ù¸é ¸®ÅÏ°ªÀ» ¹Ş±â(syso, º¯¼ö)
+		//System.out.println("ÇöÀç Àç°í¼ö·® "+product1.subtrackStock(15));
+		
+		//º¯¼ö ¼±¾ğ
 		int stockNum = product1.subtrackStock(15);
-		// ì´í›„ë¡œ stockNum ì‚¬ìš©í•  ìˆ˜ ìˆë‹¤.
-		System.out.println("í˜„ì¬ ì¬ê³ ìˆ˜ëŸ‰ : " + stockNum);
-
-		// ë°˜í’ˆ => ì¬ê³  ì¦ê°€
-		// ë©”ì†Œë“œ í˜¸ì¶œ => ë¦¬í„´íƒ€ì…ì´ ì—†ìœ¼ë©´ í˜¸ì¶œë§Œ í•˜ë©´ ë¨
+		//ÀÌÈÄ·Î stockNum »ç¿ëÇÒ ¼ö ÀÖ´Ù.
+		System.out.println("ÇöÀç Àç°í¼ö·® "+stockNum);
+			
+		
+		//¹İÇ° => Àç°í Áõ°¡
+		//¸Ş¼Òµå È£Ãâ => ¸®ÅÏÅ¸ÀÔÀÌ ¾øÀ¸¸é È£Ãâ¸¸ ÇÏ¸é µÊ
 		product1.addStock(5);
-		System.out.println("í˜„ì¬ ì¬ê³ ìˆ˜ëŸ‰ : " + product1.getStockNum());
+		System.out.println("ÇöÀç Àç°í¼ö·® "+product1.getStockNum());
+		
+		
+		
+
 	}
 }

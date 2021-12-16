@@ -4,36 +4,45 @@ import java.util.Scanner;
 
 public class SwitchEx6 {
 	public static void main(String[] args) {
-		// ê°€ìœ„(1), ë°”ìœ„(2), ë³´(3)
-		
-		// ìƒëŒ€ë°©-ì»´í“¨í„°
-		// ëœë¤ 1~3 ìë™ìœ¼ë¡œ ìƒì„± => 3
-		
-		// ë‚´ê°€ ë‚´ëŠ” ë¶€ë¶„ - ì…ë ¥ => 2
-		
-		
-		// ì¶œë ¥ë¬¸ ë‹¹ì‹ ì´ ì¡ŒìŠµë‹ˆë‹¤./ë‹¹ì‹ ì´ ì´ê²¼ìŠµë‹ˆë‹¤./ë¹„ê²¼ìŠµë‹ˆë‹¤.
-		
-		int com = (int)((Math.random()*3)+1);
 		Scanner sc = new Scanner(System.in);
-		System.out.println("ê°€ìœ„(1), ë°”ìœ„(2), ë³´(3) ì¤‘ í•˜ë‚˜ ì…ë ¥");
+		
+		
+		// °¡À§(1), ¹ÙÀ§(2), º¸(3)
+		
+		// »ó´ë¹æ-ÄÄÇ»ÅÍ
+		// ·£´ı 1~3 ÀÚµ¿À¸·Î »ı¼º => 3
+		int computer = (int)(Math.random()*3)+1;
+		
+		// ³»°¡ ³»´Â ºÎºĞ - ÀÔ·Â => 2
+		System.out.println("°¡À§(1), ¹ÙÀ§(2), º¸(3) Áß ÇÏ³ª¸¦ ÀÔ·ÂÇÏ¼¼¿ä");
 		int user = sc.nextInt();
 		
-		System.out.println("ë‚˜ : "+user+", ì»´í“¨í„° : "+ com);
+		// Ãâ·Â¹® ´ç½ÅÀÌ Á³½À´Ï´Ù/´ç½ÅÀÌ ÀÌ°å½À´Ï´Ù./ºñ°å½À´Ï´Ù.
+		System.out.println("³ª : "+user+", ÄÄÇ»ÅÍ : "+computer);
 		
-		switch (com-user) {
-		case -1: case 2:	
-			System.out.println("ë‹¹ì‹ ì´ ì´ê²¼ìŠµë‹ˆë‹¤.");
-			break;
+		switch (user-computer) { // 3 - 2, 
 		case 1: case -2:
-			System.out.println("ë‹¹ì‹ ì´ ì¡ŒìŠµë‹ˆë‹¤.");
+			System.out.println("´ç½ÅÀÌ ÀÌ°å½À´Ï´Ù.");
 			break;
+		case 2: case -1:
+			System.out.println("´ç½ÅÀÌ Á³½À´Ï´Ù.");
+			break;	
 		case 0:
-			System.out.println("ë¹„ê²¼ìŠµë‹ˆë‹¤.");
-			break;
-		default:
+			System.out.println("ºñ°å½À´Ï´Ù.");
 			break;
 		}
-		
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

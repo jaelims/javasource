@@ -1,14 +1,17 @@
 package classTest;
 
 public class CircleEx {
+
 	public static void main(String[] args) {
-		Circle cir1 = new Circle();
-		cir1.radius = 12;
-		System.out.printf("ë©´ì  : %.2f\n", cir1.volume());
+		Circle circle = new Circle();
+		circle.radius = 5;
+		System.out.println("¿øÀÇ ¸éÀû : "+circle.getArea());
 		
 		
-		Circle cir2 = new Circle();
-		cir2.radius = 3.3;
-		System.out.printf("ë©´ì  : %.2f\n", cir2.volume());
+		Circle circle2 = new Circle();
+		circle2.radius = 4.5;
+		System.out.println("¿øÀÇ ¸éÀû : "+circle2.getArea());
+
 	}
+
 }

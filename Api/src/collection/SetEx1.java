@@ -5,10 +5,9 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-/* Set : ì¤‘ë³µ í—ˆìš©í•˜ì§€ ì•ŠìŒ, ìˆœì„œê°€ ì—†ìŒ
- * 	   : êµ¬í˜„í´ë˜ìŠ¤ - HashSet, TreeSet
+/* Set : Áßº¹ Çã¿ëÇÏÁö ¾ÊÀ½, ¼ø¼­°¡ ¾øÀ½
+ *     : ±¸ÇöÅ¬·¡½º - HashSet, TreeSet
  */
-
 
 public class SetEx1 {
 	public static void main(String[] args) {
@@ -16,7 +15,7 @@ public class SetEx1 {
 		Collection<String> collect;
 		List<String> list;
 		
-		Set<String> set1 = new HashSet<String>();
+		Set<String> set1 = new HashSet<String>();		
 		HashSet<String> set2 = new HashSet<String>();
 		
 		set1.add("java");
@@ -38,15 +37,26 @@ public class SetEx1 {
 		set2.add("2");
 		set2.add("3");
 		set2.add("4");
-		set2.add("1"); // ì¤‘ë³µê°’ì€ ë‹´ì§€ ì•ŠìŒ
+		set2.add("1"); //Áßº¹°ªÀº ´ãÁö ¾ÊÀ½
 		
 		System.out.println(set2);
-		
-		
-		
-		
-		
-		
-	}
 
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

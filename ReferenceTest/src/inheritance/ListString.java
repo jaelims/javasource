@@ -1,10 +1,10 @@
 package inheritance;
 
 public class ListString {
-	String name = "í™ê¸¸ë™";
+	String name = "È«±æµ¿";
 	
 	public void list() {
-		System.out.println(name + " ìƒìœ„ í´ë˜ìŠ¤");
-		// return;
+		System.out.println(name +" »óÀ§ Å¬·¡½º");
+		//return;
 	}
 }

@@ -5,33 +5,51 @@ import java.util.Comparator;
 
 public class ArraysEx2 {
 	public static void main(String[] args) {
-		int arr1[] = { 10, 73, 2, -5, 42 };
-		int arr2[] = { 10, 73, 2, -5, 41 };
-
-		System.out.println(Arrays.equals(arr1, arr2) ? "ê°™ìŒ" : "ë‹¤ë¦„");
+		int arr1[]= {10,73,2,-5,42};
+		int arr2[]= {10,73,2,-5,41};
+		
+		System.out.println(Arrays.equals(arr1, arr2)?"°°À½":"´Ù¸§");
 		
 		System.out.println();
 		
-		int arr3[] = {37,21,56,99,88,58,62,15,39,78};
+		int arr3[]= {37,21,56,99,88,58,62,15,39,78};
 		
-		Arrays.sort(arr3); // ì˜¤ë¦„ì°¨ìˆœ
+		Arrays.sort(arr3); //¿À¸§Â÷¼ø
+		
 		System.out.println(Arrays.toString(arr3));
 		
 		Integer arr4[] = {37,21,56,99,88,58,62,15,39,78};
-		Arrays.sort(arr4, Comparator.reverseOrder()); // Comparator.naturalOrder() - ì˜¤ë¦„ì°¨ìˆœ
+		Arrays.sort(arr4, Comparator.reverseOrder()); // Comparator.naturalOrder()-¿À¸§Â÷¼ø
 		System.out.println(Arrays.toString(arr4));
 		
-		String strArr[] = {"good", "height", "very", "apple", "zero", "zoo"};
+		String strArr[]= {"good","height","very","apple","zero","zoo"};
 		
-		Arrays.sort(strArr, Comparator.reverseOrder());
+		Arrays.sort(strArr,Comparator.reverseOrder());
 		System.out.println(Arrays.toString(strArr));
 		
-		Character chArr[] = {'ã…', 'ã……', 'ã„±', 'ã„·', 'ã…', 'ã…‚', 'ã…Š'};
+		Character chArr[]= {'¤¾','¤µ','¤¡','¤§','¤±','¤²','¤º'};
 		Arrays.sort(chArr);
 		System.out.println(Arrays.toString(chArr));
 		
 		
-		
-		
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,9 +1,10 @@
 package test;
 
-// continue; ë°˜ë³µë¬¸ì•ˆì—ì„œ ì‚¬ìš©ë˜ë©°, ë¸”ë¡ ë‚´ì—ì„œ continue ë¬¸ì´ 
-// ì‹¤í–‰ë˜ë©´ forë¬¸ì˜ ì¦ê°ì‹, while ì¡°ê±´ì‹ìœ¼ë¡œ ì´ë™
+// continue; ¹İº¹¹®¾È¿¡¼­ »ç¿ëµÇ¸ç, ºí·Ï ³»¿¡¼­ continue ¹®ÀÌ
+// ½ÇÇàµÇ¸é for¹®ÀÇ Áõ°¨½Ä, while Á¶°Ç½ÄÀ¸·Î ÀÌµ¿
 
 public class ContinueTest1 {
+
 	public static void main(String[] args) {
 		for(int i=1;i<=10;i++) {
 			if(i%2!=0) {
@@ -11,5 +12,7 @@ public class ContinueTest1 {
 			}
 			System.out.println(i);
 		}
+
 	}
+
 }

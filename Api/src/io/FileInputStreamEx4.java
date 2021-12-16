@@ -1,36 +1,40 @@
 package io;
 
-import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.io.IOException;
 
 public class FileInputStreamEx4 {
 	public static void main(String[] args) {
-		// Rolling ÏùΩÏùÄ ÌõÑ Îã§Î•∏ ÌååÏùºÎ°ú Ï†ÄÏû•
-		
-		FileInputStream fis = null;
-		FileOutputStream fos = null;
+		// Rolling ¿–¿∫ »ƒ ¥Ÿ∏• ∆ƒ¿œ∑Œ ¿˙¿Â
+		FileInputStream fis=null;
+		FileOutputStream fos=null;
 		
 		try {
 			fis = new FileInputStream("c:\\temp\\Rolling.mp3");
-			fos = new FileOutputStream("c:\\temp\\Rolling2.mp3");
+			fos = new FileOutputStream("c:\\temp\\Rolling_copy.mp3");
+			byte[] datas = new byte[1024];
 			
-			byte datas[] = new byte[1024];
-			while (fis.read(datas) != -1) {
+			while(fis.read(datas)!=-1) {
 				fos.write(datas);
-			}
-			
+			}			
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
 			try {
 				fis.close();
 				fos.close();
-			} catch (IOException e) {
-				e.printStackTrace();
+			} catch (Exception e2) {
+				e2.printStackTrace();
 			}
 		}
+
 	}
 }
+
+
+
+
+
+
+
+

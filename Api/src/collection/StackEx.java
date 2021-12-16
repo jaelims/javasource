@@ -3,26 +3,50 @@ package collection;
 import java.util.Stack;
 
 // Stack : LIFO(Last In First Out)
-//		 : ìˆ˜ì‹ê³„ì‚°, ìˆ˜ì‹ ê´„í˜¸ ê²€ì‚¬, undo/redo, ì›¹ë¸Œë¼ìš°ì € ë’¤ë¡œ/ì•ìœ¼ë¡œ
+//       : ¼ö½Ä°è»ê,¼ö½Ä °ıÈ£ °Ë»ç, undo,redo, À¥ºê¶ó¿ìÀú µÚ·Î/¾ÕÀ¸·Î
 
 public class StackEx {
 	public static void main(String[] args) {
 		Stack<String> stack = new Stack<String>();
+
+		//µ¥ÀÌÅÍ »ğÀÔ
+		stack.push("»ç°ú");
+		stack.push("µş±â");
+		stack.push("¹Ù³ª³ª");
+		stack.push("°¨");
 		
-		// ë°ì´í„° ì‚½ì…
-		stack.push("ì‚¬ê³¼");
-		stack.push("ë”¸ê¸°");
-		stack.push("ë°”ë‚˜ë‚˜");
-		stack.push("ê°");
-		
-		// ë°ì´í„° ê°€ì ¸ì˜¤ê¸°
+		//µ¥ÀÌÅÍ °¡Á®¿À±â
 		System.out.println(stack);
 		
 		System.out.println();
 		
-		while (!stack.empty()) {
+		while(!stack.empty()) {
 			System.out.println(stack.pop());
 		}
 		
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

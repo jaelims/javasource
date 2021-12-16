@@ -1,40 +1,45 @@
 package classTest;
 
 public class GoodsStock2 {
-	// ì†ì„± : ìƒí’ˆì½”ë“œ(p12345), ì¬ê³ ìˆ˜ëŸ‰(100)
+	//¼Ó¼º : »óÇ°ÄÚµå(p12345), Àç°í¼ö·®(100)
 	private String code;
 	private int stockNum; // 10
 	
-	//ê¸°ë³¸ìƒì„±ì
+	//±âº»»ı¼ºÀÚ
 	GoodsStock2(){}
 	
-	//ìƒì„±ì ì˜¤ë²„ë¡œë”©
+	//»ı¼ºÀÚ ¿À¹ö·Îµù
 	
-	//ë©¤ë²„ë³€ìˆ˜ ì´ˆê¸°í™” ëª©ì 
-	GoodsStock2(String code, int stockNum){
+	//¸â¹öº¯¼ö ÃÊ±âÈ­ ¸ñÀû
+	GoodsStock2(String code,int stockNum){
 		this.code = code;
 		this.stockNum = stockNum;
 	}
 	
 	
 	
-	// ê¸°ëŠ¥ : ì¬ê³ ìˆ˜ëŸ‰ ì¦ê°€(ì…ë ¥ê°’ ìˆ˜ëŸ‰, ì¶œë ¥ê°’ì€ ì—†ìŒ), 
-	// 		ì¬ê³ ìˆ˜ëŸ‰ ê°ì†Œ(ì…ë ¥ê°’ ìˆ˜ëŸ‰, ì¶œë ¥ê°’ì€ í˜„ì¬ ì¬ê³ ìˆ˜ëŸ‰)
 	
+	//±â´É : Àç°í¼ö·® Áõ°¡(ÀÔ·Â°ª ¼ö·®, Ãâ·Â°ªÀº ¾øÀ½),
 	void addStock(int amount) {
 		stockNum += amount;
 	}
-	
+	//       Àç°í¼ö·® °¨¼Ò(ÀÔ·Â°ª ¼ö·®,Ãâ·Â°ªÀº ÇöÀç Àç°í¼ö·®)
 	int subtrackStock(int amount) {
-		if (stockNum > amount) {
+		if(stockNum > amount) {
 			stockNum -= amount;
 		}
 		return stockNum;
-	}
+	}	
 	
-	// í˜„ì¬ ì¬ê³ ìˆ˜ëŸ‰ì„ ë¦¬í„´í•˜ëŠ” ê¸°ëŠ¥
+	//ÇöÀç Àç°í¼ö·®À» ¸®ÅÏÇÏ´Â ±â´É
 	int getStockNum() {
 		return stockNum;
 	}
 	
+	
 }
+
+
+
+
+

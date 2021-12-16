@@ -2,15 +2,16 @@ package test;
 
 public class Exam2 {
 	public static void main(String[] args) {
-		// ì¤‘ì²© for ë¬¸ì„ ì‚¬ìš©í•´ì„œ ë°©ì •ì‹ 4x+5y=60 ì˜ ëª¨ë“  í•´ë¥¼
-		// êµ¬í•´ì„œ (x,y) í˜•íƒœë¡œ ì¶œë ¥í•˜ê¸°
-		// ë‹¨, x,yëŠ” 10ì´í•˜ ìì—°ìˆ˜
-		for (int x = 1; x < 11; x++) {
-			for (int y = 1; y < 11; y++) {
-				if ((4 * x) + (5 * y) == 60) {
-					System.out.printf("(%d, %d)\n", x, y);
+		// ÁßÃ¸ for ¹®À» »ç¿ëÇØ¼­ ¹æÁ¤½Ä 4x+5y=60 ÀÇ ¸ğµç ÇØ¸¦
+		// ±¸ÇØ¼­ (x,y) ÇüÅÂ·Î Ãâ·ÂÇÏ±â
+		// ´Ü, x,y´Â 10 ÀÌÇÏ ÀÚ¿¬¼ö
+		for(int x=1;x<=10;x++) {
+			for(int y=1;y<=10;y++) {
+				if(4*x+5*y==60) {
+					System.out.printf("(%d, %d)\n",x,y);
 				}
 			}
 		}
+
 	}
 }

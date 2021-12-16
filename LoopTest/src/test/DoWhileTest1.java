@@ -2,14 +2,15 @@ package test;
 
 public class DoWhileTest1 {
 	public static void main(String[] args) {
-
+		
 		int i = 0;
 		
-		// ì‹¤í–‰ë¬¸ì„ ìš°ì„  ì‹¤í–‰í•˜ê³  ì¡°ê±´ ê²€ì‚¬
-		// ë‹¤ìŒ ë°˜ë³µì„ ìˆ˜í–‰í• ì§€ ê²°ì •
+		// ½ÇÇà¹®À» ¿ì¼± ½ÇÇàÇÏ°í Á¶°Ç °Ë»çÇÏ¿©
+		// ´ÙÀ½ ¹Ýº¹À» ¼öÇàÇÒ Áö °áÁ¤		
 		do {
-			System.out.println("ì•ˆë…•í•˜ì„¸ìš”");
-		} while (i > 0);
+			System.out.println("¾È³çÇÏ¼¼¿ä");
+		}while(i>0);
 
 	}
+
 }

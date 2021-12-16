@@ -2,25 +2,29 @@ package test;
 
 public class Exam1 {
 	public static void main(String[] args) {
-		// ì£¼ì‚¬ìœ„ 2ê°œ ë˜ì§€ê¸°
-		// ë‚˜ì˜¤ëŠ” ì£¼ì‚¬ìœ„ ëˆˆ ì¶œë ¥ (1, 4)
 		
-		// ì£¼ì‚¬ìœ„ ëˆˆì˜ í•©ê³„ê°€ 5ê°€ ì•„ë‹ˆë©´ ì£¼ì‚¬ìœ„ë¥¼ ê³„ì† ë˜ì§€ê³ 
-		// 5ê°€ ë˜ë©´ ì‹¤í–‰ì„ ë©ˆì¶”ê¸°
-		
-		while (true) {
-		int dice1 = (int) (Math.random()*6)+1;
-		int dice2 = (int) (Math.random()*6)+1;
-		
-		System.out.printf("%d, %d\n", dice1, dice2);
-		
-		int sum = dice1 + dice2;
-			if (sum != 5) {
-				continue;
+		while(true) {
+			//ÁÖ»çÀ§ 2 °³ ´øÁö±â
+			int dice1 = (int)(Math.random()*6)+1;
+			int dice2 = (int)(Math.random()*6)+1;
+			
+			//³ª¿À´Â ÁÖ»çÀ§ ´« Ãâ·Â  (1,4)
+			System.out.printf("(%d, %d)\n",dice1,dice2);
+			
+			// ÁÖ»çÀ§ ´«ÀÇ ÇÕ°è°¡ 5°¡ ¾Æ´Ï¸é ÁÖ»çÀ§¸¦ °è¼Ó ´øÁö°í
+			// 5°¡ µÇ¸é ½ÇÇàÀ» ¸ØÃß±â
+			if(dice1+dice2 == 5) {
+				break;
 			}
-			System.out.printf("ì£¼ì‚¬ìœ„ ëˆˆì˜ í•©ê³„ê°€ %dê°€ ë˜ì–´ ì¢…ë£Œ í•©ë‹ˆë‹¤.\n", sum);
-			break;
 		}
-	}
+		
 
+	}
 }
+
+
+
+
+
+
+

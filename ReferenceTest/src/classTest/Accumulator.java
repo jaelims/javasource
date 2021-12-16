@@ -4,8 +4,7 @@ public class Accumulator {
 	static {
 		try {
 			Class.forName("");
-		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
+		} catch (ClassNotFoundException e) {			
 			e.printStackTrace();
 		}
 	}
@@ -14,10 +13,16 @@ public class Accumulator {
 	static int grandTotal = 0;
 	void accumulate(int amount) {
 		total+=amount;
-		grandTotal+=amount;
+		grandTotal+=amount;		
 	}
 	
 	static void print() {
-		// total
+		//total
 	}
 }
+
+
+
+
+
+

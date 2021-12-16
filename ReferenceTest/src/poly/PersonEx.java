@@ -2,8 +2,9 @@ package poly;
 
 public class PersonEx {
 	public static void main(String[] args) {
-		Person p = new Person("í™ê¸¸ë™", "ì„œìš¸", 35);
+		Person p = new Person("È«±æµ¿","¼­¿ï",35);
 		System.out.println(p);
 		//System.out.println(p.toString());
+
 	}
 }

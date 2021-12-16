@@ -2,22 +2,34 @@ package test;
 
 public class ForTest2 {
 	public static void main(String[] args) {
-		// 1~10ê¹Œì§€ í•©
-		int sum = 0;
-		for (int i = 1; i < 11; i++) {
-			sum = sum + i;
-
+		// 1~10±îÁö ÇÕ
+		int sum=0;
+		for(int i=1;i<11;i++) {
+			sum = sum+i;
 		}
-		System.out.println(sum);
+		System.out.println(sum); //55
 
 		System.out.println();
-
-		// 1~100ê¹Œì§€ í•©
+		
+		//1~100±îÁö ÇÕ
 		sum = 0;
-		for (int i = 1; i < 101; i++) {
-			sum = sum + i;
-
+		for(int i=1;i<101;i++) {
+			sum = sum+i;
 		}
-		System.out.println("1 ~ 100ê¹Œì§€ í•© : " + sum);
+		System.out.println("1 ~ 100 ±îÁö ÇÕ "+sum);
+		
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

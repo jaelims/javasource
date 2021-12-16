@@ -2,11 +2,10 @@ package interfaceTest;
 
 public class SoundableEx {
 	public static void main(String[] args) {
-		printSount(new Cat());
-		printSount(new Dog());
-		
+		printSound(new Cat());
+		printSound(new Dog());
 	}
-	private static void printSount(Soundable soundable)	{
+	private static void printSound(Soundable soundable) {
 		System.out.println(soundable.sound());
 	}
 }

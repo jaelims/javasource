@@ -13,20 +13,19 @@ public class BufferedInputStreamEx2 {
 		FileOutputStream fos = null;
 		BufferedOutputStream bos = null;
 		
-		try {
-			
+		try {			
 			//fis = new FileInputStream("c:\\temp\\picture.jpg");
 			fis = new FileInputStream("c:\\temp\\Rolling.mp3");
 			bis = new BufferedInputStream(fis);
-			//fos = new FileOutputStream("c:\\temp\\picture_copy2.jpg");
 			fos = new FileOutputStream("c:\\temp\\Rolling_copy2.mp3");
+			//fos = new FileOutputStream("c:\\temp\\picture_copy2.jpg");
 			bos = new BufferedOutputStream(fos);
 			
 			int data;
-			while ((data=bis.read())!=-1) {
+			while((data=bis.read())!=-1) {
 				bos.write(data);
 			}
-			bos.flush(); // Î≤ÑÌçº ÎπÑÏö∞Í∏∞
+			bos.flush(); //πˆ∆€ ∫ÒøÏ±‚
 			
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -40,5 +39,12 @@ public class BufferedInputStreamEx2 {
 				e2.printStackTrace();
 			}
 		}
+
 	}
 }
+
+
+
+
+
+

@@ -16,12 +16,28 @@ public abstract class Player {
 		play(currentPos);
 	}
 	void pause() {
-		if (pause) {
+		if(pause) {
 			pause = false;
 			play(currentPos);
-		} else {
+		}else {
 			pause=true;
 			stop();
 		}
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

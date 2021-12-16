@@ -1,19 +1,38 @@
 package inheritance;
 
 public class SubListString extends ListString {
-	String name = "ì„±ì¶˜í–¥";
-
+	String name="¼ºÃáÇâ";
+	
 	@Override
-	public void list() {
-		super.list(); // ë¶€ëª¨ì˜ list í˜¸ì¶œ
-		System.out.println(name + " í•˜ìœ„ í´ë˜ìŠ¤");
+	public void list() {		
+		super.list(); //ºÎ¸ğÀÇ list È£Ãâ
+		System.out.println(name + " ÇÏÀ§ Å¬·¡½º");
 	}
 	
 	public void writer() {
-		//ë¶€ëª¨ê°€ ê°€ì§€ê³  ìˆëŠ” ì´ë¦„ ì¶œë ¥
+		//ºÎ¸ğ°¡ °¡Áö°í ÀÖ´Â ÀÌ¸§ Ãâ·Â
 		System.out.println(super.name);
 		
 		super.list();
-		
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

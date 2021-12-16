@@ -2,10 +2,10 @@ package array;
 
 public class ArrayTest3 {
 	public static void main(String[] args) {
-		// int íƒ€ì…ì˜ ë°°ì—´ 5ê°œ ìƒì„±
+		// int Å¸ÀÔÀÇ ¹è¿­ 5°³ »ı¼º
 		// 0 10 20 30 40
-		int score[]= {0, 10, 20, 30, 40};
-//		for (int i = 0; i < score.length; i++) {
+		int score[] = {0, 10, 20, 30, 40};
+//		for(int i=0;i<score.length;i++) {
 //			System.out.print(score[i]+"\t");
 //		}
 		
@@ -13,19 +13,27 @@ public class ArrayTest3 {
 			System.out.print(idx+"\t");
 		}
 		
+		
 		System.out.println();
+		// String Å¸ÀÔÀÇ ¹è¿­ 5 °³ »ı¼º
+		// °úÀÏÀÌ¸§ ÃÊ±âÈ­
+		String fruit[] = {"»ç°ú","¸á·Ğ","¼ö¹Ú","Å°À§","Åä¸¶Åä"};
+//		for(int i=0;i<fruit.length;i++) {
+//			System.out.print(fruit[i]+"\t");
+//		}		
 		
-		// String íƒ€ì…ì˜ ë°°ì—´ 5 ê°œ ìƒì„±
-		// ê³¼ì¼ì´ë¦„ ì´ˆê¸°í™”
-		
-		String fruit[] = {"ì‚¬ê³¼", "í¬ë„", "ìˆ˜ë°•", "ë”¸ê¸°", "ë³µìˆ­ì•„"};
-//		for (int i = 0; i < fruit.length; i++) {
-//			System.out.print(fruit[i]+" ");
-//		}
-		
-		//í–¥ìƒëœ forë¬¸
-		for (String f:fruit) {
-			System.out.print(f+" ");
+		//Çâ»óµÈ for¹®
+		for(String f:fruit) {
+			System.out.print(f+"\t");
 		}
+
 	}
 }
+
+
+
+
+
+
+
+

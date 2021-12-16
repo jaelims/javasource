@@ -2,29 +2,42 @@ package interfaceTest;
 
 public class Audio implements RemoteControl {
 	private int volume;
-	
+
 	@Override
-	public void turnOn() {
-		System.out.println("Audioë¥¼ ì¼­ë‹ˆë‹¤.");
+	public void turnOn() {		
+		System.out.println("Audio¸¦ ÄÕ´Ï´Ù.");
 	}
 
 	@Override
 	public void turnOff() {
-		System.out.println("Audioë¥¼ ë•ë‹ˆë‹¤.");
+		System.out.println("Audio¸¦ ²ü´Ï´Ù.");
 	}
 
 	@Override
 	public void setVolume(int volume) {
 		
-		if (volume > RemoteControl.MAX_VOLUME) {
+		if(volume > RemoteControl.MAX_VOLUME) {
 			this.volume = RemoteControl.MAX_VOLUME;
-		}else if (volume < RemoteControl.MIN_VOLUME) {
+		}else if(volume < RemoteControl.MIN_VOLUME) {
 			this.volume = RemoteControl.MIN_VOLUME;
 		}else {
 			this.volume = volume;
 		}
 		
-		System.out.println("Audio í˜„ìž¬ ë³¼ë¥¨ : "+volume);
+		System.out.println("Audio ÇöÀç º¼·ý : "+this.volume);
+
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+

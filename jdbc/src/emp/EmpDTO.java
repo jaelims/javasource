@@ -8,18 +8,17 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-// í…Œì´ë¸” ê²°ê³¼ë‘ ë˜‘ê°™ì€ ëª¨ì–‘ìœ¼ë¡œ ì‘ì„±
+// Å×ÀÌºí °á°ú¶û ¶È°°Àº ¸ğ¾çÀ¸·Î ÀÛ¼º
 // ~~DTO : Data Transfer Object
 // ~~VO : Value Object
 
 // number => int, varchar => String, date = util.Date
 
-@Setter // setter ë©”ì†Œë“œ ìë™ìœ¼ë¡œ ìƒì„±
-@Getter // getter ë©”ì†Œë“œ ìë™ìœ¼ë¡œ ìƒì„±
-@NoArgsConstructor // default ìƒì„±ì ìë™ ìƒì„±
-@AllArgsConstructor // ì¸ìë¥¼ ëª¨ë‘ ë°›ëŠ” ìƒì„±ì ìë™ ìƒì„±
+@Setter  //setter ¸Ş¼Òµå ÀÚµ¿À¸·Î »ı¼º
+@Getter  //getter ¸Ş¼Òµå ÀÚµ¿À¸·Î »ı¼º
+@NoArgsConstructor // default »ı¼ºÀÚ ÀÚµ¿ »ı¼º
+@AllArgsConstructor //ÀÎÀÚ¸¦ ¸ğµÎ ¹Ş´Â »ı¼ºÀÚ ÀÚµ¿ »ı¼º
 @ToString
-
 public class EmpDTO {
 	private int empno;
 	private String ename;
@@ -31,7 +30,7 @@ public class EmpDTO {
 	private int deptno;
 	
 //	public EmpDTO() {
-//		super();
+//		super();		
 //	}
 //	public EmpDTO(int empno, String ename, String job, int mgr, Date hiredate, int sal, int comm, int deptno) {
 //		super();
@@ -93,5 +92,16 @@ public class EmpDTO {
 //		this.deptno = deptno;
 //	}
 	
-	
 }
+
+
+
+
+
+
+
+
+
+
+
+

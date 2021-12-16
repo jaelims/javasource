@@ -10,43 +10,47 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 
 public class MyFrame4 extends JFrame implements ActionListener {
-
+	
 	Container container;
 	
+	
 	public MyFrame4() {
-		setTitle("í”„ë ˆì„ ë°°ê²½ìƒ‰ ë³€ê²½");
+		setTitle("ÇÁ·¹ÀÓ ¹è°æ»ö º¯°æ");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
-		// í”„ë ˆì„ì˜ ë ˆì´ì•„ì›ƒ ë³€ê²½
-		container = getContentPane();
+		//ÇÁ·¹ÀÓÀÇ ·¹ÀÌ¾Æ¿ô º¯°æ
+		container  = getContentPane();
 		container.setLayout(new FlowLayout());
 		//container.setBackground(Color.BLUE);
 		
-		// ë²„íŠ¼ 2ê°œ ìƒì„±
-		// í…ìŠ¤íŠ¸ ë…¸ë‘, ë¹¨ê°•
-		JButton btn1 = new JButton("ë…¸ë‘");
-		btn1.addActionListener(this);
-		add(btn1);
 		
-		JButton btn2 = new JButton("ë¹¨ê°•");
+		//¹öÆ° 2°³ »ı¼º
+		//ÅØ½ºÆ® ³ë¶û, »¡°­
+		JButton btn1 = new JButton("³ë¶û");
+		btn1.addActionListener(this);
+		
+		JButton btn2 = new JButton("»¡°­");
 		btn2.addActionListener(this);
+		
+		
+		add(btn1);
 		add(btn2);
 		
-		setBounds(200, 100, 300, 200);
-		setVisible(true);
-	}
-	
-	
-	@Override
-	public void actionPerformed(ActionEvent e) {
-		String cmd = e.getActionCommand(); // ë…¸ë‘ or ë¹¨ê°•
 		
-		if(cmd.equals("ë…¸ë‘")) { // í”„ë ˆì„ ë°°ê²½ìƒ‰ì„ ë…¸ë‘ìƒ‰ìœ¼ë¡œ ë³€ê²½
+		
+		setBounds(200, 100, 300, 200);
+		setVisible(true);		
+	}	
+
+	@Override
+	public void actionPerformed(ActionEvent e) {	
+		String cmd=e.getActionCommand(); // ³ë¶û or »¡°­
+		
+		if(cmd.equals("³ë¶û")) { //ÇÁ·¹ÀÓ ¹è°æ»öÀ» ³ë¶û»öÀ¸·Î º¯°æ
 			container.setBackground(Color.YELLOW);
-		}else { // í”„ë ˆì„ ë°°ê²½ìƒ‰ì„ ë¹¨ê°•ìœ¼ë¡œ ë³€ê²½
+		}else {//ÇÁ·¹ÀÓ ¹è°æ»öÀ» »¡°­ º¯°æ
 			container.setBackground(Color.RED);
 		}
-		
 		
 		
 
@@ -58,3 +62,10 @@ public class MyFrame4 extends JFrame implements ActionListener {
 	}
 
 }
+
+
+
+
+
+
+

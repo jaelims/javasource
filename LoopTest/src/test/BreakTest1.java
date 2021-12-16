@@ -1,16 +1,18 @@
 package test;
 
-// break; ë°˜ë³µë¬¸ ì‹¤í–‰ ì¤‘ì§€
+// break; ¹İº¹¹® ½ÇÇà ÁßÁö
 public class BreakTest1 {
 	public static void main(String[] args) {
 		
 		while(true) {
-			//ì£¼ì‚¬ìœ„ë¥¼ ëŒë ¤ì„œ 6ì´ ë‚˜ì˜¤ë©´ ë°˜ë³µë¬¸ ì¢…ë£Œ
-			int num = (int) (Math.random()*6)+1;
+			//ÁÖ»çÀ§¸¦ µ¹·Á¼­ 6ÀÌ ³ª¿À¸é ¹İº¹¹® Á¾·á
+			int num = (int)(Math.random()*6)+1;
 			System.out.println(num);
+			
 			if(num == 6) {
 				break;
 			}
 		}
+
 	}
 }

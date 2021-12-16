@@ -1,40 +1,44 @@
 package exam;
 
 public class Account {
-	private String ano; // ê³„ì¢Œë²ˆí˜¸
-	private String owner; // ê³„ì¢Œì£¼
-	private int balance; // ìž”ì•¡
-	
+	private String ano; //°èÁÂ¹øÈ£
+	private String owner; //°èÁÂÁÖ
+	private int balance; //ÀÜ¾×
 	public Account(String ano, String owner, int balance) {
 		super();
 		this.ano = ano;
 		this.owner = owner;
 		this.balance = balance;
 	}
-
 	public String getAno() {
 		return ano;
 	}
-
 	public void setAno(String ano) {
 		this.ano = ano;
 	}
-
 	public String getOwner() {
 		return owner;
 	}
-
 	public void setOwner(String owner) {
 		this.owner = owner;
 	}
-
 	public int getBalance() {
 		return balance;
 	}
-
 	public void setBalance(int balance) {
 		this.balance = balance;
-	}
-	
-	
+	}	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

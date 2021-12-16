@@ -4,11 +4,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /* ActionListener
- * Jbutton, JMenuItem, JtextField ì»´í¬ë„ŒíŠ¸ì˜ ì´ë²¤íŠ¸ ë‹´ë‹¹
+ * JButton, JMenuItem, JTextField ÄÄÆ÷³ÍÆ®ÀÇ ÀÌº¥Æ® ´ã´ç
  * 
- * JButton => ë§ˆìš°ìŠ¤ë‚˜ enter ë²„íŠ¼ ì„ íƒ
- * JMenuItem => ë©”ë‰´ ì„ íƒ
- * JTextField => Enter í‚¤ ì…ë ¥
+ * JButton => ¸¶¿ì½º³ª enter ¹öÆ° ¼±ÅÃ
+ * JMenuItem => ¸Ş´º ¼±ÅÃ
+ * JTextField => Enter Å° ÀÔ·Â
  */
 
 
@@ -16,11 +16,23 @@ public class MyListener1 implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		// ì•¡ì…˜ì´ ì¼ì–´ë‚œ ê°ì²´ì˜ command ê°€ì ¸ì˜´
-		System.out.println("e.getActionCommand() " +e.getActionCommand());
-		System.out.println("e.getID() " +e.getID());
-		System.out.println("e.getSource() " +e.getSource());
-
+		//¾×¼ÇÀÌ ÀÏ¾î³­ °´Ã¼ÀÇ command °¡Á®¿È
+		System.out.println("e.getActionCommand() "+e.getActionCommand());
+		System.out.println("e.getID() "+e.getID());
+		System.out.println("e.getSource() "+e.getSource());
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

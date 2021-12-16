@@ -4,32 +4,36 @@ import java.io.IOException;
 
 public class WhileTest3 { //p126
 	public static void main(String[] args) throws IOException {
-
+		
 		boolean run = true;
-		int keyCode = 0, speed = 0;
-
-		while (run) {
-			// 13 => CR && 10 => LF : ì—”í„°
-			if (keyCode != 13 && keyCode != 10) {
-				System.out.println("=====================");
-				System.out.println("1. ì¢…ì† | 2. ê°ì† | 3.ì¤‘ì§€");
-				System.out.println("=====================");
-				System.out.print("ì„ íƒ : ");
+		int keyCode = 0,speed = 0;
+		
+		while(run) {
+			// 13 => CR && 10 => LF : ¿£ÅÍ (\r\n)
+			if(keyCode!=13 && keyCode != 10) {
+				System.out.println("=========================");
+				System.out.println("1. Á¾¼Ó | 2. °¨¼Ó | 3. ÁßÁö");
+				System.out.println("=========================");
+				System.out.print("¼±ÅÃ : ");
 			}
-
+			
 			// int java.io.InputStream.read() throws IOException
 			keyCode = System.in.read(); // 1 => 49, 2 => 50, 3 => 51
-
-			if (keyCode == 49) {
+			
+			if(keyCode == 49) {
 				speed++;
-				System.out.println("í˜„ì¬ ì†ë„ = " + speed);
-			} else if (keyCode == 50) {
+				System.out.println("ÇöÀç ¼Óµµ = "+speed);
+			}else if(keyCode==50) {
 				speed--;
-				System.out.println("í˜„ì¬ ì†ë„ = " + speed);
-			} else if (keyCode == 51) {
-				run = false;
-			}
+				System.out.println("ÇöÀç ¼Óµµ = "+speed);
+			}else if(keyCode==51) {
+				run = false;				
+			}			
 		}
-		System.out.println("í”„ë¡œê·¸ë¨ ì¢…ë£Œ");
+		System.out.println("ÇÁ·Î±×·¥ Á¾·á");
+		
+
 	}
 }
+
+

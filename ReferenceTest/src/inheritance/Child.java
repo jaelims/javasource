@@ -1,28 +1,52 @@
 package inheritance;
 
-// í™•ì¥
-// extends ë¶€ëª¨í´ë˜ìŠ¤ëª…
-// ìƒì„±ìì™€ ì´ˆê¸°í™” ë¸”ëŸ­ì€ ìƒì†ë˜ì§€ ì•ŠìŒ
-// private ë©¤ë²„ë³€ìˆ˜ëŠ” ì ‘ê·¼ì´ ì œí•œë¨
+// È®Àå
+//  extends ºÎ¸ğÅ¬·¡½º¸í
+//  »ı¼ºÀÚ¿Í ÃÊ±âÈ­ ºí·°Àº »ó¼ÓµÇÁö ¾ÊÀ½
+//  private ¸â¹öº¯¼ö´Â Á¢±ÙÀÌ Á¦ÇÑµÊ
 
 public class Child extends Parent {
 
 	public Child(int age) {
-		super(age);		// parentì˜ int ë¥¼ ë°›ëŠ” ìƒì„±ì í˜¸ì¶œ
+		super(age);		//ParentÀÇ int ¸¦ ¹Ş´Â »ı¼ºÀÚ È£Ãâ
 	}
-	// Implicit super constructor Parent() is undefined for default constructor.
-	// Must define an explicit constructor
-	
-//	public child() {
-//		super(); // parent ê¸°ë³¸ ìƒì„±ì í˜¸ì¶œ
-//	}
+	//Implicit super constructor Parent() is undefined for default constructor. 
+	//Must define an explicit constructor
+		
+	//	public Child() {
+	//		super(); //Parent ±âº» »ı¼ºÀÚ È£Ãâ
+	//	}
 	
 	void play() {
-		System.out.println("ë†€ì!");
+		System.out.println("³îÀÚ!!!!");
 	}
 	
 	@Override
 	public void print() {
 		System.out.println("Hello");
-	}
+	}	
+	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

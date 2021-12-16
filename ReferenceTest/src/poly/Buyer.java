@@ -4,15 +4,30 @@ public class Buyer {
 	int money = 2000;
 	int bonusPoint = 0;
 	
-	//ë¶€ëª¨ = ìì‹
+	//ºÎ¸ğ = ÀÚ½Ä	
 	void buy(Product p) {
-		if (money < p.getPrice()) {
-			System.out.println("ì”ì•¡ ë¶€ì¡±ìœ¼ë¡œ ì¸í•´ ë¬¼ê±´ êµ¬ë§¤ ì‹¤íŒ¨");
+		if(money < p.getPrice()) {
+			System.out.println("ÀÜ¾× ºÎÁ·À¸·Î ÀÎÇØ ¹°°Ç ±¸¸Å ½ÇÆĞ");
 			return;
 		}
 		
 		money -= p.getPrice();
 		bonusPoint += p.getBonusPoint();
-		System.out.println(p+ "ì„ êµ¬ì…í•˜ì…¨ìŠµë‹ˆë‹¤.");
+		System.out.println(p+ "À» ±¸ÀÔÇÏ¼Ì½À´Ï´Ù.");
+		
 	}
+	
+	
+//	
+//	void buy(Tv tv) {
+//		
+//	}
+//	void buy(Computer computer) {
+//		
+//	}
+//	void buy(Audio audio) {
+//		
+//	}
+	
+	
 }

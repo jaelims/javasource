@@ -7,8 +7,6 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JButton;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
 import java.awt.Color;
 import java.awt.FlowLayout;
 import javax.swing.JLabel;
@@ -58,18 +56,14 @@ public class MyFrame extends JFrame {
 		JButton btnNewButton_2 = new JButton("New button");
 		contentPane.add(btnNewButton_2);
 		
-		JButton btn3 = new JButton("버튼3");
-		btn3.setBackground(new Color(51, 204, 255));
-		btn3.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
-		contentPane.add(btn3);
+		JButton btnNewButton_3 = new JButton("New button");
+		contentPane.add(btnNewButton_3);
 		
-		JButton btnNewButton_4 = new JButton("New button");
-		contentPane.add(btnNewButton_4);
+		JButton btn4 = new JButton("\uBC84\uD2BC4");
+		btn4.setBackground(new Color(102, 153, 102));
+		contentPane.add(btn4);
 		
-		JLabel lblNewLabel = new JLabel("이름");
+		JLabel lblNewLabel = new JLabel("\uC774\uB984");
 		contentPane.add(lblNewLabel);
 		
 		textField = new JTextField();
@@ -78,3 +72,11 @@ public class MyFrame extends JFrame {
 	}
 
 }
+
+
+
+
+
+
+
+

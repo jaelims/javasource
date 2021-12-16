@@ -1,36 +1,51 @@
 package classTest;
 
 public class AccountEx2 {
-	public static void main(String[] args) {
-		//í™ê¸¸ë™ ê³„ì¢Œ
-		Account2 acc1 = new Account2();
-//		acc1.accountNum = "122-01-12222";
-//		acc1.name = "í™ê¸¸ë™";
-//		acc1.money = 5000;
 
-		//ìƒì„±ìë¥¼ ì‚¬ìš©í•˜ì§€ ì•Šê³  ë©¤ë²„ë³€ìˆ˜ ê°’ ì´ˆê¸°í™”
-		acc1.setMoney(5000);
-		// ê³„ì¢Œë²ˆí˜¸
-		acc1.setAccountNum("122-01-12222");
-		// ì´ë¦„
-		acc1.setName("í™ê¸¸ë™");
+	public static void main(String[] args) {
+		// È«±æµ¿ °èÁÂ
+		Account2 account1 = new Account2();
+
+		//»ı¼ºÀÚ¸¦ »ç¿ëÇÏÁö ¾Ê°í ¸â¹öº¯¼ö °ª ÃÊ±âÈ­
+		account1.setBalance(10000);
+		//°èÁÂ¹øÈ£
+		account1.setAccountNo("122-01-12222");
+		//ÀÌ¸§
+		account1.setName("È«±æµ¿");		
+		
+		//ÀÔ±İ
+		account1.deposit(50000);
+		System.out.println("ÀÔ±İ ÈÄ ÀÜ¾× : "+account1.getBalance());		
+		
+		//Ãâ±İ
+		System.out.println("ÇöÀç ÀÜ¾× : "+account1.withdraw(30000));
 		
 		
-		//ì…ê¸ˆ
-		acc1.add(50000);
 		
-		//ì¶œê¸ˆ
-		int money = acc1.subtrack(10000);
-		System.out.println("ì…ê¸ˆ í›„ ì”ì•¡ : "+ acc1.getMoney());
 		
-		//ì„±ì¶˜í–¥ ê³„ì¢Œ
-		Account2 acc2 = new Account2("122-01-13333", "ì„±ì¶˜í–¥");
-		System.out.println("ì…ê¸ˆ í›„ ì”ì•¡ : "+ acc2.getMoney());
+		//¼ºÃáÇâ °èÁÂ
+		Account2 account2 = new Account2("122-01-13333", "¼ºÃáÇâ");
+		System.out.println("ÇöÀç ÀÜ¾× Á¶È¸ : "+account2.getBalance());
+			
 		
-		//ë°•ë³´ê²€ ê³„ì¢Œ
-		Account2 acc3 = new Account2("122-01-13333", 1000000, "ë°•ë³´ê²€");
-		System.out.println("ì…ê¸ˆ í›„ ì”ì•¡ : "+ acc3.getMoney());
 		
-				
+		//¹Úº¸°Ë °ÔÁÂ
+		Account2 account3 = new Account2("122-01-13333",1000000,"¼ºÃáÇâ");
+		System.out.println("ÇöÀç ÀÜ¾× Á¶È¸ : "+account3.getBalance());
 	}
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

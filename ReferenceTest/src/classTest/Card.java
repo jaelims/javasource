@@ -1,20 +1,19 @@
 package classTest;
 
 public class Card {
-	// ë©¤ë²„ë³€ìˆ˜
-	// ê°ì²´ ìƒì„±
-	private String kind; //ì¹´ë“œ ëª¨ì–‘ ì§€ì •
-	private int number;  //ì¹´ë“œ ìˆ«ì ì§€ì •
+	//¸â¹öº¯¼ö
+	//°´Ã¼ »ı¼º
+	private String kind;  //Ä«µå ¸ğ¾ç ÁöÁ¤
+	private int number;   //Ä«µå ¼ıÀÚ ÁöÁ¤
 	
-	// int width = 10;
-	// int height = 7;
+//	int width = 10;
+//	int height = 7;
 	
+	// static(Á¤Àû) : Å¬·¡½º¿¡ °íÁ¤µÈ ¸â¹ö
+	//                °´Ã¼¸¦ »ı¼ºÇÏÁö ¾Ê°í »ç¿ë
+	//                Å¬·¡½º°¡ ¸Ş¸ğ¸®¿¡ ·ÎµåµÉ ¶§ »ı¼º
 	
-	// static(ì •ì ) : í´ë˜ìŠ¤ì— ê³ ì •ëœ ë©¤ë²„
-	//				 ê°ì²´ë¥¼ ìƒì„±í•˜ì§€ ì•Šê³  ì‚¬ìš©
-	//				 í´ë˜ìŠ¤ê°€ ë©”ëª¨ë¦¬ì— ë¡œë“œë  ë•Œ ìƒì„±
-	
-	// í´ë˜ìŠ¤ ë³€ìˆ˜
+	// Å¬·¡½º º¯¼ö
 	static int width = 10;
 	static int height = 7;
 	
@@ -32,21 +31,28 @@ public class Card {
 		return number;
 	}
 
-	// static(ì •ì ) ë©”ì†Œë“œ : ê°ì²´ë¥¼ ìƒì„±í•˜ì§€ ì•Šê³  ì‚¬ìš©
-	//					   í´ë˜ìŠ¤ê°€ ë©”ëª¨ë¦¬ì— ë¡œë“œë  ë•Œ ìƒì„±
-	//					  static ë©”ì†Œë“œ ì•ˆì—ì„œ ì¸ìŠ¤í„´ìŠ¤ ë©¤ë²„ ì‚¬ìš© ë¶ˆê°€
+	// static(Á¤Àû) ¸Ş¼Òµå : °´Ã¼¸¦ »ı¼ºÇÏÁö ¾Ê°í »ç¿ë
+	//                    	 Å¬·¡½º°¡ ¸Ş¸ğ¸®¿¡ ·ÎµåµÉ ¶§ »ı¼º
+	//                       static ¸Ş¼­µå ¾È¿¡¼­ ÀÎ½ºÅÏ½º ¸â¹ö »ç¿ë ºÒ°¡
 	public static int getWidth() {
-		// kind = "";	(x)
-		// getNumber();	(x)
+		// kind = ""; (X)
+		// getNumber(); (X)
 		
-		// getHeight();	(o)
+		// getHeight(); (O)
 		return width;
 	}
 
 	public static int getHeight() {
 		return height;
-	}
-	
-	
-	
+	}	
 }
+
+
+
+
+
+
+
+
+
+

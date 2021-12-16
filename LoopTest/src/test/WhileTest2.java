@@ -2,32 +2,43 @@ package test;
 
 public class WhileTest2 {
 	public static void main(String[] args) {
-		// 1~100ê¹Œì§€ í•©
+		//1~100±îÁö ÇÕ
 //		sum = 0;
-//		for (int i = 1; i < 101; i++) {
-//			sum = sum + i;
-//
+//		for(int i=1;i<101;i++) {
+//			sum = sum+i;
 //		}
-//		System.out.println("1 ~ 100ê¹Œì§€ í•© : " + sum);
+//		System.out.println("1 ~ 100 ±îÁö ÇÕ "+sum);
 		
-		int sum = 0, i = 1;
-		while (i < 101) {
-			sum = sum + i;
+		
+		int sum=0, i=1;
+		while(i<101) {
+			sum = sum+i;
 			i++;
 		}
-		System.out.println("1 ~ 100ê¹Œì§€ í•© : " + sum);
+		System.out.println("1 ~ 100 ±îÁö ÇÕ "+sum);
 		
 		System.out.println();
 		
-//		for (int i = 1; i < 10; i++) {
-//			// System.out.println("2 * " + i + " = " + (2 * i));
-//			System.out.printf("2 * %d = %02d\n", i, (2 * i));
-//		}
 		
-		i=1;
-		while (i < 10) {
-			System.out.printf("2 * %d = %02d\n", i, (2 * i));
+//		for(int i=1;i<10;i++) {
+//			//System.out.println("2 * "+i+" = "+(2*i));
+//			System.out.printf("2 * %d = %d\t",i,(2*i));
+//		}		
+	
+		
+		i = 1;
+		while(i<10) {
+			System.out.printf("2 * %d = %d\t",i,(2*i));
 			i++;
-		}
+		}	
+		
 	}
 }
+
+
+
+
+
+
+
+

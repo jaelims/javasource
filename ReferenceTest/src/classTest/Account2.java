@@ -1,68 +1,83 @@
 package classTest;
 
-import java.util.Set;
-
 public class Account2 {
-	// ì†ì„± : ê³„ì¢Œë²ˆí˜¸(122-01-12222), ìž”ì•¡, ì´ë¦„
-	private String accountNum;
-	private int money;
+	//¼Ó¼º : °èÁÂ¹øÈ£(122-01-12222),ÀÜ¾×,ÀÌ¸§
+	private String accountNo; 
+	private int balance;
 	private String name;
 	
+	//»ý¼ºÀÚ ÀÛ¼º
+	// [¸¶¿ì½º¿À¸¥ÂÊ] - [source] - [Generate Constructor using Fields..] => ÀÏ¹Ý»ý¼ºÀÚ
+	// [¸¶¿ì½º¿À¸¥ÂÊ] - [source] - [Generate Constructor using Super class..] => default
 	
-	// ìƒì„±ìž ìž‘ì„±
-	// [ë§ˆìš°ìŠ¤ì˜¤ë¥¸ìª½] - [source] - [Generate Constructor using Fields...] => ì¼ë°˜ìƒì„±ìž
-	// [ë§ˆìš°ìŠ¤ì˜¤ë¥¸ìª½] - [source] - [Generate Constructor using Super class...] => default
-	// ê¸°ë³¸ìƒì„±ìž
+	
+	//±âº»»ý¼ºÀÚ
 	public Account2() {
 		super();
-	}
-	public Account2(String accountNum, int money, String name) {
+	}	
+	public Account2(String accountNo, int balance, String name) {
 		super();
-		this.accountNum = accountNum;
-		this.money = money;
+		this.accountNo = accountNo;
+		this.balance = balance;
+		this.name = name;
+	}	
+	public Account2(String accountNo, String name) {
+		super();
+		this.accountNo = accountNo;
 		this.name = name;
 	}
-	public Account2(String accountNum, String name) {
-		super();
-		this.accountNum = accountNum;
-		this.name = name;
+
+	//¿ÜºÎ·ÎºÎÅÍ °ªÀ» ¹Þ¾Æ¼­ ¸â¹öº¯¼öÀÇ °ªÀ» º¯°æÇÏ´Â ÀÛ¾÷½Ã
+	// set~ À¸·Î ¸Þ¼Òµå¸¦ ÀÛ¼ºÇÑ´Ù.
+	
+	
+	
+	
+	
+	
+	
+	// ¸â¹öº¯¼ö : °èÁÂ¹øÈ£¸¦ º¯°æÇÏ°í ½Í´Ù¸é?
+	
+	
+	
+	// ÀÌ¸§À» º¯°æÇÏ°í ½Í´Ù¸é?
+	
+	
+	// ¸â¹ö º¯¼öÀÇ °ªÀ» ¸®ÅÏÇÏ°í ½Í´Ù¸é?
+	// get~~
+	public int getBalance() {
+		return balance;
 	}
 	
-	// ì™¸ë¶€ë¡œë¶€í„° ê°’ì„ ë°›ì•„ì„œ ë©¤ë²„ë³€ìˆ˜ì˜ ê°’ì„ ë³€ê²½í•˜ëŠ” ìž‘ì—…ì‹œ
-	// set~ìœ¼ë¡œ ë©”ì†Œë“œë¥¼ ìž‘ì„±í•œë‹¤.
-	
-	
-	// ë©¤ë²„ë³€ìˆ˜ : ê³„ì¢Œë²ˆí˜¸ë¥¼ ë³€ê²½í•˜ê³  ì‹¶ë‹¤ë©´?
-	public void setAccountNum(String accountNum) {
-		this.accountNum = accountNum;
+
+	public void setAccountNo(String accountNo) {
+		this.accountNo = accountNo;
 	}
-	
-	// ì´ë¦„ì„ ë³€ê²½í•˜ê³  ì‹¶ë‹¤ë©´?
+	public void setBalance(int balance) {
+		this.balance = balance;
+	}
 	public void setName(String name) {
 		this.name = name;
 	}
-	public void setMoney(int money) {
-		this.money = money;
+
+
+	//±â´É : ÀÔ±ÝÇÑ´Ù.(ÀÔ·Â°ª : ÀÔ±Ý¾×, ¹ÝÈ¯°ª:¾øÀ½) => ÇöÀçÀÜ¾× += ÀÔ±Ý¾×
+	void deposit(int amount) {
+		balance += amount;
 	}
-	
-	// ë©¤ë²„ ë³€ìˆ˜ì˜ ê°’ì„ ë¦¬í„´í•˜ê³  ì‹¶ë‹¤ë©´?
-	// get~~
-	public int getMoney() {
-		return money;
-	}
-	
-	
-	
-	
-	// ê¸°ëŠ¥ : ìž…ê¸ˆí•œë‹¤.(ìž…ë ¥ê°’ : ìž…ê¸ˆì•¡, ë°˜í™˜ê°’ : ì—†ìŒ) => í˜„ìž¬ìž”ì•¡ += ìž…ê¸ˆì•¡
-	// 		ì¶œê¸ˆí•œë‹¤.(ìž…ë ¥ê°’ : ì¶œê¸ˆì•¡, ë°˜í™˜ê°’ : í˜„ìž¬ìž”ì•¡) = > í˜„ìž¬ìž”ì•¡ -=ì¶œê¸ˆì•¡
-	void add(int amount) {
-		money += amount;
-	}
-	int subtrack(int amount) {
-		if (money > amount) {
-			money -= amount;
+	//       Ãâ±ÝÇÑ´Ù.(ÀÔ·Â°ª : Ãâ±Ý¾×, ¹ÝÈ¯°ª:ÇöÀçÀÜ¾×) => ÇöÀçÀÜ¾× -= Ãâ±Ý¾×
+	int withdraw(int amount) {
+		if(balance > amount) {
+			balance -= amount;			
 		}
-		return money;
+		return balance;
 	}
 }
+
+
+
+
+
+
+
+

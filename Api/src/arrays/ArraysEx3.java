@@ -4,24 +4,41 @@ import java.util.Arrays;
 
 public class ArraysEx3 {
 	public static void main(String[] args) {
-		int arr3[] = {37,21,56,99,88,58,62,15,39,78};
+		int arr3[]= {37,21,56,99,88,58,62,15,39,78};
 		
-		// 58 ìˆ«ìê°€ ëª‡ë²ˆì§¸ì— ìˆëŠ”ì§€ ì¡°íšŒ
-		// ìˆœì°¨ ê²€ìƒ‰
-		for (int i = 0; i < arr3.length; i++) {
-			if (arr3[i] == 58) {
-				System.out.println(i+1+"ë²ˆì§¸");
+		//58 ¼ıÀÚ°¡ ¸î¹øÂ°¿¡ ÀÖ´ÂÁö Á¶È¸
+		//¼øÂ÷°Ë»ö
+		for(int i=0;i<arr3.length;i++) {
+			if(arr3[i] == 15) {
+				System.out.println(i+1 + "¹øÂ° Ã£¾ÒÀ½");
 				break;
 			}
 		}
 		
 		System.out.println();
 		
-		// binarySearch : ì´ì§„ê²€ìƒ‰(ì •ë ¬ì„ ë¨¼ì € í•œ í›„)
+		// binarySearch : ÀÌÁø°Ë»ö(Á¤·ÄÀ» ¸ÕÀú ÇÑ ÈÄ)
 		Arrays.sort(arr3);
 		System.out.println(Arrays.toString(arr3));
 		
-		int pos = Arrays.binarySearch(arr3, 58);
-		System.out.println(pos+1 + "ë²ˆì§¸");
+		int pos = Arrays.binarySearch(arr3, 15);
+		System.out.println(pos+1 + "¹øÂ° Ã£¾ÒÀ½");
+
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

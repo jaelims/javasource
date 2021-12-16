@@ -3,16 +3,19 @@ package classTest;
 public class TvEx {
 	public static void main(String[] args) {
 		
-		// ê°ì²´ ì„ ì–¸, ìƒì„±
+		//°´Ã¼ ¼±¾ğ, »ı¼º
 		TV tv = new TV();
 		System.out.println(tv);
 		
-		// ê°ì²´ ì¡°ì‘
-		tv.power = true; // on
+		//°´Ã¼ Á¶ÀÛ
+		tv.power = true; //on
 		tv.channel = 2;
 		
-		tv.channelUp(); // ë©”ì†Œë“œ í˜¸ì¶œ
-		System.out.println("ì±„ë„ ìƒíƒœ : "+tv.channel);
+		tv.channelUp(); //¸Ş¼Òµå È£Ãâ
+		System.out.println("Ã¤³Î »óÅÂ : "+tv.channel);
+		
+		
+
 	}
 
 }

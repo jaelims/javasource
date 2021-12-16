@@ -8,30 +8,53 @@ import java.util.Set;
 public class MapEx1 {
 	public static void main(String[] args) {
 		Map<String, String> map = new HashMap<String, String>();
-
-		map.put("id_0123", "í™ê¸¸ë™");
-		map.put("id_0124", "ì¥ê¸¸ë™");
-		map.put("id_0125", "ì†¡ê¸¸ë™");
-		map.put("id_0126", "ìµœê¸¸ë™");
-
-		// ê°€ì ¸ì˜¤ê¸°
-		System.out.println("í‚¤ì— í•´ë‹¹í•˜ëŠ” ê°’ ê°€ì ¸ì˜¤ê¸° : " + map.get("id_0124"));
-		System.out.println("í‚¤ê°€ ì¡´ì¬í•˜ëŠ”ì§€ í™•ì¸í•˜ê¸° : " + map.containsKey("id_0125"));
-		System.out.println("ê°’ì´ ì¡´ì¬í•˜ëŠ”ì§€ í™•ì¸í•˜ê¸° : " + map.containsValue("ì†¡ê¸¸ë™"));
-		System.out.println("map í¬ê¸° : " + map.size());
-		System.out.println("map ìš”ì†Œ ì‚­ì œ : " + map.remove("id_0126"));
-
-		// í‚¤ ê°’ë§Œ ëª¨ë‘ ê°€ì ¸ì˜¤ê¸°
-		Set<String> key = map.keySet();
+		
+		//¿ä¼Ò Ãß°¡
+		map.put("id_0123", "È«±æµ¿");
+		map.put("id_0124", "Àå±æµ¿");
+		map.put("id_0125", "¼Û±æµ¿");
+		map.put("id_0126", "ÃÖ±æµ¿");
+		
+		//°¡Á®¿À±â
+		System.out.println("Å°¿¡ ÇØ´çÇÏ´Â °ª °¡Á®¿À±â : "+map.get("id_0124"));
+		System.out.println("Å°°¡ Á¸ÀçÇÏ´ÂÁö È®ÀÎÇÏ±â : "+map.containsKey("id_0125"));
+		System.out.println("°ªÀÌ Á¸ÀçÇÏ´ÂÁö È®ÀÎÇÏ±â : "+map.containsValue("¼Û±æµ¿"));
+		System.out.println("map Å©±â : "+map.size());
+		System.out.println("map ¿ä¼Ò »èÁ¦ : "+map.remove("id_0126"));
+		
+		//Å° °ª¸¸ ¸ğµÎ °¡Á®¿À±â
+		Set<String> key=map.keySet();
 		System.out.println(key);
-
-		// ê°’ë§Œ ëª¨ë‘ ê°€ì ¸ì˜¤ê¸°
-		Collection<String> values = map.values();
+		
+		//°ª¸¸ ¸ğµÎ °¡Á®¿À±â
+		Collection<String> values=map.values();
 		System.out.println(values);
-		
-		
-		
-		
-		
+
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

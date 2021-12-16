@@ -5,16 +5,29 @@ public class CarEx {
 		FireEngine f;
 		Ambulance a;
 		
-		// f = a; ìƒì†ê´€ê³„ê°€ ì•„ë‹Œ í´ë˜ìŠ¤ê°„ì˜ í˜•ë³€í™˜ ë¶ˆê°€
+		//f = a; »ó¼Ó°ü°è°¡ ¾Æ´Ñ Å¬·¡½º°£ÀÇ Çüº¯È¯ ºÒ°¡
 		
-		f = new FireEngine();
+		f = new FireEngine();	
 		// Car car = new FireEngine();
-		Car car = f; // ìƒì†ê´€ê³„ëŠ” í˜•ë³€í™˜ ê°€ëŠ¥ ì—…ìºìŠ¤íŒ…(í˜•ë³€í™˜ ìƒëµê°€ëŠ¥)
+		Car car = f; //»ó¼Ó°ü°è´Â Çüº¯È¯ °¡´É ¾÷Ä³½ºÆÃ(Çüº¯È¯ »ı·«°¡´É)
 		
 		FireEngine f2;
-		f2 = (FireEngine) car; // ë‹¤ìš´ìºìŠ¤íŒ…(í˜•ë³€í™˜ ìƒëµ ë¶ˆê°€)
+		f2 = (FireEngine) car; // ´Ù¿îÄ³½ºÆÃ(Çüº¯È¯ »ı·« ºÒ°¡)
 		f2.water();
 		
 		
+
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+

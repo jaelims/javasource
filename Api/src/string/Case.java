@@ -2,17 +2,17 @@ package string;
 
 public class Case {
 	public static void main(String[] args) {
-		// ëŒ€ì†Œë¬¸ì ë³€ê²½
+		// ´ë¼Ò¹®ÀÚ º¯°æ
 		String str1 = "Java programming";
 		String str2 = "JAVA Programming";
 		
 		System.out.println(str1.equals(str2));
-		// ëŒ€ì†Œë¬¸ì êµ¬ë³„í•˜ì§€ ë§ê³  ë¹„êµí•˜ê¸°
+		//´ë¼Ò¹®ÀÚ ±¸º°ÇÏÁö ¸»°í ºñ±³ÇÏ±â
 		System.out.println(str1.equalsIgnoreCase(str2));
 		
 		System.out.println(str1.toUpperCase());
 		System.out.println(str1);
 		System.out.println(str2.toLowerCase());
-		
+
 	}
 }

@@ -1,39 +1,57 @@
 package shop;
 
-// ë°˜ì¶”ìƒ : ì¼ë°˜í´ë˜ìŠ¤ì™€ ë™ì¼í•œë°, ì¶”ìƒë©”ì„œë“œë„ ê°€ì§€ê³  ìˆëŠ” ìƒíƒœ
+//¹İÃß»ó : ÀÏ¹İÅ¬·¡½º¿Í µ¿ÀÏÇÑµ¥, Ãß»ó¸Ş¼­µåµµ °¡Áö°í ÀÖ´Â »óÅÂ
 
 public abstract class Product {
 	private String pname;
 	private int price;
-
 	public Product(String pname, int price) {
 		super();
 		this.pname = pname;
 		this.price = price;
 	}
-
 	public String getPname() {
 		return pname;
 	}
-
 	public void setPname(String pname) {
 		this.pname = pname;
 	}
-
 	public int getPrice() {
 		return price;
 	}
-
 	public void setPrice(int price) {
 		this.price = price;
-	}
-
+	}	
+	
 	public void printDetail() {
-		System.out.println("ìƒí’ˆëª… : " + this.pname);
-		System.out.println("ê°€ê²© : " + this.price);
+		System.out.println("»óÇ°¸í : "+this.pname);
+		System.out.println("°¡°İ : "+this.price);
 		printExtra();
 	}
-
-	public abstract void printExtra();
-
+	
+	public abstract void printExtra();	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

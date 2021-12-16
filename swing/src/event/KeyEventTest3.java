@@ -11,29 +11,33 @@ public class KeyEventTest3 extends JFrame {
 	
 	private JLabel lbl = new JLabel("HELLO");
 	
+	
 	public KeyEventTest3() {
-		setTitle("í…ìŠ¤íŠ¸ ì›€ì§ì´ê¸°");
+		setTitle("ÅØ½ºÆ® ¿òÁ÷ÀÌ±â");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
-		// í˜„ì¬ ì„¤ì •ëœ ë ˆì´ì•„ì›ƒ ì—†ì• ê¸°
+		//ÇöÀç ¼³Á¤µÈ ·¹ÀÌ¾Æ¿ô ¾ø¾Ö±â
 		setLayout(null);
 		
-		// ë ˆì´ë¸” ë°°ì¹˜
+		//·¹ÀÌºí ¹èÄ¡
 		lbl.setLocation(50, 50);
 		lbl.setSize(100, 20);
 		add(lbl);
 		
-		setSize(200, 200);
+		setSize(200,200);
 		setVisible(true);
 		
-		// ë ˆì´ë¸”ì´ í¬ì»¤ìŠ¤ë¥¼ ë°›ì„ ìˆ˜ ìˆë„ë¡ ì„¤ì •
+		// ·¹ÀÌºíÀÌ Æ÷Ä¿½º¸¦ ¹ŞÀ» ¼ö ÀÖµµ·Ï ¼³Á¤
 		Container contentPane = getContentPane();
+		
 		contentPane.addKeyListener(new MyKeyAdapter());
+		
+		
 		contentPane.setFocusable(true);
-		// í‚¤ ì…ë ¥ì„ ë°›ì„ ìˆ˜ ìˆë„ë¡ í¬ì»¤ìŠ¤ ê°•ì œ ì§€ì •
-		contentPane.requestFocus();
+		// Å° ÀÔ·ÂÀ» ¹ŞÀ» ¼ö ÀÖµµ·Ï Æ÷Ä¿½º °­Á¦ ÁöÁ¤
+		contentPane.requestFocus();		
 	}
-	
+
 	public static void main(String[] args) {
 		new KeyEventTest3();
 	}
@@ -41,26 +45,40 @@ public class KeyEventTest3 extends JFrame {
 	class MyKeyAdapter extends KeyAdapter{
 		@Override
 		public void keyPressed(KeyEvent e) {
-			// ìƒ,í•˜,ì¢Œ,ìš° í‚¤ì— ë§ì¶°ì„œ ê¸€ìë¥¼ ì´ë™
+			//»ó,ÇÏ,ÁÂ,¿ì Å°¿¡ ¸ÂÃç¼­ ±ÛÀÚ¸¦ ÀÌµ¿
 			
-			// ì–´ëŠí‚¤ê°€ ëˆŒëŸ¬ì¡ŒëŠ”ì§€ í™•ì¸
+			//¾î´ÀÅ°°¡ ´­·¯Á³´ÂÁö È®ÀÎ
 			int keyCode = e.getKeyCode();
 			
 			switch (keyCode) {
-			case KeyEvent.VK_UP: // upí‚¤
+			case KeyEvent.VK_UP: // upÅ°
 				lbl.setLocation(lbl.getX(), lbl.getY()-10);
 				break;
-			case KeyEvent.VK_DOWN: // downí‚¤
+			case KeyEvent.VK_DOWN: // downÅ°
 				lbl.setLocation(lbl.getX(), lbl.getY()+10);
 				break;
-			case KeyEvent.VK_LEFT: // leftí‚¤
+			case KeyEvent.VK_LEFT: // ¿ŞÂÊ È­»ìÇ¥Å°
 				lbl.setLocation(lbl.getX()-10, lbl.getY());
 				break;
-			case KeyEvent.VK_RIGHT: // rightí‚¤
+			case KeyEvent.VK_RIGHT: // ¿À¸¥ÂÊ È­»ìÇ¥Å°
 				lbl.setLocation(lbl.getX()+10, lbl.getY());
 				break;
 			}
+			
 		}
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

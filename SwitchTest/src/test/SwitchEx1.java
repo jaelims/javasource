@@ -1,64 +1,76 @@
 package test;
 
-/* switch(int, double, float, char, String, enum){
-*	case ê°’1:
-*		í•´ì•¼í•  ì¼;
-*		break;
-*	case ê°’2:
-*		í•´ì•¼í•  ì¼;
-*		break;
-*	default:
-*		í•´ì•¼í•  ì¼;
-*}
-*
-* if ~ elseif ~ else ëŒ€ì²´í•´ì„œ ì‚¬ìš© ê°€ëŠ¥
-*
-*/
-public class SwitchEx1 {
+/* switch(int,double,float,char,String,enum){
+ * 	case °ª1:
+ * 		ÇØ¾ßÇÒ ÀÏ;
+ * 		break;
+ *  case °ª2:
+ *  	ÇØ¾ßÇÒ ÀÏ;
+ *  	break;
+ *  default:
+ *  	ÇØ¾ßÇÒ ÀÏ;  
+ * }
+ * 
+ * if ~ elseif ~ else ´ëÃ¼ÇØ¼­ »ç¿ë °¡´É
+ * 
+ */
 
+
+public class SwitchEx1 {
 	public static void main(String[] args) {
-		//ì£¼ì‚¬ìœ„
+		//ÁÖ»çÀ§ 
 		
-		//1~6 ì‚¬ì´ì˜ ìˆ˜ë¥¼ ìë™ìœ¼ë¡œ ìƒì„±
-		// 0.0 <= ì–´ë–¤ê°’ < 1.0
+		// 1~6 »çÀÌÀÇ ¼ö¸¦ ÀÚµ¿À¸·Î »ı¼º
+		// 0.0 <= ¾î¶²°ª < 1.0
 		
 		int num = (int)(Math.random()*6)+1;
-//		System.out.println(num);
-//		
-//		if (num==1) {
-//			System.out.println("1ë²ˆ ë‚˜ì˜´");
-//		} else if (num==2) {
-//			System.out.println("2ë²ˆ ë‚˜ì˜´");
-//		} else if (num==3) {
-//			System.out.println("3ë²ˆ ë‚˜ì˜´");
-//		} else if (num==4) {
-//			System.out.println("4ë²ˆ ë‚˜ì˜´");
-//		} else if (num==5) {
-//			System.out.println("5ë²ˆ ë‚˜ì˜´");
-//		} else {
-//			System.out.println("6ë²ˆ ë‚˜ì˜´");
+		
+//		if(num==1) {
+//			System.out.println("1¹ø ³ª¿È");
+//		}else if (num==2) {
+//			System.out.println("2¹ø ³ª¿È");
+//		}else if (num==3) {
+//			System.out.println("3¹ø ³ª¿È");
+//		}else if (num==4) {
+//			System.out.println("4¹ø ³ª¿È");
+//		}else if (num==5) {
+//			System.out.println("5¹ø ³ª¿È");
+//		}else {
+//			System.out.println("6¹ø ³ª¿È");
 //		}
 		
 		switch (num) {
 		case 1:
-			System.out.println("1ë²ˆ ë‚˜ì˜´");
+			System.out.println("1¹ø ³ª¿È");
 			break;
 		case 2:
-			System.out.println("2ë²ˆ ë‚˜ì˜´");
+			System.out.println("2¹ø ³ª¿È");
 			break;
 		case 3:
-			System.out.println("3ë²ˆ ë‚˜ì˜´");
-			break;
+			System.out.println("3¹ø ³ª¿È");
+			break;	
 		case 4:
-			System.out.println("4ë²ˆ ë‚˜ì˜´");
+			System.out.println("4¹ø ³ª¿È");
 			break;
 		case 5:
-			System.out.println("5ë²ˆ ë‚˜ì˜´");
+			System.out.println("5¹ø ³ª¿È");
 			break;
 		default:
-			System.out.println("6ë²ˆ ë‚˜ì˜´");
+			System.out.println("6¹ø ³ª¿È");
 		}
-		
-	}
 
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

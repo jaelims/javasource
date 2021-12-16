@@ -5,5 +5,4 @@ public class DrawShape {
 		Circle circle = new Circle();
 		circle.draw();
 	}
-
 }

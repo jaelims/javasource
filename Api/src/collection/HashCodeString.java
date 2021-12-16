@@ -1,13 +1,14 @@
 package collection;
 
-// Set => hashCode() ê°’ì„ í™•ì¸ => ê°™ë‹¤ë©´ ê°™ì€ ê°ì²´ => ì €ìž¥í•˜ì§€ ì•ŠìŒ
-// 						   => ì¡°ê±´ : equals ê²€ì‚¬ í›„ ê·¸ê²ƒë„ ê°™ë‹¤ë©´
+// Set => hashCode() °ªÀ» È®ÀÎ => °°´Ù¸é °°Àº °´Ã¼ => ÀúÀåÇÏÁö ¾ÊÀ½
+//                             => Á¶°Ç : equals °Ë»ç ÈÄ ±×°Íµµ °°´Ù¸é
 public class HashCodeString {
 	public static void main(String[] args) {
-		String obj1 = "ì•ˆë…•í•˜ì„¸ìš”";
-		String obj2 = new String("ì•ˆë…•í•˜ì„¸ìš”");
+		String obj1 = "¾È³çÇÏ¼¼¿ä";
+		String obj2 = new String("¾È³çÇÏ¼¼¿ä");
 		
 		System.out.println(obj1.hashCode());
 		System.out.println(obj2.hashCode());
+
 	}
 }

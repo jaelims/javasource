@@ -3,52 +3,52 @@ package collection;
 import java.util.ArrayList;
 import java.util.List;
 
-/* ì»¬ë ‰ì…˜ í”„ë ˆì„ì›Œí¬
- * - ì—¬ëŸ¬ ë°ì´í„°ë“¤ì„ ì €ì¥í•˜ëŠ” í´ë˜ìŠ¤ë“¤ì„ í‘œì¤€í™”í•œ ì„¤ê³„
+/* ÄÃ·º¼Ç ÇÁ·¹ÀÓ¿öÅ©
+ * - ¿©·¯ µ¥ÀÌÅÍµéÀ» ÀúÀåÇÏ´Â Å¬·¡½ºµéÀ» Ç¥ÁØÈ­ÇÑ ¼³°è
  * - Collection - List, Set
  * - Map
  * 
  * 
- * List(ì¸í„°í˜ì´ìŠ¤) : ìˆœì„œê°€ ìˆë‹¤. ë°ì´í„°ì˜ ì¤‘ë³µ ê°€ëŠ¥
- * 		  êµ¬í˜„ í´ë˜ìŠ¤ : Vector, ArrayList, LinkedList, Stack...
- * 		  ë°°ì—´ê³¼ ê°™ì€ ê°œë…ì¸ë°, í–¥ìƒ ì‹œí‚¨ êµ¬ì¡°
+ * List(ÀÎÅÍÆäÀÌ½º) : ¼ø¼­°¡ ÀÖ´Ù.µ¥ÀÌÅÍÀÇ Áßº¹ °¡´É
+ *      ±¸Çö Å¬·¡½º : Vector, ArrayList, LinkedList, Stack...
+ *      ¹è¿­°ú °°Àº °³³äÀÎµ¥, Çâ»ó ½ÃÅ² ±¸Á¶
+ *      
+ * E, T, K, V : ´ãÀ» °´Ã¼ Å¸ÀÔÀ» ÁöÁ¤
  * 
- * E, T, K, V : ë‹´ì„ ê°ì²´ íƒ€ì…ì„ ì§€ì •
- * 
- * ê¸°ë³¸ íƒ€ì… => ê°ì²´ íƒ€ì…(Wrapper í´ë˜ìŠ¤)
+ * ±âº» Å¸ÀÔ => °´Ã¼ Å¸ÀÔ(Wrapper Å¬·¡½º)
  * int => Integer, float => Float, double => Double, char => Character, boolean => Boolean
  */
-
 public class ListEx1 {
 	public static void main(String[] args) {
-		// ê°ì²´ ìƒì„±
+		//°´Ã¼ »ı¼º
 		List<String> list1 = new ArrayList<String>();
 		ArrayList<Integer> list2 = new ArrayList<Integer>();
-
-		// ë°ì´í„° ì¶”ê°€ => add()
-		list1.add("ì‚¬ê³¼");
-		list1.add("ë°°");
-		list1.add("ë³µìˆ­ì•„");
-		list1.add("ë”¸ê¸°");
-		list1.add("ìˆ˜ë°•");
-		list1.add("ë°”ë‚˜ë‚˜");
-
-		// ë°ì´í„° ê°€ì ¸ì˜¤ê¸°
-		for (String str : list1) {
+		
+		//µ¥ÀÌÅÍ Ãß°¡ => add()
+		list1.add("»ç°ú");
+		list1.add("¹è");
+		list1.add("º¹¼ş¾Æ");
+		list1.add("µş±â");
+		list1.add("¼ö¹Ú");
+		list1.add("¹Ù³ª³ª");
+		
+		//µ¥ÀÌÅÍ °¡Á®¿À±â
+		for(String str : list1) {
 			System.out.println(str);
 		}
 		
 		System.out.println();
 		
-		System.out.println(list1); // toString() ì˜¤ë²„ë¼ì´ë”© ë˜ì–´ ìˆìŒ
+		System.out.println(list1); //toString() ¿À¹ö¶óÀÌµù µÇ¾î ÀÖÀ½
 		
 		System.out.println();
 		
-		for (int i = 0; i < list1.size(); i++) {
+		for(int i=0;i<list1.size();i++) {
 			System.out.println(list1.get(i));
 		}
 		
 		System.out.println();
+		
 		
 		list2.add(10);
 		list2.add(20);
@@ -57,22 +57,30 @@ public class ListEx1 {
 		list2.add(50);
 		list2.add(60);
 		
-		for(Integer i : list2) {
+		for(Integer i:list2) {
 			System.out.println(i);
 		}
 		
-		// í•©ê³„ êµ¬í•˜ê¸°
+		//ÇÕ°è ±¸ÇÏ±â
 		int sum = 0;
-		for(Integer i : list2) {
+		for(Integer i:list2) {
 			sum += i;
 		}
-		System.out.println("í•©ê³„ "+sum);
-		
-		
-		
-		
-		
-		
-	}
+		System.out.println("ÇÕ°è "+sum);
 
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -4,13 +4,14 @@ package string;
 
 public class Replace {
 	public static void main(String[] args) {
-		String str1 = "ìë°”ëŠ” ê°ì²´ì§€í–¥ ì–¸ì–´ì…ë‹ˆë‹¤. ìë°”ëŠ” í’ë¶€í•œ APIë¥¼ ì œê³µí•©ë‹ˆë‹¤.";
+		String str1 = "ÀÚ¹Ù´Â °´Ã¼ÁöÇâ ¾ğ¾îÀÔ´Ï´Ù. ÀÚ¹Ù´Â Ç³ºÎÇÑ API¸¦ Á¦°øÇÕ´Ï´Ù.";
 		
-		// ìë°” => java
-		// str1 = str1.replace("ìë°”", "java");
+		// ÀÚ¹Ù => Java
+		//str1 = str1.replace("ÀÚ¹Ù", "java");
 		
-		str1 = str1.replaceFirst("ìë°”", "Java");
+		str1 = str1.replaceFirst("ÀÚ¹Ù", "Java");
 		
 		System.out.println(str1);
+
 	}
 }

@@ -2,24 +2,21 @@ package shop;
 
 import java.util.Scanner;
 
-public class MyShop implements IShop {
-
+public class MyShop implements Ishop {
+	
 	private String title;
 	private Scanner sc = new Scanner(System.in);
 	private String selUser;
-
-	// ì¥ë°”êµ¬ë‹ˆ ë°°ì—´
-	private Product[] carts = new Product[10]; // ë°°ì—´ ì„ ì–¸+ìƒì„±
-
-	// íšŒì›ì •ë³´ ë°°ì—´ - íšŒì›ì´ë¦„, ê²°ì œíƒ€ì…
+	
+	//Àå¹Ù±¸´Ï ¹è¿­
+	private Product[] carts = new Product[10];  
+	
+	//È¸¿øÁ¤º¸ ¹è¿­ - È¸¿øÀÌ¸§,°áÁ¦Å¸ÀÔ
 	private User users[] = new User[2];
-
-	// ìƒí’ˆì •ë³´ ë°°ì—´ - ìƒí’ˆì´ë¦„, ê°€ê²©, ìƒì„¸ì •ë³´
+	
+	//»óÇ°Á¤º¸ ¹è¿­ - »óÇ°ÀÌ¸§,°¡°İ,»ó¼¼Á¤º¸ 
 	private Product products[] = new Product[5];
-
-	public MyShop() {
-		super();
-	}
+	
 
 	@Override
 	public void setTitle(String title) {
@@ -28,123 +25,141 @@ public class MyShop implements IShop {
 
 	@Override
 	public void genUser() {
-		// ê³ ê° 2ëª… ìƒì„±
-		users[0] = new User("í™ê¸¸ë™", PayType.CARD);
-		users[1] = new User("ì„±ì¶˜í–¥", PayType.CASH);
-
+		// °í°´ 2¸í »ı¼º
+		users[0] = new User("È«±æµ¿", PayType.CARD); 
+		users[1] = new User("¼ºÃáÇâ", PayType.CASH); 
 	}
 
 	@Override
 	public void genProduct() {
-		// ìƒí’ˆ 5ê°œ ìƒì„±
-		// SmartTv(2ê°œ), CellPhone(3ê°œ)
-		products[0] = new SmartTV("ì‚¼ì„± 3D SMART TV", 5000000, "4k");
-		products[1] = new SmartTV("LG SMART TV", 2500000, "FULL HD");
-		products[2] = new CellPhone("ê°¤ëŸ­ì‹œ ë…¸íŠ¸20", 1000000, "SKT");
-		products[3] = new CellPhone("ì•„ì´í°10", 950000, "KT");
-		products[4] = new CellPhone("ê°¤ëŸ­ì‹œ zí”Œë¦½3", 1300000, "LG");
-
+		// »óÇ° 5 °³ »ı¼º
+		// SmartTv(2°³), CellPhone(3°³) 
+		products[0] = new CellPhone("ZÇÃ¸³", 1500000, "SKT");
+		products[1] = new CellPhone("¾ÆÀÌÆù14", 1520000, "KT");
+		products[2] = new SmartTv("»ï¼º 3D Tv", 3500000, "4K");
+		products[3] = new SmartTv("LG ½º¸¶Æ® Tv", 3000000, "4K");
+		products[4] = new SmartTv("»ï¼º ¿ïÆ®¶ó Tv", 2800000, "Full HD");
 	}
-
+	
 	@Override
 	public void start() {
-		System.out.println(title + " : ë©”ì¸í™”ë©´ - ê³„ì •ì„ íƒ");
-		System.out.println("======================");
-		for (int i = 0; i < users.length; i++) {
-			System.out.printf("[%d]%s(%s)\n", i, users[i].getName(), users[i].getPayType());
-		}
-		System.out.println("[x]ì¢…   ë£Œ");
-		System.out.print("ì„ íƒ : ");
+		System.out.println(title+" : ¸ŞÀÎÈ­¸é - °èÁ¤¼±ÅÃ");
+		System.out.println("===================================");
 		
-		String menu = sc.next();
-		System.out.println("## " + menu + "ì„ íƒ ##");
-
-		// ì‚¬ìš©ìê°€ 0, 1 ì„ íƒí•œ ê²½ìš° =>
-
-		// xë¥¼ ì…ë ¥í•œ ê²½ìš° => ì¢…ë£Œ
-		switch (menu) {
+		for(int i=0;i<users.length;i++) {
+			System.out.printf("[%d] %s(%s)\n",i,users[i].getName(),users[i].getPayType());
+		}
+		System.out.println("[x] Á¾·á");
+		System.out.print("¼±ÅÃ : ");
+		
+		String input = sc.next();
+		System.out.println("### "+input+" ¼±ÅÃ ###");
+		
+//		»ç¿ëÀÚ°¡ 0, 1 ¼±ÅÃÇÑ °æ¿ì => 
+		
+		// x ¸¦ ÀÔ·ÂÇÑ °æ¿ì => Á¾·á
+		switch (input) {
 		case "x":
 			System.exit(0);
 			break;
-
-		default: // "0", "1"
-			selUser = menu;
+		default: // "0","1"
+			selUser = input;
 			productList();
 			break;
 		}
-
 	}
-
-	void productList() {
-		System.out.println(title + " : ìƒí’ˆëª©ë¡ - ìƒí’ˆì„ íƒ");
-		System.out.println("======================");
+	
+	public void productList() {
+		System.out.println(title+" : »óÇ°¸ñ·Ï - »óÇ° ¼±ÅÃ");
+		System.out.println("===================================");
 		
-		// ìƒí’ˆì •ë³´ ì¶œë ¥ => 
-		for (int i = 0; i < products.length; i++) {
-			System.out.print("[" + i + "]");
+		//»óÇ°Á¤º¸ Ãâ·Â => 
+		for(int i=0;i<products.length;i++) {
+			System.out.printf("[%d]",i);
 			products[i].printDetail();
 		}
-		System.out.println("[h] ë©”ì¸ í™”ë©´");
-		System.out.println("[c] ì²´í¬ ì•„ì›ƒ");
-		System.out.print("ì„ íƒ : ");
+		System.out.println("[h] ¸ŞÀÎÈ­¸é");
+		System.out.println("[c] Ã¼Å©¾Æ¿ô");
+		System.out.print("¼±ÅÃ : ");
 		
-		// ì‚¬ìš©ì ì…ë ¥ => ìƒí’ˆì„ íƒ, 0~4(ì¥ë°”êµ¬ë‹ˆì— í˜„ì¬ ì„ íƒí•œ ì œí’ˆ ë‹´ê¸°, h(ë©”ì¸í™”ë©´), c
-		String menu = sc.next();
-		System.out.println("## " + menu + "ì„ íƒ ##");
-		
-		// "0" => 0
-		
-		switch (menu) {
-		case "h":
-			// ë©”ì¸í™”ë©´ ë³´ì—¬ì£¼ê¸°
+		//»ç¿ëÀÚ ÀÔ·Â => »óÇ°¼±ÅÃ 0~4(Àå¹Ù±¸´Ï¿¡ ÇöÀç ¼±ÅÃÇÑ Á¦Ç° ´ã±â), h(¸ŞÀÎÈ­¸é), c 
+		String input = sc.next();
+	
+		switch (input) {
+		case "h":		
+			//¸ŞÀÎÈ­¸é º¸¿©ÁÖ±â
 			start();
 			break;
 		case "c":
 			checkOut();
 			break;
-		default: // "0", "1", "2", "3", "4"
-			// ì‚¬ìš©ìê°€ ì„ íƒí•œ ìƒí’ˆì„ cartsì— ë‹´ê¸°
-			for (int i = 0; i < carts.length; i++) {
-				if (carts[i] == null) {
-					carts[i] = products[Integer.parseInt(menu)];
+		default: // "0","1","2","3","4"
+			//»ç¿ëÀÚ°¡ ¼±ÅÃÇÑ »óÇ°À» carts¿¡ ´ã±â
+			for(int i=0;i<carts.length;i++) {
+				if(carts[i]==null) {
+					carts[i] = products[Integer.parseInt(input)];
 					break;
 				}
 			}
-			// ìƒí’ˆëª©ë¡ ë³´ì—¬ì£¼ê¸°
+			//»óÇ°¸ñ·Ï º¸¿©ÁÖ±â
 			productList();
 			break;
-		}
+		}		
 	}
-
-	void checkOut() {
-		System.out.println(title + " : ì²´í¬ ì•„ì›ƒ");
-		System.out.println("======================");
+	
+	public void checkOut() {
+		System.out.println(title+" : Ã¼Å©¾Æ¿ô");
+		System.out.println("===================================");
 		
-		int sum = 0;
+		int total=0;
 		
-		for (int i = 0; i < carts.length; i++) {
-			if(carts[i] != null) {
-			System.out.printf("[%d] %s(%s)\n", i, carts[i].getPname(), carts[i].getPrice());
-			sum += carts[i].getPrice(); // ê²°ì œ ê¸ˆì•¡
+		//Àå¹Ù±¸´Ï ¸ñ·Ï Ãâ·Â
+		for(int i=0;i<carts.length;i++) {
+			if(carts[i]!=null) { 
+				System.out.printf("[%d] %s (%d)\n",i,carts[i].getPname(),carts[i].getPrice());
+				total+=carts[i].getPrice(); //°áÁ¦±İ¾×
 			}
 		}
-		System.out.println("======================");
-		System.out.println("ê²°ì œ ë°©ë²• : "+users[Integer.parseInt(selUser)].getPayType());
-		System.out.printf("í•©ê³„ : %dì› ì…ë‹ˆë‹¤.\n", sum);
-		System.out.println("[p] ì´ì „, [q] ê²°ì œ ì™„ë£Œ");
-		System.out.print("ì„ íƒ : ");
+		System.out.println("===================================");
+		System.out.println("°áÁ¦¹æ¹ı : "+users[Integer.parseInt(selUser)].getPayType());
+		System.out.println("ÇÕ°è : "+total);
+		System.out.println("[p] ÀÌÀü, [q] °áÁ¦ ¿Ï·á");
+		System.out.print("¼±ÅÃ : ");
+		
 		String input = sc.next();
+		
+		// p(»óÇ°¸ñ·ÏÈ­¸é), q("°áÁ¦°¡ ¿Ï·áµÇ¾ú½À´Ï´Ù. Á¾·áÇÕ´Ï´Ù") 
 		switch (input) {
 		case "p":
 			productList();
 			break;
 		case "q":
-			System.out.println("## ê²°ì œê°€ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤. ì¢…ë£Œí•©ë‹ˆë‹¤. ##");
+			System.out.println("°áÁ¦°¡ ¿Ï·áµÇ¾ú½À´Ï´Ù. Á¾·áÇÕ´Ï´Ù");
 			break;
 		default:
 			break;
 		}
 	}
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

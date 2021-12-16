@@ -3,22 +3,22 @@ package classTest;
 public class TvEx2 {
 	public static void main(String[] args) {
 		
-		// ê°ì²´ ì„ ì–¸, ìƒì„±
-		TV2 tv1 = new TV2("black", 8);
+		//°´Ã¼ ¼±¾ğ, »ı¼º
+		TV2 tv1 = new TV2("black",8);	
 		
 		// TV2 tv1 = new TV2();
-		// tv1.color = "black";
-		// tv1.channel = 8;
+		// tv1.color="black";
+		// tv1.channel = 8;		
 		
-		TV2 tv2 = new TV2();
-		tv2.color = "white";
+		TV2 tv2 = new TV2();	
+		tv2.color="white";
 		
-		// ê°ì²´ ì¡°ì‘
+		//°´Ã¼ Á¶ÀÛ	
+		System.out.println("Ã¤³Î »óÅÂ : "+tv1.channel);
+		System.out.println("Ã¤³Î »óÅÂ : "+tv2.channel);
 		
 		
-		
-		System.out.println("ì±„ë„ ìƒíƒœ : "+tv1.channel);
-		System.out.println("ì±„ë„ ìƒíƒœ : "+tv2.channel);
+
 	}
 
 }

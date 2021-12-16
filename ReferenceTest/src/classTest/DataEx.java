@@ -3,27 +3,39 @@ package classTest;
 public class DataEx {
 	public static void main(String[] args) {
 		Data data = new Data();
-		System.out.println("data:"+data);
+		System.out.println("data:"+data); // classTest.Data@2a139a55
 		
-		//xì˜ ê°’ 10ìœ¼ë¡œ ì§€ì •
+		
+		//xÀÇ °ª 10À¸·Î ÁöÁ¤
 //		data.x = 10;
-//		change(data.x); //data ê°ì²´ ì•ˆì˜ xë©¤ë²„ë³€ìˆ˜ê°€ ê°€ì§€ëŠ” ê°’(10)ì„ ë³´ëƒ„
-//		System.out.println("after change () x = " + data.x);
+//		change(data.x); //data °´Ã¼ ¾ÈÀÇ x¸â¹öº¯¼ö°¡ °¡Áö´Â °ª(10)À» º¸³¿
+//		System.out.println("after change () x = "+data.x);
 		
 		System.out.println();
 		
 		change(data);
-		System.out.println("after change () x = " + data.x);
+		System.out.println("after change () x = "+data.x);
 	}
 	static void change(int x) {
 		x = 10000;
-		System.out.println("change () x = " + x);
+		System.out.println("change () x = "+x);
 	}
 	
 	static void change(Data d) {
 		// d => 2a139a55
 		System.out.println(d);
 		
-		d.x = 10000;
+		d.x = 10000;		
 	}
 }
+
+
+
+
+
+
+
+
+
+
+

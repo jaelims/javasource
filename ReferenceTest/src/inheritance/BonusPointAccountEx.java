@@ -2,14 +2,11 @@ package inheritance;
 
 public class BonusPointAccountEx {
 	public static void main(String[] args) {
-		
-		BonusPointAccount bonus = new BonusPointAccount("122-12", 
-				50000, "í™ê¸¸ë™", 500);
+		BonusPointAccount bonus = new BonusPointAccount("122-12",10000,"È«±æµ¿",100);
 		bonus.deposit(100000);
 		
-		System.out.println("í˜„ì¬ ì”ì•¡ : " + bonus.getMoney());
-		System.out.println("í˜„ì¬ ë³´ë„ˆìŠ¤í¬ì¸íŠ¸ : " + bonus.getBonusPoint());
-		
-		
+		System.out.println("ÇöÀçÀÜ¾× : "+bonus.getBalance());
+		System.out.println("ÇöÀçº¸³Ê½ºÆ÷ÀÎÆ® : "+bonus.getBonusPoint());
+
 	}
 }

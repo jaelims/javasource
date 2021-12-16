@@ -2,16 +2,14 @@ package inheritance;
 
 public class DmbCellPhone extends CellPhone {
 	int channel;
-
+	
 	void turnOnDmb() {
-		System.out.println("ì±„ë„ " + channel + " ë²ˆ dmb ë°©ì†¡ ì‹œì‘");
+		System.out.println("Ã¤³Î "+channel+" ¹ø dmb ¹æ¼Û ½ÃÀÛ");
 	}
-
 	void turnOffDmb() {
-		System.out.println("ì±„ë„ " + channel + " ë²ˆ dmb ë°©ì†¡ ì¢…ë£Œ");
+		System.out.println("Ã¤³Î "+channel+" ¹ø dmb ¹æ¼Û Á¾·á");
 	}
-
 	void changeChannelDmb(int channel) {
-		System.out.println("ì±„ë„ " + channel + " ë²ˆ ë³€ê²½");
+		System.out.println("Ã¤³Î "+channel+" ¹ø º¯°æ");
 	}
 }

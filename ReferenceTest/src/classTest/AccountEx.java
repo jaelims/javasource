@@ -1,18 +1,20 @@
 package classTest;
 
 public class AccountEx {
+
 	public static void main(String[] args) {
+		// È«±æµ¿ °èÁÂ
+		Account account1 = new Account();
+		account1.accountNo="122-01-12222";
+		account1.balance=10000;
+		account1.name="È«±æµ¿";
 		
-		Account acc1 = new Account();
-		acc1.accountNum = "122-01-12222";
-		acc1.name = "ê°€ë‚˜ë‹¤";
-		acc1.money = 5000;
+		//ÀÔ±İ
+		account1.deposit(50000);
 		
-		//ì…ê¸ˆ
-		acc1.add(50000);
-		
-		//ì¶œê¸ˆ
-		int money = acc1.subtrack(10000);
-		System.out.printf("%së‹˜ì˜ í˜„ì¬ì”ì•¡ : %dì›\n", acc1.name, money);
+		//Ãâ±İ
+		System.out.println("ÇöÀç ÀÜ¾× : "+account1.withdraw(30000));
+
 	}
+
 }

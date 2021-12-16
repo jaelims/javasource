@@ -2,48 +2,60 @@ package string;
 
 public class CharAt {
 	public static void main(String[] args) {
-		String str1 = "ìë°” í”„ë¡œê·¸ë˜ë°";
-
+		String str1 = "ÀÚ¹Ù ÇÁ·Î±×·¡¹Ö";
+		
 		char ch = str1.charAt(3);
 		System.out.println(ch);
-
+		
 		System.out.println();
-
-		// str1ì— 'ê·¸' ë¼ëŠ” ë¬¸ìê°€ ìˆëŠ”ì§€ í™•ì¸í•˜ê³  ë“¤ì–´ìˆë‹¤ë©´
-		// í¬í•¨í•˜ê³  ìˆìŒ, ì—†ë‹¤ë©´ í¬í•¨í•˜ê³  ìˆì§€ ì•ŠìŒ
-		boolean flag = false;
-		for (int i = 0; i < str1.length(); i++) {
-			if (str1.charAt(i) == 'ê·¸') {
+		
+		// str1¿¡ '±×' ¶ó´Â ¹®ÀÚ°¡ ÀÖ´ÂÁö È®ÀÎÇÏ°í µé¾îÀÖ´Ù¸é
+		// Æ÷ÇÔÇÏ°í ÀÖÀ½, ¾ø´Ù¸é Æ÷ÇÔÇÏ°í ÀÖÁö ¾ÊÀ½
+		boolean flag=false;
+		for(int i=0;i<str1.length();i++) {
+			if(str1.charAt(i) == '±×') {
 				flag = true;
 				break;
 			}
-//			char ch1 = str1.charAt(i);
-//			switch (ch1) {
-//			case 'ê·¸':
-//				System.out.println("í¬í•¨í•˜ê³  ìˆìŒ");
-//				break;
-//				
-//			default:
-//				System.out.println("í¬í•¨í•˜ê³  ìˆì§€ ì•ŠìŒ");
-//				break;
-//			}
 		}
-		System.out.println(flag ? "í¬í•¨í•˜ê³  ìˆìŒ" : "í¬í•¨í•˜ê³  ìˆì§€ ì•ŠìŒ");
-
+		System.out.println(flag?"Æ÷ÇÔÇÏ°í ÀÖÀ½":"Æ÷ÇÔÇÏ°í ÀÖÁö ¾ÊÀ½");		
+		
+		
+		
 		System.out.println();
-
+		
 		String str2 = "Hello java!!";
-
-		// str2ë¥¼ char ë°°ì—´ì— ë‹´ê³  ê·¸ ë°°ì—´ì„ ì¶œë ¥
-		char chArr[] = new char[str2.length()];
-
-		for (int i = 0; i < str2.length(); i++) {
+		
+		
+		
+		//str2¸¦ char ¹è¿­¿¡ ´ã°í ±× ¹è¿­À» Ãâ·Â
+		char chArr[]=new char[str2.length()];
+		
+		for(int i=0;i<str2.length();i++) {
 			chArr[i] = str2.charAt(i);
 		}
-
-		for (char ch1 : chArr) {
-			System.out.printf("%c ", ch1);
+		
+		for(char ch1:chArr) {
+			System.out.printf("%c ",ch1);
 		}
-
+		
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

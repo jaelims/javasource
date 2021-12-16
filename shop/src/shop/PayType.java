@@ -1,9 +1,6 @@
 package shop;
 
-// enum : ìƒìˆ˜ë“¤ ì§‘í•©
-
+// enum : »ó¼öµé ÁıÇÕ
 public enum PayType {
-	CASH,
-	CARD
-
+	CASH,CARD
 }

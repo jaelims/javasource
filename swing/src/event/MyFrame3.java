@@ -8,43 +8,41 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-public class MyFrame3 extends JFrame {
+public class MyFrame3 extends JFrame{
 	
 	private JButton btn1,btn2;
 	
 	public MyFrame3() {
-		setTitle("ì•¡ì…˜ì´ë²¤íŠ¸");
+		setTitle("¾×¼ÇÀÌº¥Æ®");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		setLayout(new FlowLayout());
 		
-		JLabel lbl = new JLabel("ë²„íŠ¼ì„ ëˆ„ë¥´ì„¸ìš”");
+		JLabel lbl = new JLabel("¹öÆ°À» ´©¸£¼¼¿ä");
 		
 		btn1 = new JButton("click");
-		btn1.addActionListener(new ActionListener() {
-			
+		btn1.addActionListener(new ActionListener() {			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				System.out.println("ì²«ë²ˆì§¸ ë²„íŠ¼ í´ë¦­");
-				lbl.setText("ì²«ë²ˆì§¸ ë²„íŠ¼ í´ë¦­");
+				System.out.println("Ã¹¹øÂ° ¹öÆ° Å¬¸¯");	
+				lbl.setText("Ã¹¹øÂ° ¹öÆ° Å¬¸¯");
 			}
 		});
 		add(btn1);
 		
-		// lbl.setText("ë ˆì´ë¸”"); í…ìŠ¤íŠ¸ ë³€ê²½
-		add(lbl);
+		//lbl.setText("·¹ÀÌºí");  ÅØ½ºÆ® º¯°æ
+		add(lbl);		
 		
 		btn2 = new JButton("click2");
-		btn2.addActionListener(new ActionListener() {
-			
+		btn2.addActionListener(new ActionListener() {			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				System.out.println("ë‘ë²ˆì§¸ ë²„íŠ¼ í´ë¦­");
-				lbl.setText("ë‘ë²ˆì§¸ ë²„íŠ¼ í´ë¦­");
-				
+				System.out.println("µÎ¹øÂ° ¹öÆ° Å¬¸¯");		
+				lbl.setText("µÎ¹øÂ° ¹öÆ° Å¬¸¯");
 			}
 		});
 		add(btn2);
+		
 		
 		setBounds(100, 100, 300, 200);
 		setVisible(true);
@@ -57,10 +55,16 @@ public class MyFrame3 extends JFrame {
 //	@Override
 //	public void actionPerformed(ActionEvent e) {
 //		if(e.getSource() == btn1) {
-//			System.out.println("ë²„íŠ¼ì´ ëˆŒëŸ¬ì¡ŒìŠµë‹ˆë‹¤.");
+//			System.out.println("¹öÆ°ÀÌ ´­·¯Á³½À´Ï´Ù.");
 //		}else if(e.getSource() == btn2) {
-//			System.out.println("ë‘ë²ˆì§¸ ë²„íŠ¼ì´ ëˆŒëŸ¬ì¡ŒìŠµë‹ˆë‹¤.");
+//			System.out.println("µÎ¹øÂ° ¹öÆ°ÀÌ ´­·¯Á³½À´Ï´Ù.");
 //		}
 //		
 //	}
 }
+
+
+
+
+
+

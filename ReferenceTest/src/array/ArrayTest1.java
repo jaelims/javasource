@@ -2,27 +2,27 @@ package array;
 
 public class ArrayTest1 {
 	public static void main(String[] args) {
-		// int íƒ€ì…ì˜ ë³€ìˆ˜ 10ê°œ ìƒì„±
+		// int Å¸ÀÔÀÇ º¯¼ö 10°³ »ı¼º
 		// int a=1, b=2, c=3, d=4...;
 		
-//		int sum;
+//		int sum;		
 //		sum = 0;
 //		System.out.println(sum);
 		
-		// ë°°ì—´(ì°¸ì¡°íƒ€ì…)
-		// ì°¸ì¡°íƒ€ì… : í™/null/ìë™ìœ¼ë¡œ ì´ˆê¸°í™”
-		// ì •ìˆ˜: 0, ì‹¤ìˆ˜:0.0, ë¶ˆë¦°: false
+		// ¹è¿­(ÂüÁ¶Å¸ÀÔ)
+		// ÂüÁ¶Å¸ÀÔ : Èü/null/ÀÚµ¿À¸·Î ÃÊ±âÈ­
+		// Á¤¼ö: 0, ½Ç¼ö 0.0, ºÒ¸° false
 		int arr[]=new int[10];
 		
-		// ê°œë³„ ìš”ì†Œì— ì ‘ê·¼ 0ë²ˆë¶€í„° ì‹œì‘(0~9)
+		// °³º° ¿ä¼Ò¿¡ Á¢±Ù 0¹øºÎÅÍ ½ÃÀÛ(0~9)
 		System.out.println(arr[0]);
 		System.out.println(arr[9]);
 		
 		arr[3] = 90;
 		arr[5] = 85;
 		arr[7] = 65;
-
-		//ë°°ì—´ ì „ì²´ ìš”ì†Œ ì¶œë ¥
+		
+		//¹è¿­ ÀüÃ¼ ¿ä¼Ò Ãâ·Â
 //		System.out.println(arr[0]);
 //		System.out.println(arr[1]);
 //		System.out.println(arr[2]);
@@ -34,9 +34,11 @@ public class ArrayTest1 {
 //		System.out.println(arr[8]);
 //		System.out.println(arr[9]);
 		
-		for (int i = 0; i < 10; i++) {
+		
+		for(int i=0;i<10;i++) {
 			System.out.println(arr[i]);
 		}
 		
+
 	}
 }

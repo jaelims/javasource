@@ -1,47 +1,46 @@
 package inheritance;
 
 public class CheckingAccount extends Account2 {
-	// ê³„ì¢Œë²ˆí˜¸, ê³„ì¢Œì£¼, ì”ì•¡	=> ë¶€ëª¨
-	// ì…ê¸ˆí•˜ë‹¤, ì¶œê¸ˆí•˜ë‹¤		=> ë¶€ëª¨
+	// °èÁÂ¹øÈ£,°èÁÂÁÖ,ÀÜ¾× => ºÎ¸ğ
+	// ÀÔ±İÇÏ´Ù, Ãâ±İÇÏ´Ù => ºÎ¸ğ, 
 
-	// ì¹´ë“œë²ˆí˜¸(111-11-1234)
+	// Ä«µå¹øÈ£(111-11-1234)
 	private String cardNo;
-
-	public CheckingAccount(String accountNum, int money, String name, String cardNo) {
-		super(accountNum, money, name);
+	
+	public CheckingAccount(String accountNo, int balance, String name,String cardNo) {
+		super(accountNo, balance, name);
 		this.cardNo = cardNo;
-		// TODO Auto-generated constructor stub
-	}
-
-	
-	// ì…ë ¥ê°’ : ì¹´ë“œë²ˆí˜¸, ì‚¬ìš©ê¸ˆì•¡
-	// ë°˜í™˜ê°’ : ì •ìˆ˜(int)
-	// ì¹´ë“œê°’ì„ ì§€ë¶ˆí•œë‹¤.(ë„˜ì–´ì˜¨ ì¹´ë“œë²ˆí˜¸ì™€ ì‹¤ì œ ë°œê¸‰ëœ ì¹´ë“œë²ˆí˜¸ê°€ ê°™ì€ì§€,
-	//				ì‚¬ìš©ê¸ˆì•¡ì€ í˜„ì¬ ì”ì•¡ë³´ë‹¤ ì‘ì€ì§€ í•™ì¸í•œ í›„)
-	
-	int payCard(String cardNo, int used) {
-//		if (cardNo.equals(this.cardNo)) {
-//			if (used < getMoney()) {
-//				setMoney(getMoney()-used);
-//				System.out.println("ì”ì•¡ " + getMoney());
-//			} else {
-//				System.out.println("í•œë„ì´ˆê³¼");
-//			}
-//		} else {
-//			System.out.println("ì¹´ë“œë²ˆí˜¸ í™•ì¸ë°”ëë‹ˆë‹¤.");
-//		}
-		if (!cardNo.equals(this.cardNo) || getMoney() < used) {
-			System.out.println("ì¹´ë“œë²ˆí˜¸ì™€ ì‚¬ìš©ê¸ˆì•¡ì„ í™•ì¸í•´ ì£¼ì„¸ìš”");
+	}	
+	// ÀÔ·Â°ª : Ä«µå¹øÈ£, »ç¿ë±İ¾×
+	// ¹İÈ¯°ª : Á¤¼ö(int)
+	// Ä«µå°ªÀ» ÁöºÒÇÑ´Ù.(³Ñ¾î¿Â Ä«µå¹øÈ£¿Í ½ÇÁ¦ ¹ß±ŞµÈ Ä«µå¹øÈ£°¡ °°ÀºÁö,
+	//     »ç¿ë±İ¾×Àº ÇöÀç ÀÜ¾×º¸´Ù ÀÛÀºÁö È®ÀÎÇÑ ÈÄ)
+	int pay(String cardNo,int amount) {
+		
+		if(!cardNo.equals(this.cardNo) || getBalance() < amount) {
+			System.out.println("Ä«µå¹øÈ£¿Í »ç¿ë±İ¾×À» È®ÀÎÇØ ÁÖ¼¼¿ä");
 			return 0;
 		}
 		
-		// ì”ì•¡ = í˜„ì¬ ì”ì•¡ - ì¹´ë“œì‚¬ìš©ì•¡
-		//setMoney(getMoney()-used);
-		// ë¶€ëª¨ì˜ withdraw ê°€ êµ¬í˜„í•œ ê¸°ëŠ¥ê³¼ ê°™ë‹¤
-		// ë”°ë¼ì„œ ë‹¤ì‹œ ë§Œë“¤ì§€ ë§ê³  ë¶€ëª¨ì˜ withdraw ë¥¼ ì‚¬ìš©í•˜ë©´ ë¨
-		return withdraw(used);
+		// ÀÜ¾× = ÇöÀç ÀÜ¾× - Ä«µå»ç¿ë¾×
+		//setBalance(getBalance() - amount);
+		//ºÎ¸ğÀÇ withdraw °¡ ±¸ÇöÇÑ ±â´É°ú °°´Ù
+		//µû¶ó¼­ ´Ù½Ã ¸¸µéÁö ¸»°í ºÎ¸ğÀÇ withdraw ¸¦ »ç¿ëÇÏ¸é µÊ
+		return withdraw(amount);
 		
-	} 
+	}
 	
 	
 }
+
+
+
+
+
+
+
+
+
+
+
+

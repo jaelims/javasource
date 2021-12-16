@@ -9,45 +9,45 @@ import java.util.ArrayList;
 import java.util.List;
 
 // JDBC
-// ~DAO : database ì™€ ê´€ë ¨ëœ ì‘ì—… í´ë˜ìŠ¤
-// ì»¤ë„¥ì…˜, ì¡°íšŒ(select), ì‚½ì…, ì‚­ì œ, ìˆ˜ì •
+// ~DAO : database ¿Í °ü·ÃµÈ ÀÛ¾÷ Å¬·¡½º
+// Ä¿³Ø¼Ç, Á¶È¸(select), »ğÀÔ, »èÁ¦, ¼öÁ¤
 
 public class EmpDAO {
-	// ë“œë¼ì´ë²„ ë¡œë“œ
+	//µå¶óÀÌ¹ö ·Îµå
 	static {
 		try {
 			Class.forName("oracle.jdbc.OracleDriver");
-		} catch (ClassNotFoundException e) {
+		} catch (ClassNotFoundException e) {			
 			e.printStackTrace();
-		}
+		}		
 	}
-
+	
 	public static Connection getConnection() {
 		String url = "jdbc:oracle:thin:@localhost:1521:xe";
 		String user = "c##scott";
 		String password = "tiger";
-		Connection con = null;
+		Connection con=null;
 		try {
 			con = DriverManager.getConnection(url, user, password);
-		} catch (SQLException e) {
+		} catch (SQLException e) {			
 			e.printStackTrace();
 		}
 		return con;
 	}
-
+	
 	public List<EmpDTO> select() {
 		Connection con = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
-
+		
 		List<EmpDTO> list = new ArrayList<EmpDTO>();
-
+		
 		try {
 			con = getConnection();
 			String sql = "select * from emp_temp order by hiredate desc";
 			pstmt = con.prepareStatement(sql);
 			rs = pstmt.executeQuery();
-			while (rs.next()) {
+			while(rs.next()) {
 				EmpDTO dto = new EmpDTO();
 				dto.setEmpno(rs.getInt("empno"));
 				dto.setEname(rs.getString("ename"));
@@ -57,8 +57,9 @@ public class EmpDAO {
 				dto.setSal(rs.getInt("sal"));
 				dto.setComm(rs.getInt("comm"));
 				dto.setDeptno(rs.getInt("deptno"));
+			
 				list.add(dto);
-			}
+			}			
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -71,26 +72,30 @@ public class EmpDAO {
 		}
 		return list;
 	}
-
-	// íŠ¹ì • ì‚¬ì› ì¡°íšŒ
+	
+	// Æ¯Á¤ »ç¿ø Á¶È¸
 	public EmpDTO getRow(int empno) {
 		Connection con = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
+		
 		EmpDTO dto = null;
-
+		
 		try {
 			con = getConnection();
-			// String sql = "select * from emp where empno = " + empno;
-
-			String sql = "select * from emp_temp where empno = ?";
+			//String sql = "select * from emp where empno="+empno;
+			
+			
+			String sql = "select * from emp_temp where empno=?";
 			pstmt = con.prepareStatement(sql);
 			
-			// ë¬¼ìŒí‘œì— ëŒ€í•œ ì²˜ë¦¬
-			pstmt.setInt(1, empno);
+			//¹°À½Ç¥¿¡ ´ëÇÑ Ã³¸® 
+			
+			pstmt.setInt(1, empno);		
+			
 			
 			rs = pstmt.executeQuery();
-			if (rs.next()) { // í•˜ë‚˜ì˜ í–‰ì—ì„œ í•„ë“œë³„ë¡œ ê°€ì ¸ì˜¤ê¸° + EmpDTO ë‹´ê¸°
+			if(rs.next()) { // ÇÏ³ªÀÇ Çà¿¡¼­ ÇÊµåº°·Î °¡Á®¿À±â+EmpDTO ´ã±â
 				dto = new EmpDTO();
 				dto.setEmpno(rs.getInt("empno"));
 				dto.setEname(rs.getString("ename"));
@@ -100,7 +105,7 @@ public class EmpDAO {
 				dto.setSal(rs.getInt("sal"));
 				dto.setComm(rs.getInt("comm"));
 				dto.setDeptno(rs.getInt("deptno"));
-			}
+			}			
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -116,30 +121,28 @@ public class EmpDAO {
 	}
 	
 	
-	// ê¸‰ì—¬ ì˜¤ë¦„ì°¨ìˆœ
+	//±Ş¿© ¿À¸§Â÷¼ø Á¶È¸
 	public List<EmpDTO> orderBySal() {
 		Connection con = null;
-		PreparedStatement pstmt = null;
-		ResultSet rs = null;
+		PreparedStatement pstmt=null;
+		ResultSet rs=null;		
 		List<EmpDTO> list = new ArrayList<EmpDTO>();
 		
 		try {
-			// ì»¤ë„¥ì…˜ ì—°ê²°
+			//Ä¿³Ø¼Ç ¿¬°á
 			con = getConnection();
-			// ì»¤ë„¥ì…˜ì„ í†µí•´ SQL ë¬¸ ë³´ë‚´ê¸°
-			String sql = "select ename, sal from emp_temp order by sal";
-			pstmt = con.prepareStatement(sql);
-			// SQL ì‹¤í–‰
-			rs = pstmt.executeQuery();
-			// ë°›ì€ ê²°ê³¼ë¥¼ ë¦¬í„´
-			while (rs.next()) {
+			//Ä¿³Ø¼ÇÀ» ÅëÇØ SQL ¹® º¸³»±â
+			String sql = "select ename,sal from emp_temp order by sal";
+			pstmt=con.prepareStatement(sql);
+			//SQL ½ÇÇà
+			rs=pstmt.executeQuery();
+			//¹ŞÀº °á°ú¸¦ ¸®ÅÏ
+			while(rs.next()) {
 				EmpDTO dto = new EmpDTO();
 				dto.setEname(rs.getString(1));
 				dto.setSal(rs.getInt(2));
 				list.add(dto);
-			}
-			
-			
+			}			
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -154,25 +157,24 @@ public class EmpDAO {
 		return list;
 	}
 	
-	// íŠ¹ì • ì‚¬ì›ì˜ ê¸‰ì—¬ ìˆ˜ì •
-	public boolean updateSal(int empno, int sal) {
+	
+	//Æ¯Á¤ »ç¿øÀÇ ±Ş¿© ¼öÁ¤
+	public boolean updateSal(int empno,int sal) {
 		
 		Connection con = null;
-		PreparedStatement pstmt = null;
-		boolean updateFlag = false;
-		
+		PreparedStatement pstmt = null;		
+		boolean updateFlag =  false;		
 		try {
-			con = getConnection();
-			String sql = "update emp_temp set sal = ? where empno = ?";
-			pstmt = con.prepareStatement(sql);
+			con = getConnection();			
+			String sql = "update emp_temp set sal=? where empno=?";
+			pstmt=con.prepareStatement(sql);
 			pstmt.setInt(1, sal);
 			pstmt.setInt(2, empno);
 			
-			int result = pstmt.executeUpdate();
-			if(result > 0) { // update ì„±ê³µ
+			int result=pstmt.executeUpdate();
+			if(result>0) { // update ¼º°ø
 				updateFlag = true;
-			}
-			
+			}			
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -183,27 +185,25 @@ public class EmpDAO {
 				e2.printStackTrace();
 			}
 		}
-		return updateFlag; // true ì—…ë°ì´íŠ¸ ì„±ê³µ, false ì—…ë°ì´íŠ¸ ì‹¤íŒ¨
+		return updateFlag;  //true ¾÷µ¥ÀÌÆ® ¼º°ø, false ¾÷µ¥ÀÌÆ® ½ÇÆĞ
 	}
 	
-	// íŠ¹ì • ì‚¬ì›ì˜ ì¶”ê°€ìˆ˜ë‹¹ ìˆ˜ì •
-	public boolean updateComm(int comm, int sal) {
+	//Æ¯Á¤ »ç¿øÀÇ Ãß°¡¼ö´ç ¼öÁ¤
+	public boolean updateComm(int comm,int sal) {
 		
 		Connection con = null;
 		PreparedStatement pstmt = null;
 		boolean updateFlag = false;
-		
 		try {
 			con = getConnection();
-			String sql = "update emp_temp set comm = ? where sal <= ?";
+			String sql = "update emp_temp set comm=? where sal <= ?";
 			pstmt = con.prepareStatement(sql);
 			pstmt.setInt(1, comm);
 			pstmt.setInt(2, sal);
-			int result = pstmt.executeUpdate();
-			if(result > 0) {
-				updateFlag = true;
-			}
-			
+			int result  = pstmt.executeUpdate();
+			if(result>0) {
+				updateFlag=true;
+			}			
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -217,31 +217,29 @@ public class EmpDAO {
 		return updateFlag;
 	}
 	
-	// ì‹ ì…ì‚¬ì› ì…ë ¥
-	public boolean insertEmp(EmpDTO dto) {
-		
+	
+	//½ÅÀÔ »ç¿ø ÀÔ·Â
+	public boolean insertEmp(EmpDTO dto) {		
 		Connection con = null;
 		PreparedStatement pstmt = null;
 		boolean insertFlag = false;
-		
 		try {
 			con = getConnection();
-			String sql = "insert into emp_temp(empno, ename, job, mgr, hiredate, sal, comm, deptno)"; 
-			sql += " values(?, ?, ?, ?, sysdate, ?, ?, ?)";
-			pstmt = con.prepareStatement(sql);
+			String sql = "insert into emp_temp(empno,ename,job,mgr,hiredate,sal,comm,deptno)"; 
+			sql+=" values(?,?,?,?,sysdate,?,?,?)";
+			pstmt = con.prepareStatement(sql);			
 			pstmt.setInt(1, dto.getEmpno());
 			pstmt.setString(2, dto.getEname());
 			pstmt.setString(3, dto.getJob());
 			pstmt.setInt(4, dto.getMgr());
-			pstmt.setInt(5, dto.getSal());
+			pstmt.setInt(5,dto.getSal());
 			pstmt.setInt(6, dto.getComm());
 			pstmt.setInt(7, dto.getDeptno());
 			
 			int result = pstmt.executeUpdate();
-			if(result > 0) {
+			if(result>0) {
 				insertFlag = true;
 			}
-			
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -250,27 +248,29 @@ public class EmpDAO {
 				con.close();
 			} catch (Exception e2) {
 				e2.printStackTrace();
-			}
+			}			
 		}
 		return insertFlag;
 	}
 	
-	// íŠ¹ì • ì‚¬ì› ì‚­ì œ
+	//Æ¯Á¤ »ç¿ø »èÁ¦
 	public boolean deleteEmp(int empno) {
+		
 		Connection con = null;
 		PreparedStatement pstmt = null;
 		boolean deleteFlag = false;
 		
 		try {
 			con = getConnection();
-			String sql = "delete emp_temp where empno = ?";
+			String sql = "delete emp_temp where empno=?";
 			pstmt = con.prepareStatement(sql);
 			pstmt.setInt(1, empno);
 			
 			int result = pstmt.executeUpdate();
-			if (result > 0) {
+			if(result>0) {
 				deleteFlag = true;
 			}
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -285,4 +285,32 @@ public class EmpDAO {
 	}
 	
 	
+	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

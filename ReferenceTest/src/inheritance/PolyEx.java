@@ -5,21 +5,28 @@ public class PolyEx {
 		
 		Parent2 p2 = new Child3();
 		
-		p2.field1 = "";
+		p2.field1 ="";
 		p2.method1();
-		p2.method2(); // ì˜¤ë²„ë¼ì´ë”© ëœ ìƒíƒœë¼ë©´ ìì‹ í´ë˜ìŠ¤ì˜ ë©”ì†Œë“œê°€ ì‹¤í–‰
+		p2.method2();  //¿À¹ö¶óÀÌµù µÈ »óÅÂ¶ó¸é ÀÚ½Ä Å¬·¡½ºÀÇ ¸Ş¼Òµå°¡ ½ÇÇà
 		
-		//method3 ì‹¤í–‰?
-		Child3 c = (Child3) p2;
+		//method3 ½ÇÇà?
+		Child3 c = (Child3)p2;
 		c.method3();
 		
-		// java.lang.ClassCastException
+		//java.lang.ClassCastException		
 //		Parent2 obj = new Parent2();
 //		Child3 c2 = (Child3) obj;
 //		c2.method3();
 		
-		
-		
-	}
 
+	}
 }
+
+
+
+
+
+
+
+
+

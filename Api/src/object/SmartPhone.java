@@ -9,7 +9,7 @@ public class SmartPhone {
 		this.os = os;
 	}
 	@Override
-	public String toString() { // ê°ì²´ê°€ ê°€ì§€ê³  ìˆëŠ” ë©¤ë²„ ë³€ìˆ˜ì˜ ê°’ì„ ì¶œë ¥í•˜ëŠ” ìš©ë„
+	public String toString() { //°´Ã¼°¡ °¡Áö°í ÀÖ´Â ¸â¹ö º¯¼öÀÇ °ªÀ» Ãâ·ÂÇÏ´Â ¿ëµµ
 		return "SmartPhone [company=" + company + ", os=" + os + "]";
 	}
 	

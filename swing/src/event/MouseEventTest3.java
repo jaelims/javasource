@@ -1,13 +1,10 @@
 package event;
 
 import java.awt.Container;
-import java.awt.Point;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
-import java.awt.event.MouseMotionListener;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -16,25 +13,26 @@ public class MouseEventTest3 extends JFrame {
 	
 	private JLabel lbl = new JLabel("HELLO");
 	
+	
 	public MouseEventTest3() {
-		setTitle("í…ìŠ¤íŠ¸ ì›€ì§ì´ê¸°");
+		setTitle("ÅØ½ºÆ® ¿òÁ÷ÀÌ±â");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
-		// í˜„ì¬ ì„¤ì •ëœ ë ˆì´ì•„ì›ƒ ì—†ì• ê¸°
+		//ÇöÀç ¼³Á¤µÈ ·¹ÀÌ¾Æ¿ô ¾ø¾Ö±â
 		setLayout(null);
 		
-		// ë ˆì´ë¸” ë°°ì¹˜
+		//·¹ÀÌºí ¹èÄ¡
 		lbl.setLocation(50, 50);
 		lbl.setSize(100, 20);
 		add(lbl);
 		
-		setSize(200, 200);
+		setSize(200,200);
 		setVisible(true);
-		
-		Container contentPane = getContentPane();
-		contentPane.addMouseListener(new MyMouseAdapter());
+				
+		Container contentPane = getContentPane();		
+		contentPane.addMouseListener(new MyMouseAdapter());			
 	}
-	
+
 	public static void main(String[] args) {
 		new MouseEventTest3();
 	}
@@ -42,12 +40,24 @@ public class MouseEventTest3 extends JFrame {
 	class MyMouseAdapter extends MouseAdapter{
 		@Override
 		public void mousePressed(MouseEvent e) {
+			// ¸¶¿ì½º Å¬¸¯ À§Ä¡ °¡Á®¿À±â
 			int x = e.getX();
 			int y = e.getY();
-			lbl.setLocation(x,y);
 			
-		}
+			lbl.setLocation(x, y);			
+		}		
 	}
-
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

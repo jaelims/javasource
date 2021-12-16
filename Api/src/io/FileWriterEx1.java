@@ -4,14 +4,17 @@ import java.io.File;
 import java.io.FileWriter;
 
 public class FileWriterEx1 {
+
 	public static void main(String[] args) {
-		try(FileWriter writer = new FileWriter(new File("c:\\temp\\test2.txt"), true)) {
+		try(FileWriter writer = new FileWriter(new File("c:\\temp\\test2.txt"),true)) {
 			
-			writer.write("FileWriterëŠ” ë¬¸ìì—´ì„ ë°”ë¡œ\r\n");
-			writer.write("ì¶œë ¥í•  ìˆ˜ ìˆë‹¤\r\n");
+			writer.write("FileWriter´Â ¹®ÀÚ¿­À» ¹Ù·Î\r\n");
+			writer.write("Ãâ·ÂÇÒ ¼ö ÀÖ´Ù\r\n");
 			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+
 	}
+
 }

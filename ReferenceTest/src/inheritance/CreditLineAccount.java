@@ -1,28 +1,37 @@
 package inheritance;
 
-// ê³„ì¢Œë²ˆí˜¸, ê³„ì¢Œì£¼, ì”ì•¡, ë§ˆì´ë„ˆìŠ¤í•œë„ / ì…ê¸ˆí•˜ë‹¤, ì¶œê¸ˆí•˜ë‹¤
+// °èÁÂ¹øÈ£,°èÁÂÁÖ,ÀÜ¾×,¸¶ÀÌ³Ê½ºÇÑµµ / ÀÔ±İÇÏ´Ù, Ãâ±İÇÏ´Ù
 public class CreditLineAccount extends Account2{
-	private int creditLine; // ë§ˆì´ë„ˆìŠ¤ í•œë„
-	
-	public CreditLineAccount(String accountNum, int money, String name, int creditLine) {
-		super(accountNum, money, name);
+	private int creditLine; //¸¶ÀÌ³Ê½º ÇÑµµ
+
+	public CreditLineAccount(String accountNo, int balance, String name,int creditLine) {
+		super(accountNo, balance, name);
 		this.creditLine = creditLine;
 	}
 	
-	// ì¶œê¸ˆí•˜ë‹¤ ì˜¤ë²„ë¼ì´ë”©
-	// ë¶€ëª¨ì˜ ê¸°ëŠ¥ : ì”ì•¡ = ì”ì•¡ - ì¶œê¸ˆì•¡
-	// ìì‹ : ì”ì•¡(í˜„ì¬ì”ì•¡ + ë§ˆì´ë„ˆìŠ¤ í•œë„) - ì¶œê¸ˆì•¡
+	// Ãâ±İÇÏ´Ù ¿À¹ö¶óÀÌµù
+	// ºÎ¸ğÀÇ ±â´É :  ÀÜ¾× = ÀÜ¾× - Ãâ±İ¾×
+	// ÀÚ½Ä : ÀÜ¾×(ÇöÀçÀÜ¾× + ¸¶ÀÌ³Ê½º ÇÑµµ) - Ãâ±İ¾×
 	@Override
 	int withdraw(int amount) {
-		// í˜„ì¬ì”ì•¡+ë§ˆì´ë„ˆìŠ¤í•œë„í•„ë“œë³´ë‹¤ ì‚¬ìš©ê¸ˆì•¡ì´ ë§ìœ¼ë©´ ì¸ì¶œë¶ˆê°€ ë©”ì„¸ì§€ ì¶œë ¥, 0ì„ ë¦¬í„´
-		if (getMoney()+creditLine < amount) {
-			System.out.println("ì‚¬ìš©ê¸ˆì•¡ í•œë„ ì´ˆê³¼");
+		// ÇöÀçÀÜ¾×+¸¶ÀÌ³Ê½ºÇÑµµÇÊµåº¸´Ù »ç¿ë±İ¾×ÀÌ ¸¹À¸¸é ÀÎÃâºÒ°¡ ¸Ş¼¼Áö Ãâ·Â,0À» ¸®ÅÏ
+		if(getBalance()+creditLine < amount) {
+			System.out.println("»ç¿ë±İ¾× ÇÑµµ ÃÊ°ú");
 			return 0;
 		}
-		// ì”ì•¡(í˜„ì¬ì”ì•¡ + ë§ˆì´ë„ˆìŠ¤ í•œë„) - ì¶œê¸ˆì•¡
-		setMoney(getMoney() - amount);
-		return getMoney();
+		// ÀÜ¾×(ÇöÀçÀÜ¾× + ¸¶ÀÌ³Ê½º ÇÑµµ) - Ãâ±İ¾×
+		setBalance(getBalance() - amount);
+		
+		return getBalance();
 	}
-	
-	
+
 }
+
+
+
+
+
+
+
+
+

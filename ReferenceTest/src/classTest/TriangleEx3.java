@@ -2,24 +2,28 @@ package classTest;
 
 public class TriangleEx3 {
 	public static void main(String[] args) {
-		//ê¸¸ì´ê°€ ì„œë¡œ ë‹¤ë¥¸ ì‚¼ê°í˜• 5ê°œë¥¼ ê°€ì§€ê³  ìˆë‹¤.
-		//ë„“ì´ êµ¬í•˜ê¸°
-				
-		Triangle3 triArr[] = new Triangle3[5];
-		triArr[0] = new Triangle3(5, 18);
-		triArr[1] = new Triangle3(10, 17);
-		triArr[2] = new Triangle3(15, 16);
-		triArr[3] = new Triangle3(20, 15);
-		triArr[4] = new Triangle3(25, 14);
+		//±æÀÌ°¡ ¼­·Î ´Ù¸¥ »ï°¢Çü 5°³¸¦ °¡Áö°í ÀÖ´Ù.
+		//³ĞÀÌ ±¸ÇÏ±â
+		Triangle3 triArr[] = new Triangle3[5];		
+		
+		triArr[0] = new Triangle3(10,15);
+		triArr[1] = new Triangle3(5,10);
+		triArr[2] = new Triangle3(12,20);
+		triArr[3] = new Triangle3(8,15);
+		triArr[4] = new Triangle3(7,17);
 		
 		triArr(triArr);
-
+		
 	}
 	
 	static void triArr(Triangle3 triArr[]) {
-		//ë©´ì  êµ¬í•˜ê¸°
-		for (int i = 0; i < triArr.length; i++) {
-			System.out.println("ì‚¼ê°í˜• ë©´ì  : " + triArr[i].getArea());
+		//¸éÀû ±¸ÇÏ±â
+		for(int i=0;i<triArr.length;i++) {
+			System.out.println("¸éÀû "+triArr[i].getArea());			
 		}
 	}
+	
 }
+
+
+

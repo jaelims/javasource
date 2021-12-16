@@ -1,22 +1,23 @@
 package classTest;
 
 public class Triangle3 {
-	// ì‚¼ê°í˜• ë„“ì´ êµ¬í•˜ê¸°
-	// ë°‘ë³€ * ë†’ì´ / 2
-
-	// ì†ì„± : ë°‘ë³€, ë†’ì´
+	//»ï°¢Çü ³ĞÀÌ ±¸ÇÏ±â	
+	//¼Ó¼º : ¹Øº¯, ³ôÀÌ
 	private int baseLine;
 	private int height;
 	
-	// ìƒì„±ìëŠ” ê¸°ë³¸ ìƒì„±ì
-	// Triangle(){}
 	
-	Triangle3(int baseLine, int height){
+	//»ı¼ºÀÚ´Â ±âº» »ı¼ºÀÚ
+	//Triangle2(){}
+	
+	// Triangle2() is undefined
+	
+	Triangle3(int baseLine,int height){
 		this.baseLine = baseLine;
 		this.height = height;
-	}
+	}	
 	
-	// ê¸°ëŠ¥(ë©”ì†Œë“œ) : ë°‘ë³€ * ë†’ì´ / 2 ê²°ê³¼ ë¦¬í„´
+	//±â´É(¸Ş¼Òµå) : ¹Øº¯ * ³ôÀÌ / 2 °á°ú ¸®ÅÏ
 	int getArea() {
 		return baseLine * height / 2;
 	}

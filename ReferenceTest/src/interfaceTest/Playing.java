@@ -1,9 +1,8 @@
 package interfaceTest;
 
-// ì¸í„°í˜ì´ìŠ¤ë¥¼ êµ¬í˜„í•˜ëŠ” í´ë˜ìŠ¤
-// implements : êµ¬í˜„ + í™•ì¥
-// extends : í™•ì¥
-
+// ÀÎÅÍÆäÀÌ½º¸¦ ±¸ÇöÇÏ´Â Å¬·¡½º
+// implements : ±¸Çö + È®Àå
+// extends : È®Àå
 
 public class Playing implements PlayingCard {
 

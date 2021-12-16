@@ -4,50 +4,64 @@ import java.util.Scanner;
 
 public class SwitchEx5 {
 	public static void main(String[] args) {
-		// ì‚¬ìš©ìí•œí…Œ ìˆ«ì 2ê°œ ì…ë ¥ ë°›ê¸°
-		// ì—°ì‚°ì ì…ë ¥ë°›ê¸°(+,-,*,/,%)
-
-		// switch(ì—°ì‚°ì)
-		// ì—°ì‚° í›„ ê³„ì‚° ê²°ê³¼ ì¶œë ¥
-
+		// »ç¿ëÀÚÇÑÅ× ¼ıÀÚ 2°³ ÀÔ·Â ¹Ş±â
 		Scanner sc = new Scanner(System.in);
-		System.out.print("ìˆ«ì 1ë²ˆ : ");
+		
+		System.out.print("Ã¹¹øÂ° ¼ö ÀÔ·Â : ");
 		int num1 = sc.nextInt();
-
-		System.out.print("ìˆ«ì 2ë²ˆ : ");
+		
+		System.out.print("µÎ¹øÂ° ¼ö ÀÔ·Â : ");
 		int num2 = sc.nextInt();
-
-		System.out.print("ì—°ì‚°ì(+,-,*,/,%) : ");
-		String asd = sc.next();
-
-		System.out.println("--------");
-
+		
+		// ¿¬»êÀÚ ÀÔ·Â¹Ş±â(+,-,*,/,%) 
+		System.out.print("¿¬»êÀÚ ÀÔ·Â(+,-,*,/,%) : ");
+		// + / * => '+' or "+"
+		String op = sc.next();
+		
+		// switch(¿¬»êÀÚ)
+		// ¿¬»ê ÈÄ °è»ê °á°ú Ãâ·Â
 		int result = 0;
-		switch (asd) {
+		switch (op) {
 		case "+":
 			result = num1 + num2;
-			//System.out.println(num1 + asd + num2 + "=" + (num1 + num2));
+			//System.out.println(num1+ op + num2 + "=" + (num1+num2));
 			break;
 		case "-":
 			result = num1 - num2;
-			//System.out.println(num1 + asd + num2 + "=" + (num1 - num2));
+			//System.out.println(num1+ op + num2 + "=" + (num1-num2));		
 			break;
 		case "*":
 			result = num1 * num2;
-			//System.out.println(num1 + asd + num2 + "=" + (num1 * num2));
+			//System.out.println(num1+ op + num2 + "=" + (num1*num2));
 			break;
 		case "/":
 			result = num1 / num2;
-			//System.out.println(num1 + asd + num2 + "=" + (num1 / num2));
+			//System.out.println(num1+ op + num2 + "=" + (num1/num2));
 			break;
 		case "%":
 			result = num1 % num2;
-			//System.out.println(num1 + asd + num2 + "=" + (num1 % num2));
+			//System.out.println(num1+ op + num2 + "=" + (num1%num2));
 			break;
-		default:
-			System.out.println("ì—°ì‚°ìë¥¼ í™•ì¸í•´ ì£¼ì„¸ìš”");
-			break;
+//		default:
+//			System.out.println("¿¬»êÀÚ¸¦ È®ÀÎÇØ ÁÖ¼¼¿ä");
+//			break;
 		}
-		System.out.printf("%d %s %d = %d", num1, asd, num2, result);
+		System.out.printf("%d %s %d = %d",num1,op,num2,result);
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

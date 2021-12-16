@@ -8,44 +8,50 @@ import java.io.FileOutputStream;
 public class BufferedInputStreamEx5 {
 	public static void main(String[] args) {
 		
-		// FileInputStreamë§Œ ì‚¬ìš©í•˜ëŠ” ê²½ìš° + byte ë°°ì—´
-		// FileOutputStream
+		//FileInputStream¸¸ »ç¿ëÇÏ´Â °æ¿ì + byte ¹è¿­
+		//FileOutputStream
 		try(FileInputStream fis = new FileInputStream("c:\\temp\\Rolling.mp3");
-			FileOutputStream fos = new FileOutputStream("c:\\temp\\Rolling_copy4.mp3")) {
+			FileOutputStream fos = new FileOutputStream("c:\\temp\\Rolling_copy4.mp3")	) {
 			
-			byte data[] = new byte[1024];
+			byte data[]=new byte[1024];
 			
 			long start = System.currentTimeMillis();
-			while (fis.read(data)!=-1) {
+			while(fis.read(data)!=-1) {	
 				fos.write(data);
 			}
-				long end = System.currentTimeMillis();
-				System.out.println("FileInputStream + byte + FileOutputStream ì‚¬ìš©ì‹œ " + (end-start));
+			long end = System.currentTimeMillis();
+			System.out.println("FileInputSteam + byte + FileOutputStream »ç¿ë½Ã "+(end-start));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		
 		
-		// FileInputStream + BufferedInputStream + byte ë°°ì—´ ì‚¬ìš©í•˜ëŠ” ê²½ìš°
-		// FileOutputStream + BufferedOutputStream
+		//FileInputStream + BufferedInputStream + byte ¹è¿­ »ç¿ëÇÏ´Â °æ¿ì
+		//FileOutputStream + BufferedOutputStream
 		try(FileInputStream fis = new FileInputStream("c:\\temp\\Rolling.mp3");
 			BufferedInputStream bis = new BufferedInputStream(fis);
-			FileOutputStream fos = new FileOutputStream("c:\\temp\\Rolling_copy5.mp3");
-			BufferedOutputStream bos = new BufferedOutputStream(fos);) {
+			FileOutputStream fos = new FileOutputStream("c:\\temp\\Rolling_copy5.mp3");	
+			BufferedOutputStream bos = new BufferedOutputStream(fos)) {	
 			
-			byte data[] = new byte[1024];
+			byte data[]=new byte[1024];
 			
 			long start = System.currentTimeMillis();
-			while (bis.read(data)!=-1) {
-				bos.write(data);
+			while(bis.read(data)!=-1) {	
+				bos.write(data);				
 			}
 			bos.flush();
 			long end = System.currentTimeMillis();
-			System.out.println("FileInputStream + BufferedInputStream + byte ì‚¬ìš©ì‹œ " + (end-start));
-
+			System.out.println("FileInputSteam+BufferedInputStream+byte »ç¿ë½Ã "+(end-start));
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 	}
 }
+
+
+
+
+
+

@@ -1,16 +1,31 @@
 package shop;
 
 public class CellPhone extends Product {
-
-	private String carrier; // ν†µμ‹ μ‚¬ μ •λ³΄
-
-	public CellPhone(String pname, int price, String carrier) {
+	
+	private String carrier; //Ελ½Ε»η Α¤ΊΈ
+	
+	public CellPhone(String pname, int price,String carrier) {
 		super(pname, price);
 		this.carrier = carrier;
-	}
+	}	
 
 	@Override
 	public void printExtra() {
-		System.out.println("ν†µμ‹ μ‚¬ : "+ carrier);
+		System.out.println("Ελ½Ε»η Α¤ΊΈ : "+carrier);
 	}
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

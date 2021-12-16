@@ -1,21 +1,32 @@
 package classTest;
 
-public class MethodTestEx { //êµì¬ 6ì¥
+public class MethodTestEx {
 	public static void main(String[] args) {
-
 		MethodTest1 obj = new MethodTest1();
 
-		// ë©”ì†Œë“œ í˜¸ì¶œì‹œ ë¦¬í„´ë˜ëŠ” ê°’ì´ ìˆëŠ” ê²½ìš°
+		//¸Ş¼Òµå È£Ãâ½Ã ¸®ÅÏµÇ´Â °ªÀÌ ÀÖ´Â °æ¿ì
 		// print()
 		System.out.println(obj.isRedirect());
-		// ë¦¬í„´ë˜ëŠ” ê°’ ë°›ê¸°
-		boolean result = obj.isRedirect();
-		// resultë¥¼ ì´ìš©í•´ì„œ ì½”ë“œ ì‘ì„±
-
-		int var1 = obj.sum();
+		// ¸®ÅÏµÇ´Â °ª ¹Ş±â
+		boolean result=obj.isRedirect();
+		// result¸¦ ÀÌ¿ëÇØ¼­ ÄÚµå ÀÛ¼º
+		
+		
+		int var1=obj.sum();
 		
 		System.out.println(obj.add(25, 35));
 		
 	}
-
 }
+
+
+
+
+
+
+
+
+
+
+
+

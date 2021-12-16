@@ -3,24 +3,39 @@ package exam;
 import java.util.Scanner;
 
 public class Degrees {
-
 	public static void main(String[] args) {
-		// í™”ì”¨ì˜¨ë„ => ì„­ì”¨ì˜¨ë„
-
-		// ì¡°ê±´
-		// í™”ì”¨ì˜¨ë„ ìž…ë ¥ë°›ê¸°(ì •ìˆ˜)
-
-		// ë°›ì€ í™”ì”¨ì˜¨ë„ => ì„­ì”¨ì˜¨ë„ë¡œ ë³€í™˜ í›„ ì¶œë ¥í•˜ê¸°
-		// (í™”ì”¨ì˜¨ë„-32)*5/9
+		// È­¾¾¿Âµµ => ¼·¾¾¿Âµµ
 		
-		Scanner a = new Scanner(System.in);
-		System.out.print("í™”ì”¨ì˜¨ë„ : ");
-		int fdeg = a.nextInt();
-
-		double cdeg = (fdeg - 32) * 5 / 9.0;
-		System.out.printf("ì„­ì”¨ì˜¨ë„ : %.2fâ„ƒ\n", cdeg);
-
-		a.close();
+		
+		// Á¶°Ç
+		Scanner sc = new Scanner(System.in);
+		System.out.print("È­¾¾¿Âµµ ÀÔ·Â : ");
+		
+		// È­¾¾¿Âµµ ÀÔ·Â¹Þ±â(Á¤¼ö)
+		int fahr = sc.nextInt();
+		
+		// ¹ÞÀº È­¾¾¿Âµµ=> ¼·¾¾¿Âµµ·Î º¯È¯ ÈÄ Ãâ·ÂÇÏ±â
+		// (È­¾¾¿Âµµ-32)*5/9 
+		double cels=(fahr-32)*5/9.0;
+		System.out.println("¼·¾¾¿Âµµ : "+cels);
+		System.out.printf("¼·¾¾¿Âµµ : %.4f",cels);
 	}
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

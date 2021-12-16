@@ -3,16 +3,17 @@ package test;
 public class WhileTest1 {
 	public static void main(String[] args) {
 //		for(int i=0;i<10;i++) {
-//			//ë°˜ë³µí•´ì•¼í•  ìž‘ì—…
-//			System.out.println("ì•ˆë…•í•˜ì„¸ìš”");
+//			//¹Ýº¹ÇØ¾ßÇÒ ÀÛ¾÷
+//			System.out.println("¾È³çÇÏ¼¼¿ä");
 //		}
 		
 		int i=0;
-		while (i<10) {
-			//ë°˜ë³µí•´ì•¼í•  ìž‘ì—…
-			System.out.println("ì•ˆë…•í•˜ì„¸ìš”");
+		while(i<10) {
+			//¹Ýº¹ÇØ¾ßÇÒ ÀÛ¾÷
+			System.out.println("¾È³çÇÏ¼¼¿ä");
 			i++;
 		}
+		
 		System.out.println();
 		
 		i=1;
@@ -21,9 +22,15 @@ public class WhileTest1 {
 			i++;
 		}
 
+		
+		// 0~10±îÁö Â¦¼ö¸¸ Ãâ·Â
+//		for(int i=0;i<11;i+=2) {
+//			System.out.print(i+"\t");
+//		}
 		System.out.println();
-			
-		i=2;
+		
+		
+		i=0;
 		while(i<11) {
 			System.out.print(i+"\t");
 			i+=2;
@@ -31,10 +38,28 @@ public class WhileTest1 {
 		
 		System.out.println();
 		
+		// 3 6 9 12... 3 ÀÇ ¹è¼ö¸¸ Ãâ·Â
+//		for(int i=3;i<100;i+=3) {
+//			System.out.print(i+"  ");
+//		}
+		
 		i=3;
 		while(i<101) {
-			System.out.print(i+" ");
+			System.out.print(i+"  ");
 			i+=3;
-		}	
+		}
+		
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+

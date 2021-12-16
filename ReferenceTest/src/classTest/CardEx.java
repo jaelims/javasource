@@ -2,20 +2,35 @@ package classTest;
 
 public class CardEx {
 	public static void main(String[] args) {
-		Card card1 = new Card("spade", 7);
+		Card card1 = new Card("spade",7);	
 		cardPrint(card1);
-		// The static field Card.width should be accessed in a static way
+		// static field Card.width should be accessed in a static way
 //		card1.width = 8;
 //		card1.height = 4;
-
-		Card card2 = new Card("heart", 2);
+		
+		Card card2 = new Card("heart",2);
 		cardPrint(card2);
 	}
-
+	
 	static void cardPrint(Card card) {
-		System.out.println("ìˆ«ì : " + card.getNumber());
-		System.out.println("ëª¨ì–‘ : " + card.getKind());
-		System.out.printf("ì¹´ë“œ í¬ê¸°(%d, %d)\n", Card.width, Card.height);
+		System.out.println("¼ıÀÚ : "+card.getNumber());
+		System.out.println("¸ğ¾ç : "+card.getKind());
+		System.out.printf("Ä«µå Å©±â(%d, %d)\n",Card.width,Card.height);
 		System.out.println();
 	}
+	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

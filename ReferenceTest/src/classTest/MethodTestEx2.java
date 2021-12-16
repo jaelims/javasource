@@ -1,21 +1,26 @@
 package classTest;
 
-public class MethodTestEx2 { //êµì¬ 6ì¥
+public class MethodTestEx2 {
 	public static void main(String[] args) {
 		MethodTest2 obj = new MethodTest2();
 		
-		// êµ¬êµ¬ë‹¨ ì¶œë ¥ ê¸°ëŠ¥
+		//±¸±¸´Ü Ãâ·Â ±â´É
 		obj.print99dan();
 		
-		// ë§ì…ˆ ê¸°ëŠ¥
-		// ë©”ì†Œë“œë¥¼ í˜¸ì¶œí•˜ëŠ” ìª½ì—ì„œ ì…ë ¥ê°’ì„ ë„£ì–´ì£¼ê¸°
+		//µ¡¼À ±â´É
+		//¸Ş¼Òµå¸¦ È£ÃâÇÏ´Â ÂÊ¿¡¼­ ÀÔ·Â°ªÀ» ³Ö¾îÁÖ±â
 		obj.sum(11, 15);
 		
-		// obj.sum(10.5, 11.5);
+		//obj.sum(10.5, 11.5);
+		
 		
 		byte b1 = 3;
 		byte b2 = 5;
 		
 		obj.sum(b1, b2);
+		
+		
+		
+
 	}
 }

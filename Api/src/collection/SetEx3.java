@@ -5,17 +5,30 @@ import java.util.Set;
 
 public class SetEx3 {
 	public static void main(String[] args) {
-		Set<Member> set = new HashSet<Member>();
+		Set<Member> set = new HashSet<Member>();		
 		
-		
-		// hashCode() / equals() => ë‘˜ë‹¤ ê°™ë‹¤ë©´ ì €ì¥í•˜ì§€ ì•ŠìŒ
-		set.add(new Member("hong123", "hong123", "í™ê¸¸ë™"));
-		set.add(new Member("hong124", "hong123", "í™ê¸¸ë™"));
-		set.add(new Member("hong125", "hong123", "í™ê¸¸ë™"));
-		set.add(new Member("hong123", "hong123", "í™ê¸¸ë™"));
+		// hashCode() / equals() => µÑ´Ù °°´Ù¸é ÀúÀåÇÏÁö ¾ÊÀ½
+		set.add(new Member("hong123", "hong123", "È«±æµ¿"));
+		set.add(new Member("hong124", "hong123", "È«±æµ¿"));
+		set.add(new Member("hong125", "hong123", "È«±æµ¿"));
+		set.add(new Member("hong123", "hong123", "È«±æµ¿"));
 		
 		for(Member member : set) {
-			System.out.println(member+" "+member.hashCode());
+			System.out.println(member+" "+member.hashCode());			
 		}
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

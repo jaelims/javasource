@@ -4,7 +4,6 @@ import java.awt.BorderLayout;
 import java.awt.Container;
 import java.awt.Font;
 import java.awt.GridLayout;
-import java.awt.TextField;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -16,30 +15,32 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 public class RockScissorPaper extends JFrame implements ActionListener {
-	
+
 	private JTextField textField;
-	private JButton btnRock, btnPaper, btnScissor;
+	private JButton btnRock,btnPaper,btnScissor;
 	
-	static final int SCISSOR = 0;
-	static final int ROCK = 1;
-	static final int PAPER = 2;
+	static final int ROCK = 0;
+	static final int PAPER = 1;
+	static final int SCISSOR = 2;
+	
 	
 	public RockScissorPaper() {
-		setTitle("ê°€ìœ„ë°”ìœ„ë³´ ê²Œì„");
+		setTitle("°¡À§¹ÙÀ§º¸ °ÔÀÓ");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
-		//í˜„ì¬ contentPane ê°€ì ¸ì˜¤ê¸°
+		//ÇöÀç contentPane °¡Á®¿À±â
 		Container contentPane = getContentPane();
+				
 		
-		// ìƒë‹¨ ë©”ì‹œì§€ ì¶œë ¥
-		JLabel label = new JLabel("ì•„ë˜ì˜ ë²„íŠ¼ ì¤‘ì—ì„œ í•˜ë‚˜ë¥¼ í´ë¦­í•˜ì‹œì˜¤");
-		label.setFont(new Font("êµ´ë¦¼", Font.BOLD, 18));
-		contentPane.add(label, BorderLayout.NORTH); //add(label, BorderLayout.NORTH);
+		//»ó´Ü ¸Ş½ÃÁö Ãâ·Â
+		JLabel label = new JLabel("¾Æ·¡ÀÇ ¹öÆ° Áß¿¡¼­ ÇÏ³ª¸¦ Å¬¸¯ÇÏ½Ã¿À");
+		label.setFont(new Font("±¼¸²", Font.BOLD, 18));
+		contentPane.add(label,BorderLayout.NORTH);    //add(label,BorderLayout.NORTH);
 		
-		// ê°€ìš´ë° ì´ë¯¸ì§€ ì¶œë ¥
-		// JPanel ì„ Centerì— ë¶€ì°© => JPanel ì„ GridLayout ë³€ê²½ => ë²„íŠ¼ 3ê°œ ë¶€ì°©
+		//°¡¿îµ¥ ÀÌ¹ÌÁö Ãâ·Â
+		// JPanel À» CENTER¿¡ ºÎÂø => JPanelÀ» GridLayout º¯°æ => ¹öÆ° 3°³ ºÎÂø
 		JPanel panel = new JPanel();
-		panel.setLayout(new GridLayout(0,3));
+		panel.setLayout(new GridLayout(0, 3));
 		
 		btnRock = new JButton();
 		btnRock.setIcon(new ImageIcon(RockScissorPaper.class.getResource("/component/rock.png")));
@@ -47,11 +48,13 @@ public class RockScissorPaper extends JFrame implements ActionListener {
 		btnRock.addActionListener(this);
 		panel.add(btnRock);
 		
+		
 		btnPaper = new JButton();
 		btnPaper.setIcon(new ImageIcon(RockScissorPaper.class.getResource("/component/paper.png")));
 		btnPaper.setActionCommand("paper");
 		btnPaper.addActionListener(this);
 		panel.add(btnPaper);
+		
 		
 		btnScissor = new JButton();
 		btnScissor.setIcon(new ImageIcon(RockScissorPaper.class.getResource("/component/scissor.png")));
@@ -59,60 +62,80 @@ public class RockScissorPaper extends JFrame implements ActionListener {
 		btnScissor.addActionListener(this);
 		panel.add(btnScissor);
 		
-		contentPane.add(panel, BorderLayout.CENTER);
+		contentPane.add(panel,BorderLayout.CENTER);
 		
-		// í•˜ë‹¨ ê²°ê³¼ ì¶œë ¥
+		
+		
+		//ÇÏ´Ü °á°ú Ãâ·Â
 		textField = new JTextField();
-		textField.setFont(new Font("êµ´ë¦¼", Font.BOLD, 18));
-		contentPane.add(textField, BorderLayout.SOUTH);
+		textField.setFont(new Font("±¼¸²", Font.BOLD, 18));
+		contentPane.add(textField,BorderLayout.SOUTH); 
+		
 		
 		pack();
 		setVisible(true);
 	}
 	
 	
-	
 	public static void main(String[] args) {
 		new RockScissorPaper();
 	}
 	
+	
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		// ê²Œì„ìê°€ ëˆ„ë¥¸ ê°€ìœ„,ë°”ìœ„,ë³´ ê°€ì ¸ì˜¤ê¸°
-		String cmd = e.getActionCommand();
+		// °ÔÀÓÀÚ°¡ ´©¸¥ °¡À§,¹ÙÀ§,º¸ °¡Á®¿À±â
+		String cmd = e.getActionCommand();  // rock,paper,scissor
 		
-		// ì»´í“¨í„°ì˜ ê°€ìœ„, ë°”ìœ„, ë³´ ê²°ì •
-		int com = (int) (Math.random()*3); // 0,1,2
-		// 0 = ê°€ìœ„, 1 = ë°”ìœ„, ë³´ = 2
-		// ì»´í“¨í„°ì™€ ê²Œì„ì ì‚¬ì´ì—ì„œ ëˆ„ê°€ ì´ê²¼ëŠ”ì§€ ì¶œë ¥
-		switch (com) {
-		case SCISSOR:
-			if (cmd.equals("rock")) {
-				textField.setText("ë‹¹ì‹ ì´ ì´ê²¼ìŠµë‹ˆë‹¤.");
-			} else if (cmd.equals("paper")) {
-				textField.setText("ì»´í“¨í„°ê°€ ì´ê²¼ìŠµë‹ˆë‹¤.");
-			} else
-				textField.setText("ë¹„ê²¼ìŠµë‹ˆë‹¤.");
-			break;
-		case ROCK:
-			if (cmd.equals("rock")) {
-				textField.setText("ë¹„ê²¼ìŠµë‹ˆë‹¤.");
-			} else if (cmd.equals("paper")) {
-				textField.setText("ë‹¹ì‹ ì´ ì´ê²¼ìŠµë‹ˆë‹¤.");
-			} else
-				textField.setText("ì»´í“¨í„°ê°€ ì´ê²¼ìŠµë‹ˆë‹¤.");
-			break;
-		case PAPER:
-			if (cmd.equals("rock")) {
-				textField.setText("ì»´í“¨í„°ê°€ ì´ê²¼ìŠµë‹ˆë‹¤.");
-			} else if (cmd.equals("paper")) {
-				textField.setText("ë¹„ê²¼ìŠµë‹ˆë‹¤.");
-			} else
-				textField.setText("ë‹¹ì‹ ì´ ì´ê²¼ìŠµë‹ˆë‹¤.");
-	break;
-		default:
-			break;
+		// ÄÄÇ»ÅÍÀÇ °¡À§,¹ÙÀ§,º¸ °áÁ¤
+		int computer = (int)(Math.random()*3); //0,1,2 
+		// System.out.println(num);		
+		
+		// ÄÄÇ»ÅÍ¿Í °ÔÀÓÀÚ »çÀÌ¿¡¼­ ´©°¡ ÀÌ°å´ÂÁö Ãâ·Â
+		
+		// °ÔÀÓÀÚ°¡ ÁÖ¸ÔÀ» ³½ °æ¿ì
+		if(cmd.equals("rock")) { 
+			if(computer==ROCK) {
+				textField.setText("ºñ°åÀ½. ´Ù½Ã °¡À§¹ÙÀ§º¸");
+			}else if(computer==SCISSOR) {
+				textField.setText("³»°¡ ÀÌ°åÀ½");
+			}else {
+				textField.setText("ÄÄÇ»ÅÍ°¡ ÀÌ°åÀ½");
+			}
+		}else if(cmd.equals("scissor")) { //°ÔÀÓÀÚ°¡ °¡À§¸¦ ³½ °æ¿ì
+			if(computer==ROCK) {
+				textField.setText("ÄÄÇ»ÅÍ°¡ ÀÌ°åÀ½");
+			}else if(computer==SCISSOR) {
+				textField.setText("ºñ°åÀ½. ´Ù½Ã °¡À§¹ÙÀ§º¸");
+			}else {
+				textField.setText("³»°¡ ÀÌ°åÀ½");
+			}
+		}else { //°ÔÀÓÀÚ°¡ º¸ÀÚ±â¸¦ ³½ °æ¿ì
+			if(computer==ROCK) {
+				textField.setText("³»°¡ ÀÌ°åÀ½");
+			}else if(computer==SCISSOR) {
+				textField.setText("ÄÄÇ»ÅÍ°¡ ÀÌ°åÀ½");
+			}else {
+				textField.setText("ºñ°åÀ½. ´Ù½Ã °¡À§¹ÙÀ§º¸");
+			}
 		}
+
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

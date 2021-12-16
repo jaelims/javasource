@@ -2,22 +2,44 @@ package array;
 
 public class ArrayTest7 {
 	public static void main(String[] args) {
-		int score[] = { 78, 65, 95, 88, 36, 45, 25, 47, 87, 43 };
-
-		// ìµœê³ ì ìˆ˜
-		// ìµœì €ì ìˆ˜
-
+		int score[]= {78,65,95,88,36,45,25,47,87,43};
+		
 		int max = score[0];
 		int min = score[0];
-
-		for (int i = 1; i < score.length; i++) {
-			if (max < score[i]) {
+		
+		
+		//ÃÖ°íÁ¡¼ö
+		//ÃÖÀúÁ¡¼ö		
+		for(int i=1;i<score.length;i++) {
+			if(max < score[i]) {
 				max = score[i];
-			} else if (score[i] < min) {
+			}else if(score[i] < min) {
 				min = score[i];
 			}
 		}
-		System.out.printf("ìµœê³ ì ìˆ˜: %d\n", max);
-		System.out.printf("ìµœì €ì ìˆ˜: %d\n", min);
+		
+		System.out.printf("ÃÖ°íÁ¡¼ö : %d, ÃÖÀúÁ¡¼ö : %d",max,min);
+		
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

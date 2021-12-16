@@ -3,32 +3,38 @@ package inheritance;
 // Account2
 // CheckingAccount
 
-public class TrafficCardAccount extends CheckingAccount {
-	// CheckingAccount => ê³„ì¢Œë²ˆí˜¸, ê³„ì¢Œì£¼, ì”ì•¡, ì¹´ë“œë²ˆí˜¸
-	// CheckingAccount => ì…ê¸ˆí•˜ë‹¤, ì¶œê¸ˆí•˜ë‹¤, ì²´í¬ì¹´ë“œ ê²°ì œ
-
-	// êµí†µì¹´ë“œ ê¸°ëŠ¥ì—¬ë¶€
-	private boolean hasTrafficCard;
-
-	public TrafficCardAccount(String accountNum, int money, String name, 
-			String cardNo, Boolean hasTrafficCard) {
-		super(accountNum, money, name, cardNo);
+public class TrafficCardAccount extends CheckingAccount{
+// CheckingAccount => °èÁÂ¹øÈ£,°èÁÂÁÖ,ÀÜ¾×, Ä«µå¹øÈ£, 	
+// CheckingAccount => ÀÔ±İÇÏ´Ù, Ãâ±İÇÏ´Ù, Ã¼Å©Ä«µå °áÁ¦
+	
+	
+	// ±³ÅëÄ«µå ±â´É¿©ºÎ 
+	private boolean hasTrafficCard;  
+	
+	public TrafficCardAccount(String accountNo, int balance, String name, 
+			 String cardNo, boolean hasTrafficCard) {
+		super(accountNo, balance, name, cardNo);
 		this.hasTrafficCard = hasTrafficCard;
 	}
-
 	
-	// êµí†µì¹´ë“œ ê¸°ëŠ¥ì´ ìˆë‹¤ë©´ êµí†µë¹„ ì§€ë¶ˆí•œë‹¤.
-	// ì…ë ¥ê°’ : ì¹´ë“œë²ˆí˜¸, êµí†µë¹„ ì‚¬ìš©ì•¡
-	// ë°˜í™˜ê°’ : ì •ìˆ˜
-	
-	int payTraffic(String cardNo, int traffic){
-		if (!hasTrafficCard) { // hasTrafficCard != true
-			System.out.println("êµí†µê¸°ëŠ¥í™•ì¸");
+	// ±³ÅëÄ«µå ±â´ÉÀÌ ÀÖ´Ù¸é ±³Åëºñ ÁöºÒÇÑ´Ù.
+	// ÀÔ·Â°ª : Ä«µå¹øÈ£, ±³Åëºñ »ç¿ë¾×
+	// ¹İÈ¯°ª : Á¤¼ö
+	int payTrafficCard(String cardNo,int amount) {
+		if(!hasTrafficCard) { // hasTrafficCard != true
+			System.out.println("±³ÅëÄ«µå ±â´ÉÀÌ ¾ø½À´Ï´Ù.");
 			return 0;
 		}
-		
-		return payCard(cardNo, traffic);
+		return pay(cardNo, amount);		
 	}
-	
-	
+
 }
+
+
+
+
+
+
+
+
+

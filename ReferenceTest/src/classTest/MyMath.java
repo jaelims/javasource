@@ -1,40 +1,42 @@
 package classTest;
 
 public class MyMath {
-	// ë©¤ë²„ ë³€ìˆ˜ long ë³€ìˆ˜ 2ê°œ
+	//¸â¹ö º¯¼ö long º¯¼ö 2°³
+	long a, b;	
 	
-	// ë©”ì†Œë“œ : add, subtract, multiply, divide
-	//       ì…ë ¥ê°’ ì—†ìŒ, ë°˜í™˜ê°’ì€ ì—°ì‚° ê²°ê³¼
+	//¸Ş¼Òµå : add,subtract,multiply,divide
+	//       : ÀÔ·Â°ª ¾øÀ½, ¹İÈ¯°ªÀº ¿¬»ê°á°ú
 	
-	long x, y;
-	
-	long add() {
-		return x+y;
+	long add(){
+		return a+b;
 	}
-	long subtract() {
-		return x-y;
+	long subtract(){
+		return a-b;
 	}
-	long multiply() {
-		return x*y;
+	long multiply(){
+		return a*b;
 	}
-	double divide() {
-		return x/y;
+	double divide(){
+		return a/b;
 	}
 	
-	static long add(long x, long y) {
-		return x+y;
+	static long add(long a, long b){
+		return a+b;
 	}
-	static long subtract(long x, long y) {
-		return x-y;
+	static long subtract(long a, long b){
+		return a-b;
 	}
-	static long multiply(long x, long y) {
-		return x*y;
+	static long multiply(long a, long b){
+		return a*b;
 	}
-	static double divide(double x, double y) {
-		return x/y;
+	static double divide(double a, double b){
+		return a/b;
 	}
-		
-	
-	
-	
 }
+
+
+
+
+
+
+

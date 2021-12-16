@@ -2,17 +2,32 @@ package exam;
 
 public class PrintTest {
 	public static void main(String[] args) {
-
+		
 		int a = 3;
 		int b = 4;
-
+		
 		System.out.print(true);
-		// + : ë¬¸ìžì—´ê³¼ ê°™ì´ ì‚¬ìš©ì„ í•˜ê²Œë˜ë©´ ì—°ê²°ì˜ ì˜ë¯¸ë¡œ ì‚¬ìš©ë¨
-		System.out.println("ì•„ë¬´ê±°ë‚˜" + (a+1)); // ê³µë°±í—ˆìš©=> ì—”í„°í•œë²ˆ
-		System.out.println(a + b);
-		System.out.printf("%d+%d=%d\n", a, b, a + b);
+		// + : ¹®ÀÚ¿­°ú °°ÀÌ »ç¿ëÀ» ÇÏ°ÔµÇ¸é ¿¬°áÀÇ ÀÇ¹Ì·Î »ç¿ëµÊ
+		System.out.println("¿©±â´Ù°¡´Â ¸¶À½´ë·Î"+(a+1)); //°ø¹éÇã¿ë=> ¿£ÅÍÇÑ¹ø
+		System.out.println(a+b);
+		//System.out.printf();
 		
 		String str="abc"+3;
 		System.out.println(str);
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

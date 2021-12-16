@@ -1,23 +1,40 @@
 package arrays;
 
-import java.util.List;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class ArraysEx4 {
 	public static void main(String[] args) {
-		// asList() : Listì˜ í¬ê¸°ë¥¼ ë³€ê²½í•  ìˆ˜ ì—†ìŒ
-		List<String> list = Arrays.asList("apple", "ì‚¬ê³¼", "lemon");
-		// list.add("ìˆ˜ë°•"); // UnsupportedOperationException
-		System.out.println(list);
-
+		//asList() : ListÀÇ Å©±â¸¦ º¯°æÇÒ ¼ö ¾øÀ½
+		List<String> list=Arrays.asList("apple","»ç°ú","lemon");
+		//list.add("¼ö¹Ú"); // UnsupportedOperationException
+		System.out.println(list); 
+		
+		
 		List<String> list1 = new ArrayList<String>();
 		list1.add("apple");
-		list1.add("ì‚¬ê³¼");
+		list1.add("»ç°ú");
 		list1.add("lemon");
-
-		List<Integer> list2 = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5));
+		
+		
+		List<Integer> list2=new ArrayList<>(Arrays.asList(1,2,3,4,5));
 		list2.add(6);
 		System.out.println(list2);
+		
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

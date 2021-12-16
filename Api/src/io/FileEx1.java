@@ -3,12 +3,11 @@ package io;
 import java.io.File;
 
 /* File
- * íŒŒì¼ì„ ë‹¤ë£¨ê¸° ìœ„í•œ í´ë˜ìŠ¤
- * í´ë”(ë””ë ‰í† ë¦¬) : / , \
+ * ÆÄÀÏÀ» ´Ù·ç±â À§ÇÑ Å¬·¡½º
+ * Æú´õ(µğ·ºÅä¸®) : / , \
  * 
  * \t, \n, \b....
  */
-
 
 public class FileEx1 {
 	public static void main(String[] args) {
@@ -16,9 +15,8 @@ public class FileEx1 {
 		File file2 = new File("c:\\temp","test1.txt");
 		
 		File file3 = new File("c:\\temp");
-		File file4 = new File(file3,"test1.txt");
-		// File file4 = new File(new File("c:\\temp"),"test1.txt");
-		
-		
+		File file4 = new File(file3, "test1.txt");		
+		// File file4 = new File(new File("c:\\temp"), "test1.txt");		
+
 	}
 }

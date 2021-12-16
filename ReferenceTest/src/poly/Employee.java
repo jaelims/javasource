@@ -3,9 +3,9 @@ package poly;
 public class Employee {
 	private String name;
 	private String position;
-
+	
 	public void work() {
-		System.out.println(name + " " + position + " ì—ì„œ ì¼í•œë‹¤");
+		System.out.println(name +" "+position+" ¿¡¼­ ÀÏÇÑ´Ù");
 	}
 
 	public String getName() {
@@ -22,6 +22,6 @@ public class Employee {
 
 	public void setPosition(String position) {
 		this.position = position;
-	}
-
+	}	
+	
 }

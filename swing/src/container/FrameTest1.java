@@ -4,12 +4,11 @@ import javax.swing.JFrame;
 
 public class FrameTest1 {
 	public static void main(String[] args) {
-		JFrame f = new JFrame("ìŠ¤ìœ™ í”„ë ˆì„");
-		//size ì§€ì •
+		JFrame f = new JFrame("½ºÀ® ÇÁ·¹ÀÓ");
+		//size ÁöÁ¤
 		f.setSize(300, 300);
-		//í™”ë©´ì— ì¶œë ¥
+		//È­¸é¿¡ Ãâ·Â
 		f.setVisible(true);
-		
-	}
 
+	}
 }

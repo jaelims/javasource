@@ -6,20 +6,34 @@ public class FileEx2 {
 	public static void main(String[] args) {
 		File file = new File("c:\\temp\\InputStreamEx1.java");
 		
-		// íŒŒì¼ ì´ë¦„
+		//ÆÄÀÏ ÀÌ¸§
 		String fileName = file.getName();
-		// . ìœ„ì¹˜
-		int pos = fileName.lastIndexOf(".");
+		// . À§Ä¡
+		int pos=fileName.lastIndexOf(".");
 		
-		System.out.println("íŒŒì¼ëª… : "+fileName);
-		System.out.println("í™•ì¥ìë¥¼ ì œì™¸í•œ íŒŒì¼ëª… : "+fileName.substring(0, pos));
-		System.out.println("í™•ì¥ì : "+fileName.substring(pos+1));
+		System.out.println("ÆÄÀÏ¸í : "+fileName);
+		System.out.println("È®ÀåÀÚ¸¦ Á¦¿ÜÇÑ ÆÄÀÏ¸í : "+fileName.substring(0, pos));
+		System.out.println("È®ÀåÀÚ : "+fileName.substring(pos+1));
 		
-		System.out.println("ê²½ë¡œë¥¼ í‘œí•¨í•œ íŒŒì¼ëª… : " + file.getPath());
-		System.out.println("íŒŒì¼ì´ ì†í•´ ìˆëŠ” í´ë”ëª… : " + file.getParent());
+		System.out.println("°æ·Î¸¦ Æ÷ÇÔÇÑ ÆÄÀÏ¸í : "+file.getPath());
+		System.out.println("ÆÄÀÏÀÌ ¼ÓÇØ ÀÖ´Â Æú´õ¸í : "+file.getParent());
 		
-		System.out.println("file.separator : " + File.separator);
-		System.out.println("file.pathseparator : " + File.pathSeparator);
-		
+		System.out.println("File.separator : "+File.separator);
+		System.out.println("File.pathSeparator : "+File.pathSeparator);
+
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

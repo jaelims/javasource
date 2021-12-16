@@ -10,51 +10,53 @@ public class FileEx3 {
 		File dir = new File("c:\\temp\\dir");
 		File file1 = new File("c:\\temp\\file1.txt");
 		File file2 = new File("c:\\temp\\file2.txt");
-		File file3 = new File(temp, "file3.txt");
+		File file3 = new File(temp,"file3.txt");
 		File file4 = new File("c:\\temp\\dir\\file4.txt");
 		
 		
-		// í´ë” ìƒì„±
+		//Æú´õ »ı¼º
 		if(!temp.exists()) {
-			temp.mkdir();
+			temp.mkdir(); 
 		}
-		if (!dir.exists()) {
-			dir.mkdir();
+		if(!dir.exists()) {
+			dir.mkdir(); 
 		}
 		
 		try {
-			// íŒŒì¼ ìƒì„±
-			if (!file1.exists()) {
+			// ÆÄÀÏ»ı¼º
+			if(!file1.exists()) {
 				file1.createNewFile();
 			}
-			if (!file2.exists()) {
+			if(!file2.exists()) {
 				file2.createNewFile();
 			}
-			if (!file3.exists()) {
+			if(!file3.exists()) {
 				file3.createNewFile();
 			}
-			if (!file4.exists()) {
+			if(!file4.exists()) {
 				file4.createNewFile();
 			}
+			
 		} catch (Exception e) {
 			e.printStackTrace();
-		}
+		}	
 		
-		// íŒŒì¼ ì •ë³´ ì¶œë ¥
-		System.out.println("\të‚ ì§œ\tì‹œê°„\tí˜•íƒœ\tí¬ê¸°\tì´ë¦„");
-		System.out.println("-------------------------");
+		//ÆÄÀÏ Á¤º¸ Ãâ·Â
+		System.out.println("\t³¯Â¥\t½Ã°£\tÇüÅÂ\tÅ©±â\tÀÌ¸§");
+		System.out.println("---------------------------------------------");		
 		
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd a HH:mm");
+		
 		File contents[] = temp.listFiles();
-		for (File f:contents) {
-			// long access = f.lastModified();
-			// Data date = new Date(access);
-			// String formatDate = sdf.format(date);
+		for(File f:contents) {
+			//long access = f.lastModified();			
+			//Date date = new Date(access); //Fri Sep 17 11:18:17 KST 2021			
+			// String formatDate = sdf.format(date);	
 			
 			System.out.print(sdf.format(new Date(f.lastModified())));
-			if (f.isDirectory()) {
+			if(f.isDirectory()) {
 				System.out.print("\t<DIR>\t\t"+f.getName());
-			} else {
+			}else {
 				System.out.print("\t\t"+f.length()+"\t"+f.getName());
 			}
 			System.out.println();
@@ -62,3 +64,35 @@ public class FileEx3 {
 		
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

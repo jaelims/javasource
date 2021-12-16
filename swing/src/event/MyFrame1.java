@@ -8,7 +8,7 @@ import javax.swing.JLabel;
 
 public class MyFrame1 extends JFrame {
 	public MyFrame1() {
-		setTitle("ì•¡ì…˜ì´ë²¤íŠ¸");
+		setTitle("¾×¼ÇÀÌº¥Æ®");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		setLayout(new FlowLayout());
@@ -17,8 +17,9 @@ public class MyFrame1 extends JFrame {
 		btn1.addActionListener(new MyListener1());
 		add(btn1);
 		
-		JLabel lbl = new JLabel("ë²„íŠ¼ì„ ëˆ„ë¥´ì„¸ìš”");
-		add(lbl);
+		JLabel lbl = new JLabel("¹öÆ°À» ´©¸£¼¼¿ä");
+		add(lbl);		
+		
 		
 		setBounds(100, 100, 300, 200);
 		setVisible(true);
@@ -28,3 +29,9 @@ public class MyFrame1 extends JFrame {
 		new MyFrame1();
 	}
 }
+
+
+
+
+
+

@@ -3,7 +3,6 @@ package poly;
 public class Manager extends Employee {
 	@Override
 	public void work() {
-		System.out.println(super.getPosition()+" ì—ì„œ "+super.getName()+"ê°€ ì¼ì„ í•©ë‹ˆë‹¤.");
-		
+		System.out.println(super.getPosition()+" ¿¡¼­ "+super.getName()+"°¡ ÀÏÀ»ÇÕ´Ï´Ù.");
 	}
 }

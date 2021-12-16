@@ -4,14 +4,17 @@ import java.util.Scanner;
 
 public class ForTest4 {
 	public static void main(String[] args) {
-		// ì‚¬ìš©ìí•œí…Œ êµ¬êµ¬ë‹¨ì˜ ë‹¨ìˆ˜ë¥¼ ì…ë ¥ë°›ê¸°
+		// »ç¿ëÀÚÇÑÅ× ±¸±¸´ÜÀÇ ´Ü¼ö¸¦ ÀÔ·Â¹Ş±â
 		Scanner sc = new Scanner(System.in);
-		System.out.print("êµ¬êµ¬ë‹¨ì˜ ë‹¨ìˆ˜ ì…ë ¥ : ");
-		int num = sc.nextInt();
-		
-		for (int i = 1; i < 10; i++) {
-			// System.out.println("2 * " + i + " = " + (2 * i));
-			System.out.printf("%d * %d = %02d\n",num, i, (num * i));
+		System.out.print("±¸±¸´Ü ´Ü ¼ö ÀÔ·Â : ");
+		int num = sc.nextInt(); //5, 6,...
+
+		for(int i=1;i<10;i++) {
+		//	System.out.println(num+" * "+i+" = "+(num*i));
+			System.out.printf("%d * %d = %d\t",num,i,(num*i));
 		}
+		
 	}
 }
+
+

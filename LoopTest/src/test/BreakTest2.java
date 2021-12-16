@@ -1,20 +1,28 @@
 package test;
 
 public class BreakTest2 {
+
 	public static void main(String[] args) {
-		// ìˆ«ìë¥¼ 0ì—ì„œë¶€í„° í•˜ë‚˜ì”© ì¦ê°€ì‹œí‚¤ë©´ì„œ í•©ê³„ë¥¼ êµ¬í•˜ê¸°
-		// ë‹¨, í•©ê³„ê°€ 100ì´ ë„˜ìœ¼ë©´ ë°˜ë³µë¬¸ ì¢…ë£Œ
-
-		int sum = 0, i = 0;
-
-		while (true) {
-			if (sum > 100) {
+		// ¼ıÀÚ¸¦ 0¿¡¼­ºÎÅÍ ÇÏ³ª¾¿ Áõ°¡½ÃÅ°¸é¼­ ÇÕ°è¸¦ ±¸ÇÏ±â
+		// ´Ü, ÇÕ°è°¡ 100ÀÌ ³ÑÀ¸¸é ¹İº¹¹® Á¾·á
+		
+		int sum=0,i=0;
+		
+		while(true) {
+			if(sum > 100) {
 				break;
 			}
 			
 			sum += i;
 			i++;
 		}
-		System.out.printf("i = %d, sum = %d", i, sum);
+		System.out.printf("i = %d, sum = %d",i,sum);
 	}
+
 }
+
+
+
+
+
+

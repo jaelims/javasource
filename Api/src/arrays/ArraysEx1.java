@@ -2,18 +2,37 @@ package arrays;
 
 import java.util.Arrays;
 
-/* Arrays : ë°°ì—´ì„ ë‹¤ë£¨ëŠ”ë° ìœ ìš©í•œ ë©”ì„œë“œ ì œê³µ
- * ë°°ì—´ ë³µì‚¬, ë°°ì—´ ì±„ìš°ê¸°, ë°°ì—´ì˜ ì •ë ¬, ê²€ìƒ‰, ë¬¸ìì—´ ë¹„êµ, ì¶œë ¥
- * ë°°ì—´ì„ ë¦¬ìŠ¤íŠ¸ë¡œ ë³€í™˜
+/* Arrays : ¹è¿­À» ´Ù·ç´Âµ¥ À¯¿ëÇÑ ¸Ş¼­µå Á¦°ø
+ * ¹è¿­ º¹»ç, ¹è¿­ Ã¤¿ì±â, ¹è¿­ÀÇ Á¤·Ä, °Ë»ö, ¹®ÀÚ¿­ ºñ±³, Ãâ·Â,
+ * ¹è¿­À» ¸®½ºÆ®·Î º¯È¯
  */
-
 public class ArraysEx1 {
 	public static void main(String[] args) {
-		int[] arr = { 0, 1, 2, 3, 4 };
-		int[][] arr2 = { { 11, 12, 13 }, { 21, 22, 23 } };
+		int[] arr = {0,1,2,3,4};
+		int[][] arr2 = {
+				{11,12,13},
+				{21,22,23}
+		};
 		
 		System.out.println(Arrays.toString(arr));
 		System.out.println(Arrays.deepToString(arr2));
-		
+
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

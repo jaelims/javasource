@@ -1,22 +1,32 @@
 package classTest;
 
 public class Account {
-	// ì†ì„± : ê³„ì¢Œë²ˆí˜¸(122-01-12222), ìž”ì•¡, ì´ë¦„
-	String accountNum;
-	int money;
+	//¼Ó¼º : °èÁÂ¹øÈ£(122-01-12222),ÀÜ¾×,ÀÌ¸§
+	String accountNo; 
+	int balance;
 	String name;
 	
-	// ê¸°ë³¸ìƒì„±ìž
+	//±âº»»ý¼ºÀÚ
 	
-	// ê¸°ëŠ¥ : ìž…ê¸ˆí•œë‹¤.(ìž…ë ¥ê°’ : ìž…ê¸ˆì•¡, ë°˜í™˜ê°’ : ì—†ìŒ) => í˜„ìž¬ìž”ì•¡ += ìž…ê¸ˆì•¡
-	// 		ì¶œê¸ˆí•œë‹¤.(ìž…ë ¥ê°’ : ì¶œê¸ˆì•¡, ë°˜í™˜ê°’ : í˜„ìž¬ìž”ì•¡) = > í˜„ìž¬ìž”ì•¡ -=ì¶œê¸ˆì•¡
-	void add(int amount) {
-		money += amount;
+	//±â´É : ÀÔ±ÝÇÑ´Ù.(ÀÔ·Â°ª : ÀÔ±Ý¾×, ¹ÝÈ¯°ª:¾øÀ½) => ÇöÀçÀÜ¾× += ÀÔ±Ý¾×
+	void deposit(int amount) {
+		balance += amount;
 	}
-	int subtrack(int amount) {
-		if (money > amount) {
-			money -= amount;
+	
+	
+	//       Ãâ±ÝÇÑ´Ù.(ÀÔ·Â°ª : Ãâ±Ý¾×, ¹ÝÈ¯°ª:ÇöÀçÀÜ¾×) => ÇöÀçÀÜ¾× -= Ãâ±Ý¾×
+	int withdraw(int amount) {
+		if(balance > amount) {
+			balance -= amount;			
 		}
-		return money;
+		return balance;
 	}
 }
+
+
+
+
+
+
+
+

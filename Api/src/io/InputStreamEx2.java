@@ -14,16 +14,28 @@ public class InputStreamEx2 {
 		try {
 			int input = in.read();
 			out.write(input);
-		} catch (IOException e) {
+		} catch (IOException e) {		
 			e.printStackTrace();
-		} finally { // ë¬´ì¡°ê±´ ì‹¤í–‰(exception ì´ ë°œìƒí•˜ë˜ ë°œìƒí•˜ì§€ ì•Šë˜)
+		} finally { //¹«Á¶°Ç ½ÇÇà(exception ÀÌ ¹ß»ıÇÏ´ø ¹ß»ıÇÏÁö ¾Ê´ø)
 			try {
 				in.close();
 				out.close();
-			} catch (IOException e) {
-			e.printStackTrace();
+			} catch (IOException e) {				
+				e.printStackTrace();
+			}
 		}
 		
-	}
+
 	}
 }
+
+
+
+
+
+
+
+
+
+
+

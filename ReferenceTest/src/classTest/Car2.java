@@ -1,38 +1,44 @@
 package classTest;
 
 public class Car2 {
-	// ì†ì„±
+	//¼Ó¼º
 	private String company;
 	private String model;
 	private String color;
 	private int maxSpeed;
-
-	// ìƒì„±ì - í´ë˜ìŠ¤ì´ë¦„ê³¼ ë™ì¼/ë¦¬í„´ íƒ€ì… ì—†ìŒ/ì¤‘ë³µ ê°€ëŠ¥(ìƒì„±ì ì˜¤ë²„ë¡œë”©)
-	// ëª©ì  - í•„ë“œì— ì´ˆê¸°ê°’ì„ ì €ì¥/ê°ì²´ ìƒì„±í•˜ë©´ì„œ ì¤€ë¹„í•´ì•¼ í•˜ëŠ” ì‘ì—… ì‹¤í–‰
-	Car2() {
-		System.out.println("Car2 ê¸°ë³¸ ìƒì„±ì");
+	
+	//»ı¼ºÀÚ - Å¬·¡½ºÀÌ¸§°ú µ¿ÀÏ/¸®ÅÏ Å¸ÀÔ ¾øÀ½/Áßº¹ °¡´É(»ı¼ºÀÚ ¿À¹ö·Îµù)
+	//¸ñÀû - ÇÊµå¿¡ ÃÊ±â°ªÀ» ÀúÀå/°´Ã¼ »ı¼ºÇÏ¸é¼­ ÁØºñÇØ¾ß ÇÏ´Â ÀÛ¾÷ ½ÇÇà
+	Car2(){
+		System.out.println("Car2 ±âº» »ı¼ºÀÚ");
 	}
-
-	Car2(String model) {
-		System.out.println("Car2 ìƒì„±ì - model ì´ˆê¸°í™”");
+	Car2(String model){ 
+		System.out.println("Car2 »ı¼ºÀÚ - model ÃÊ±âÈ­");
 	}
-
-	Car2(String model, String color) {
-		System.out.println("Car2 ìƒì„±ì - model, color ì´ˆê¸°í™”");
+	Car2(String model,String color){ 
+		System.out.println("Car2 »ı¼ºÀÚ - model,color ÃÊ±âÈ­");
 	}
-
-	Car2(String company, String model, String color, int maxSpeed) {
-		System.out.println("Car2 ìƒì„±ì - ì†ì„± ëª¨ë‘ ì´ˆê¸°í™”");
+	Car2(String company,String model,String color,int maxSpeed){ // Duplicate method Car2() in type Car2
+		System.out.println("Car2 »ı¼ºÀÚ - ¼Ó¼º ¸ğµÎ ÃÊ±âÈ­");
 	}
-
-	// ë™ì‘-ë©”ì†Œë“œ
-	// ë¦¬í„´íƒ€ì… ë©”ì†Œë“œëª…(){}
-	// ë¦¬í„´íƒ€ì… ë©”ì†Œë“œëª…(íƒ€ì… ë³€ìˆ˜ëª…,...){}
+	
+		
+	//µ¿ÀÛ-¸Ş¼Òµå
+	// ¸®ÅÏÅ¸ÀÔ ¸Ş¼Òµå¸í(){}
+	// ¸®ÅÏÅ¸ÀÔ ¸Ş¼Òµå¸í(Å¸ÀÔ º¯¼ö¸í,....){}
 	void forward() {
-		System.out.println("ì „ì§„í•˜ë‹¤");
+		System.out.println("ÀüÁøÇÏ´Ù");
 	}
-
-	void backward() {
-		System.out.println("í›„ì§„í•˜ë‹¤");
+	void backword() {
+		System.out.println("ÈÄÁøÇÏ´Ù");
 	}
 }
+
+
+
+
+
+
+
+
+

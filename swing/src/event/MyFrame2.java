@@ -14,7 +14,7 @@ public class MyFrame2 extends JFrame implements ActionListener{
 	private JLabel lbl;
 	
 	public MyFrame2() {
-		setTitle("ì•¡ì…˜ì´ë²¤íŠ¸");
+		setTitle("¾×¼ÇÀÌº¥Æ®");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		setLayout(new FlowLayout());
@@ -23,12 +23,13 @@ public class MyFrame2 extends JFrame implements ActionListener{
 		btn1.addActionListener(this);
 		add(btn1);
 		
-		lbl = new JLabel("ë²„íŠ¼ì„ ëˆ„ë¥´ì„¸ìš”");
-		add(lbl);
+		lbl = new JLabel("¹öÆ°À» ´©¸£¼¼¿ä");
+		add(lbl);		
 		
 		btn2 = new JButton("click2");
 		btn2.addActionListener(this);
 		add(btn2);
+		
 		
 		setBounds(100, 100, 300, 200);
 		setVisible(true);
@@ -41,12 +42,18 @@ public class MyFrame2 extends JFrame implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if(e.getSource() == btn1) {
-			//System.out.println("ë²„íŠ¼ì´ ëˆŒëŸ¬ì¡ŒìŠµë‹ˆë‹¤.");
-			lbl.setText("ì²«ë²ˆì§¸ ë²„íŠ¼ ëˆ„ë¦„");
+			//System.out.println("¹öÆ°ÀÌ ´­·¯Á³½À´Ï´Ù.");
+			lbl.setText("1¹ø ¹öÆ° Å¬¸¯");
 		}else if(e.getSource() == btn2) {
-			//System.out.println("ë‘ë²ˆì§¸ ë²„íŠ¼ì´ ëˆŒëŸ¬ì¡ŒìŠµë‹ˆë‹¤.");
-			lbl.setText("ë‘ë²ˆì§¸ ë²„íŠ¼ ëˆ„ë¦„");
+			//System.out.println("µÎ¹øÂ° ¹öÆ°ÀÌ ´­·¯Á³½À´Ï´Ù.");
+			lbl.setText("2¹ø ¹öÆ° Å¬¸¯");
 		}
 		
 	}
 }
+
+
+
+
+
+

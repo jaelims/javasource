@@ -8,42 +8,46 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-// FlowLayout : ì»´í¬ë„ŒíŠ¸ë¥¼ ì™¼ìª½ì—ì„œ ì˜¤ë¥¸ìª½ìœ¼ë¡œ ë°°ì¹˜
-//				ì˜¤ë¥¸ìª½ ê³µê°„ì´ ì—†ìœ¼ë©´ ì•„ë˜ë¡œ ë‚´ë ¤ê°
-
+/* FlowLayout : ÄÄÆ÷³ÍÆ®¸¦ ¿ŞÂÊ¿¡¼­ ¿À¸¥ÂÊÀ¸·Î ¹èÄ¡
+ *              ¿À¸¥ÂÊ °ø°£ÀÌ ¾øÀ¸¸é ¾Æ·¡·Î ³»·Á°¨	
+ */
 
 public class FlowLayoutTest2 extends JFrame{
 	
 	public FlowLayoutTest2() {
-		setTitle("BorderLayout í…ŒìŠ¤íŠ¸");
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setTitle("BorderLayout Å×½ºÆ®");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);		
 		
-		// í˜„ì¬ í”„ë ˆì„ì˜ contentPane ê°€ì ¸ì˜¤ê¸°
+		
+		//ÇöÀç ÇÁ·¹ÀÓÀÇ contentPane °¡Á®¿À±â
 		Container container = getContentPane();
-		// contentPane ì— ìƒˆë¡œìš´ ë ˆì´ì•„ì›ƒ ì„¤ì •
+		//contentPane ¿¡ »õ·Î¿î ·¹ÀÌ¾Æ¿ô ¼³Á¤
 		container.setLayout(new FlowLayout(FlowLayout.LEFT,30,40));
 		
-		
-		JButton btn1 = new JButton("ë²„íŠ¼1");
+	
+		JButton btn1 = new JButton("¹öÆ°1");
 		add(btn1);
 		
-		JButton btn2 = new JButton("ë²„íŠ¼2");
-		add(btn2);
+		JButton btn2 = new JButton("¹öÆ°2");
+		add(btn2);		
 		
-		JButton btn3 = new JButton("ë²„íŠ¼3");
+		JButton btn3 = new JButton("¹öÆ°3");
 		add(btn3);
 		
-		JButton btn4 = new JButton("ë²„íŠ¼4");
+		JButton btn4 = new JButton("¹öÆ°4");
 		add(btn4);
 		
-		JButton btn5 = new JButton("ë²„íŠ¼5");
-		add(btn5);
+		JButton btn5 = new JButton("¹öÆ°5");
+		add(btn5);		
 		
 		setSize(300, 200);
 		setVisible(true);
 	}
 	
+
 	public static void main(String[] args) {
 		FlowLayoutTest2 f = new FlowLayoutTest2();
+
 	}
+
 }

@@ -5,25 +5,38 @@ import java.util.List;
 
 public class ListEx3 {
 	public static void main(String[] args) {
-		// ìƒì„±
+		//»ı¼º
 		List<Member> list = new ArrayList<>();
 		
-		// ì¶”ê°€
-		list.add(new Member("hong", "hong1234", "í™ê¸¸ë™"));
-		list.add(new Member("hong1", "hong12345", "ì¥ê¸¸ë™"));
-		list.add(new Member("hong2", "hong12346", "ìµœê¸¸ë™"));
-		list.add(new Member("hong3", "hong12347", "ê¹€ê¸¸ë™"));
-		list.add(new Member("hong4", "hong12348", "ë°•ê¸¸ë™"));
+		//Ãß°¡
+		list.add(new Member("hong", "hong1234", "È«±æµ¿"));
+		list.add(new Member("hong1", "hong12345", "Àå±æµ¿"));
+		list.add(new Member("hong2", "hong12346", "ÃÖ±æµ¿"));
+		list.add(new Member("hong3", "hong12347", "±è±æµ¿"));
+		list.add(new Member("hong4", "hong12348", "¹Ú±æµ¿"));
 		
-		// ê°€ì ¸ì˜¤ê¸°
-		System.out.println(list); // collection.Member@2a139a55 => toString ì˜¤ë²„ë¼ì´ë”©
+		//°¡Á®¿À±â
+		System.out.println(list); // collection.Member@2a139a55
 		
 		System.out.println();
 		
 		for(Member member:list) {
 			System.out.println(member);
 		}
-		
-		
+
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

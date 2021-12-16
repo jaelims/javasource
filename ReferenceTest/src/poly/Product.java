@@ -27,7 +27,5 @@ public class Product {
 
 	public void setBonusPoint(int bonusPoint) {
 		this.bonusPoint = bonusPoint;
-	}
-	
-	
+	}		
 }
